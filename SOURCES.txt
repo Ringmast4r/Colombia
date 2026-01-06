@@ -1,0 +1,157 @@
+================================================================================
+                    COLOMBIA OSINT - REFERENCE SOURCES
+                    Gustavo Petro Research
+                    Last Updated: January 5, 2026
+================================================================================
+
+NOTE: This file contains NEWS and REFERENCE sources for research.
+For TECHNICAL OSINT methodology (tools, endpoints, queries), see:
+  -> sources/OSINT_SOURCES.txt
+
+================================================================================
+[1] US GOVERNMENT - OFFICIAL
+================================================================================
+
+TREASURY SANCTIONS (October 24, 2025):
+https://home.treasury.gov/news/press-releases/sb0292
+- Official OFAC designation of Petro
+- Lists all sanctioned individuals
+- Legal basis and justification
+
+OFAC SDN LIST:
+https://sanctionssearch.ofac.treas.gov/
+- Specially Designated Nationals database
+- Petro and family members listed
+
+================================================================================
+[2] NEWS COVERAGE - SANCTIONS
+================================================================================
+
+NPR:
+https://www.npr.org/2025/10/24/g-s1-94970/us-sanctions-colombia-president-petro-drug-allegations
+
+Spokesman-Review:
+https://www.spokesman.com/stories/2025/oct/24/us-treasury-sanctions-colombian-president-over-all/
+
+OPB:
+https://www.opb.org/article/2025/10/24/u-s-slaps-sanctions-on-colombia-president-petro-over-drug-allegations/
+
+JURIST:
+https://www.jurist.org/news/2025/10/us-announces-sanctions-against-columbian-president-over-drug-trade-dispute/
+
+MercoPress:
+https://en.mercopress.com/2025/10/25/us-sanctions-petro-over-alleged-drug-links
+
+================================================================================
+[3] LEGAL ANALYSIS
+================================================================================
+
+Holland & Knight:
+https://www.hklaw.com/en/insights/publications/2025/10/us-sanctions-colombias-president-under-global-illicit-drug-trade
+
+Freshfields:
+https://blog.freshfields.us/post/102lvuv/sanctioning-a-president-not-a-country-ofac-designates-colombias-president-gust
+
+Sullivan & Cromwell:
+https://www.sullcrom.com/insights/memo/2025/October/United-States-Sanctions-Colombia-President-Certain-Supporters
+
+================================================================================
+[4] M-19 & PALACE OF JUSTICE
+================================================================================
+
+Wikipedia - Gustavo Petro:
+https://en.wikipedia.org/wiki/Gustavo_Petro
+
+Wikipedia - 19th of April Movement:
+https://en.wikipedia.org/wiki/19th_of_April_Movement
+
+Wikipedia - Palace of Justice Siege:
+https://en.wikipedia.org/wiki/Palace_of_Justice_siege
+
+Colombia Reports - Palace of Justice:
+https://colombiareports.com/palace-justice/
+
+City Paper Bogotá - 40th Anniversary:
+https://thecitypaperbogota.com/colombia/colombia-marks-40-years-since-palace-of-justice-siege-by-m-19/
+
+Latin America Reports - 40th Anniversary:
+https://latinamericareports.com/colombia-marks-40-years-since-palace-of-justice-guerrilla-siege/12871/
+
+================================================================================
+[5] PABLO ESCOBAR CONNECTION
+================================================================================
+
+ADST (Association for Diplomatic Studies):
+https://adst.org/2015/11/pablo-escobar-and-the-siege-of-colombias-palace-of-justice/
+
+Colombia Reports - Escobar Myth?:
+https://colombiareports.com/pablo-escobars-involvement-in-1985-palace-of-justice-attack-another-urban-myth/
+
+================================================================================
+[6] MADURO CONNECTION (January 2026)
+================================================================================
+
+NBC News - Maduro Capture:
+https://www.nbcnews.com/news/us-news/live-blog/venezuela-maduro-trump-live-updates-rcna252101
+
+CBS News - Maduro Updates:
+https://www.cbsnews.com/live-updates/venezuela-us-military-strikes-maduro-trump/
+
+CNN - Maduro in Custody:
+https://www.cnn.com/world/live-news/venezuela-explosions-caracas-intl-hnk-01-03-26
+
+ABC News - US Captures Maduro:
+https://abcnews.go.com/International/explosions-heard-venezuelas-capital-city-caracas/story?id=128861598
+
+The Hill - Maduro Indictment:
+https://thehill.com/regulation/court-battles/5671342-venezuela-nicolas-maduro-cilia-flores-indictment/
+
+STLPR - Maduro Charges:
+https://www.stlpr.org/npr/2026-01-03/what-are-the-charges-against-venezuelas-nicolas-maduro
+
+================================================================================
+[7] BACKGROUND REFERENCE
+================================================================================
+
+Military Wiki - Palace Siege:
+https://military-history.fandom.com/wiki/Palace_of_Justice_siege
+
+Narcos Wiki - Palace Siege:
+https://narcos.fandom.com/wiki/Palace_of_Justice_siege
+
+================================================================================
+[8] US-COLOMBIA CRISIS (2025-2026)
+================================================================================
+
+VISA REVOCATION (September 2025):
+- Multiple news sources reported Petro's US visa revoked
+- Triggered by UN speech calling on soldiers to disobey Trump
+
+OFAC SANCTIONS (October 2025):
+- Treasury SDN designation
+- Petro + family members sanctioned
+- Trump called Petro "illegal drug dealer"
+
+RUBIO CONFRONTATION (November 2025):
+- Petro challenged: "Want to put me in orange jumpsuit? Try it"
+- USS Gerald R. Ford deployed to Caribbean
+- Colombia halted intel sharing with US
+
+================================================================================
+[9] ARCGIS DATA SOURCES
+================================================================================
+
+Primary ArcGIS Server:
+https://ergit.presidencia.gov.co/server/rest/services
+
+Key Data Categories:
+- Military intelligence maps (CNR_*_MIL1)
+- Armed group territories (ELN, Clan del Golfo, EMC, etc.)
+- Human rights data (DDHH folder)
+- Violence statistics (2010-2025)
+- Peace process data (signatories, ETCR camps)
+- Coca cultivation maps (2017-2023)
+
+================================================================================
+                              END SOURCES
+================================================================================

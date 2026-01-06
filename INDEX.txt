@@ -1,0 +1,347 @@
+================================================================================
+              COLOMBIA OSINT PROJECT - MASTER INDEX
+              Target: Colombian Government Infrastructure
+              ArcGIS Intelligence Dump + Police AI Platform
+              Last Updated: January 5, 2026 (Final PM Session)
+================================================================================
+
+CRITICAL FINDING #1: OPEN ARCGIS SERVER
+=======================================
+URL: https://ergit.presidencia.gov.co/server/rest/services
+Status: PUBLICLY ACCESSIBLE - NO AUTHENTICATION REQUIRED
+Version: ArcGIS Enterprise 11.3.0 (Build 51575)
+Data: Military intelligence maps, armed group territories, victim data
+Size: 2.0 GB downloaded
+Services: 300+ services across 26 folders
+
+CRITICAL FINDING #2: POLICE AI PLATFORM (AWS)
+=============================================
+URL: https://ia.policia.gov.co
+AWS Account: 926162397524
+S3 Bucket: pon-prod-ai-platform-926162397524.s3.amazonaws.com
+AI Backend: Amazon Bedrock (NADIA AI assistant)
+Credentials: Temporary STS tokens exposed in pre-signed URLs
+
+CRITICAL FINDING #3: INTELLIGENCE AGENCIES
+==========================================
+DNI (National Intelligence): 15 subdomains discovered
+  - Codename servers: birmania, denver, kuwait
+  - Encrypted email: correocifrado.dni.gov.co
+Fiscalia (Prosecutor): 30+ subdomains
+DIJIN Pandora: Criminal investigation system
+
+BREAKING: US-COLOMBIA CRISIS (2025)
+===================================
+- Sept 2025: US revokes Petro's visa (called for soldiers to disobey Trump)
+- Oct 2025: OFAC sanctions Petro + family (SDN list)
+- Oct 2025: Trump calls Petro "illegal drug dealer"
+- Nov 2025: Petro dares Rubio: "Want to put me in orange jumpsuit? Try it"
+- USS Gerald R. Ford deployed to Caribbean
+- Colombia halts intel sharing with US
+
+================================================================================
+PROJECT STATISTICS (Final - Jan 5, 2026)
+================================================================================
+
+| Category         | Files | Size      |
+|------------------|-------|-----------|
+| RAW DOWNLOADS    | 455   | 2,048 MB  |
+| KEY FINDINGS     | 35    | 224 KB    |
+| HTML Maps        | 24+   | 247 MB    |
+| Hashes/Creds     | 5     | 34 KB     |
+| Intel Reports    | 5     | 24 KB     |
+| Assets/Snips     | 10+   | 448 KB    |
+|------------------|-------|-----------|
+| TOTAL            | 534+  | 2,553 MB  |
+
+INFRASTRUCTURE ENUMERATED:
+| Domain             | Subdomains |
+|--------------------|------------|
+| ejercito.mil.co    | 147        |
+| armada.mil.co      | 94         |
+| fac.mil.co         | 79         |
+| cgfm.mil.co        | 41         |
+| policia.gov.co     | 60+        |
+| ia.policia.gov.co  | 20+        |
+| dni.gov.co         | 15         |
+| fiscalia.gov.co    | 30+        |
+| mininterior.gov.co | 27         |
+|--------------------|------------|
+| TOTAL              | 513+       |
+
+ARCGIS SERVICES ENUMERATED:
+| Folder              | Services |
+|---------------------|----------|
+| Root                | 33       |
+| Hosted              | 240+     |
+| DDHH                | 22       |
+| UnidadCumplimiento  | 8        |
+| Zonas               | 1        |
+| Resguardos          | 2        |
+| aicma               | 4        |
+| FondoPaz            | 2        |
+| UnidadAcuerdoFinal  | 2        |
+| Utilities           | 4        |
+| Other folders       | 15+      |
+|---------------------|----------|
+| TOTAL               | 300+     |
+
+================================================================================
+FOLDER STRUCTURE
+================================================================================
+
+COLOMBIA/
+|
+|-- INDEX.txt                    <- THIS FILE
+|-- GUSTAVO_PETRO_TIMELINE.txt   <- Full chronological timeline
+|-- PRESIDENCIA_OSINT_REPORT.txt <- Complete technical OSINT report
+|
+|-- KEY FINDINGS/                <- Quick Reference Files (35 files)
+|   |-- 01_INFRASTRUCTURE.txt    <- Hosting, IPs, tech stack
+|   |-- 02_SUBDOMAINS.txt        <- 33 discovered subdomains
+|   |-- 03_IP_ADDRESSES.txt      <- IP inventory by provider
+|   |-- 04_ARCGIS_SYSTEM.txt     <- ArcGIS 11.3.0 details
+|   |-- 05_DNS_RECORDS.txt       <- TXT records, tokens
+|   |-- 06_SECURITY_NOTES.txt    <- Security observations
+|   |-- 07_COOKIES_TOKENS.txt    <- Session data captured
+|   |-- 08_PETRO_SUMMARY.txt     <- Quick subject summary
+|   |-- 09_ACTIONABLE_INTEL.txt  <- Prioritized actionable items
+|   |-- 10_PETRO_DOMAINS.txt     <- Personal domains (parked)
+|   |-- 11_PARTY_SITES.txt       <- colombiahumana.co, pactohistorico.co
+|   |-- 12_SOCIAL_MEDIA.txt      <- Social media accounts
+|   |-- 13_COLOMBIAHUMANA_SUBDOMAINS.txt <- 54 subdomains
+|   |-- 14_HIGH_VALUE_TARGETS.txt <- Priority targets
+|   |-- 15_HASHES_TOKENS.txt     <- Collected tokens
+|   |-- 16_ARCGIS_FULL.txt       <- Complete ArcGIS config
+|   |-- 17_CURRENT_EVENTS.txt    <- Live news (Jan 5, 2026)
+|   |-- 18_ARCGIS_FULL_DUMP.txt  <- Complete ArcGIS enumeration
+|   |-- 19_MILITARY_MAP_INTEL.txt <- Military map analysis
+|   |-- 20_PEACE_SIGNATORY_ATTACKS.txt <- Attack statistics
+|   |-- 21_INTERACTIVE_MAPS.txt  <- Map visualization guide
+|   |-- 22_EXPOSED_CREDENTIALS.txt <- Emails, usernames, hashes
+|   |-- 23_GALLERY_PUBLIC_ACCESS.txt <- Gallery visibility verification
+|   |-- 24_OSINT_CHECKLIST_VERIFICATION.txt <- Checklist cross-reference
+|   |-- 25_ADDITIONAL_ENDPOINTS.txt <- Admin/info endpoints discovered
+|   |-- 26_ADDITIONAL_INFRASTRUCTURE.txt <- Military, party, gov ArcGIS
+|   |-- 27_FINAL_INFRASTRUCTURE_SUMMARY.txt <- Complete summary
+|   |-- 28_US_COLOMBIA_CRISIS_2025.txt <- Petro sanctions, Rubio confrontation
+|   |-- 29_QUANTIFIED_FINDINGS.txt <- Complete statistics & metrics
+|   |-- 30_MILITARY_INFRASTRUCTURE_ENUMERATION.txt <- 421+ military subdomains
+|   |-- 31_FINAL_DATA_EXTRACTION.txt <- Final session summary (Jan 5 AM)
+|   |-- 32_POLICE_AI_PLATFORM_OSINT.txt <- Police AI platform AWS exposure
+|   |-- 33_INTELLIGENCE_AGENCIES_OSINT.txt <- DNI, Fiscalia, DIJIN enumeration
+|   |-- 34_ARCGIS_COMPLETE_ENUMERATION.txt <- 300+ services, 26 folders
+|   |-- 35_SESSION_WRAP_UP_JAN5_PM.txt <- Final session summary
+|
+|-- RAW DOWNLOADS/               <- ArcGIS data dumps (455 files, 2.0 GB)
+|   |-- *_MapServer.json         <- Map service metadata
+|   |-- *_FeatureServer.json     <- Feature service metadata
+|   |-- *_layer*.json            <- Layer data with geometry
+|   |-- *.png                    <- Exported map images
+|   |-- CNR_SEP_2025_MIL1_*      <- September 2025 military map (156 MB)
+|   |-- CNR_julio_2025_MIL1_*    <- July 2025 military map
+|   |-- Mapa_AT_MIL1_*           <- AT military map
+|   |-- Mapa_Caso_03_MIL1_*      <- Case 03 military map
+|   |-- DDHH_*                   <- Human rights data (145+ MB)
+|   |-- Afectaciones_Firmantes_* <- Peace signatory attacks (38 MB)
+|   |-- ELN_*.json               <- ELN territory polygons
+|   |-- ClanDelGolfo_*.json      <- Clan del Golfo territories (1.9 MB)
+|   |-- EMC_FARC_*.json          <- EMC/FARC critical zones (97 MB)
+|   |-- Disidencias_*.json       <- FARC dissident territories
+|   |-- Homicidios_*.json        <- Homicide data
+|   |-- Masacre_*.json           <- Massacre data
+|   |-- PoliceAI_*.html          <- Police AI platform captures
+|   |-- DNI_*.html               <- Intelligence agency captures
+|
+|-- Credentials/                 <- Extracted credentials (40 KB)
+|   |-- EMAILS.txt               <- 460+ exposed emails
+|   |-- GOV_EMAILS.txt           <- 113 government emails
+|   |-- USERNAMES.txt            <- 3 usernames
+|   |-- HASHES.txt               <- 103 hashes/GUIDs
+|   |-- AWS_CREDENTIALS.txt      <- AWS Account ID, STS tokens
+|   |-- SESSION_COOKIES.txt      <- Police AI session cookies
+|   |-- LANDMINE_EMAILS.txt      <- Landmine survey contacts
+|
+|-- HTML/                        <- Visual HTML Reports & Maps (247 MB)
+|   |-- index.html               <- Main overview page
+|   |-- timeline.html            <- Interactive timeline
+|   |-- armed_groups_map.html    <- Interactive territory map
+|   |-- attacks_on_signatories_map.html <- Attack choropleth
+|   |-- *.geojson                <- Converted map data
+|
+|-- intel/                       <- Intelligence Reports (24 KB)
+|   |-- PETRO_PROFILE.txt        <- Subject biography
+|   |-- M19_CRIMES.txt           <- M-19 criminal history
+|   |-- US_SANCTIONS.txt         <- OFAC sanctions detail
+|   |-- MADURO_CONNECTION.txt    <- Venezuela alliance
+|   |-- DRUG_TRADE.txt           <- Drug trafficking intel
+|
+|-- Assets/                      <- Graphics and resources (192 KB)
+|-- Snips/                       <- Screenshots (256 KB)
+|-- sources/                     <- Source references (13 KB)
+
+================================================================================
+CRITICAL INTELLIGENCE CAPTURED
+================================================================================
+
+1. MILITARY MAPS (4 maps, multiple layers)
+   - CNR_SEP_2025_MIL1: September 2025 operational map (156 MB)
+   - CNR_julio_2025_MIL1: July 2025 operational map
+   - Mapa_AT_MIL1: AT zone map
+   - Mapa_Caso_03_MIL1: Case 03 investigation map
+
+2. ARMED GROUP TERRITORIES (87+ zones mapped)
+   - ELN: 11 zones + critical zones data (21 MB)
+   - Clan del Golfo (AGC): 22 zones + presence data (1.9 MB)
+   - Disidencias EMC: 22 zones + critical zones (97 MB)
+   - Segunda Marquetalia: 21 zones (Dec 2024 data)
+   - Disidencias EMBF: 11 zones
+
+3. PEACE SIGNATORY DATA
+   - 163 MB of signatory location data (Firmantes mayo 2025)
+   - 37.7 MB attack data (110 incidents in H1 2025)
+   - AETCR camp locations (reintegration sites)
+   - 29 homicides, 9 disappearances, 68 threats
+   - Reparations fund properties (7.7 MB)
+
+4. HUMAN RIGHTS DATA
+   - Fiscalia SIG (Prosecutor) data: 81 MB
+   - Fiscalia general data: 32 MB
+   - Journalist federation (FECOLPER): 32 MB
+   - Protection route information
+   - Press freedom data (FLIP)
+   - Women violence programs
+   - Historical Memory Center (CNMH): 119 KB
+   - INDEPAZ peace institute data
+   - Defensoria alerts (Ombudsman)
+   - Somos Defensores (HR defenders)
+
+5. VIOLENCE/CRIME STATISTICS (2010-2025)
+   - Homicides by municipality
+   - Massacres data
+   - Femicides
+   - Kidnappings
+   - Extortion
+   - Human trafficking
+   - Domestic violence
+   - Illegal recruitment
+   - Displacement
+   - Threats
+   - Sexual crimes
+   - Actions against police (127 KB)
+
+6. DRUG/COCA DATA
+   - Coca cultivation 2017, 2022, 2023 (724 KB)
+   - PNIS substitution program data
+   - Coca change tracking
+
+7. EXPOSED CREDENTIALS
+   - 460 emails (113 .gov.co government emails)
+   - 3 usernames
+   - 103 hashes
+   - AWS Account ID: 926162397524
+   - AWS temporary credentials patterns
+
+8. POLICE AI PLATFORM
+   - NADIA AI (Amazon Bedrock)
+   - AI Search Engine
+   - Document analysis (HOUNDOC)
+   - Transcription services
+   - Predictive analytics (ANTICIPACION)
+   - Crime mapping analytics
+
+================================================================================
+VULNERABILITY SUMMARY
+================================================================================
+
+[CRITICAL] ArcGIS REST API - No authentication required
+[CRITICAL] Military intelligence maps publicly accessible
+[CRITICAL] Military maps VISIBLE IN PUBLIC GALLERY
+[CRITICAL] 240+ hosted services with sensitive data
+[CRITICAL] AWS infrastructure exposed (Account ID, bucket names)
+[HIGH] Armed group territory data exposed
+[HIGH] Peace signatory locations exposed (AETCR camp GPS coordinates)
+[HIGH] Protection route data accessible
+[HIGH] Government employee emails exposed (460 total, 113 .gov.co)
+[HIGH] Violence statistics 2010-2025 publicly accessible
+[HIGH] Session cookies captured from Police AI platform
+[MEDIUM] Portal configuration exposed
+[MEDIUM] Server info exposed (version 11.3.0)
+[MEDIUM] Service GUIDs exposed
+[MEDIUM] AWS temporary credentials in pre-signed URLs
+[MEDIUM] DNI codename servers discovered
+
+================================================================================
+INFRASTRUCTURE DISCOVERED
+================================================================================
+
+GOVERNMENT:
+- ergit.presidencia.gov.co (ArcGIS Enterprise 11.3.0)
+- ia.policia.gov.co (Police AI Platform - AWS)
+- dni.gov.co (National Intelligence - 15 subdomains)
+- fiscalia.gov.co (Prosecutor - 30+ subdomains)
+- mininterior.gov.co (Interior Ministry - 27 subdomains)
+
+MILITARY:
+- ejercito.mil.co (Army - 147 subdomains)
+- armada.mil.co (Navy - 94 subdomains)
+- fac.mil.co (Air Force - 79 subdomains)
+- cgfm.mil.co (Joint Forces - 41 subdomains)
+
+PARTY/POLITICAL:
+- colombiahumana.co (54 subdomains)
+- pactohistorico.co (12 subdomains)
+- gustavopetro.co (parked)
+- gustavo-petro.com (parked)
+
+AWS INFRASTRUCTURE:
+- S3: pon-prod-ai-platform-926162397524.s3.amazonaws.com
+- Region: us-east-1
+- CloudFront CDN
+- Amazon Bedrock AI
+
+================================================================================
+SESSIONS CONDUCTED
+================================================================================
+
+Session 1: January 4, 2026 (Evening)
+- Initial ArcGIS discovery and enumeration
+- Military map downloads
+- Armed group territory extraction
+- 322 files, 1.18 GB
+
+Session 2: January 5, 2026 (Morning)
+- US-Colombia crisis research
+- Current events documentation
+- Military infrastructure enumeration (421+ subdomains)
+
+Session 3: January 5, 2026 (Afternoon #1)
+- Police AI Platform discovery
+- AWS exposure documentation
+- Intelligence agencies enumeration
+- DNI codename servers
+
+Session 4: January 5, 2026 (Afternoon #2) - FINAL
+- Complete ArcGIS enumeration (300+ services)
+- Hosted folder discovery (240+ services)
+- Violence/crime data downloads
+- Human rights organization data
+- Final documentation
+- Total: 455 files, 2.0 GB
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+1. Responsible disclosure to Colombian CERT (ColCERT)
+2. Document methodology for vulnerability report
+3. Archive all evidence with timestamps
+4. Create visualization package for briefing
+5. Assess risk to exposed individuals
+6. Monitor for data changes or takedowns
+7. Cross-reference armed group territories with violence data
+8. Map peace signatory locations vs. attack patterns
+
+================================================================================
+                         END OF MASTER INDEX
+================================================================================

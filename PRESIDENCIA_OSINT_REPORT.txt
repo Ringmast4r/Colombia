@@ -1,0 +1,282 @@
+================================================================================
+             OSINT REPORT: PRESIDENCIA.GOV.CO
+             Colombian Presidential Website Intelligence
+             Generated: January 5, 2026
+================================================================================
+
+TARGET: presidencia.gov.co / www.presidencia.gov.co
+STATUS: Active Colombian Government Website
+METHODOLOGY: Passive OSINT via Tor + Direct Queries
+
+================================================================================
+[1] DOMAIN INFORMATION
+================================================================================
+
+Domain:             presidencia.gov.co
+Registered:         1999-10-29 (26+ years old)
+Expires:            2026-11-02
+Last Updated:       2025-11-03
+Registrar:          www.registrocolombia.co
+Status:             OK, autoRenewPeriod
+
+Primary IP:         170.246.114.229
+IPv6:               2801:172::930:81:0:12
+
+================================================================================
+[2] DNS RECORDS
+================================================================================
+
+A RECORD:
+  presidencia.gov.co -> 170.246.114.229
+
+MX RECORDS (Mail Servers):
+  Priority 5: mxpalacio.presidencia.gov.co (170.246.114.213)
+  Priority 5: pxpalacio.presidencia.gov.co (190.145.219.51)
+
+NS RECORDS (Nameservers - Self-Hosted):
+  ariadne.presidencia.gov.co
+    - 190.145.219.8
+    - 181.59.42.8
+    - 2801:172::930:0:0:8
+
+  bdpalacio.presidencia.gov.co
+    - 170.246.114.197
+    - 2801:172:2:0:1208::8
+
+TXT RECORDS (Verification & SPF):
+  SPF: v=spf1 mx ip4:190.145.219.51 ip4:190.145.219.52 ip4:170.246.114.213
+       include:spf.protection.outlook.com include:spf.rpost.net -all
+
+  Google Site Verification:
+    google-site-verification=ZbFu0BAhJKxdmmP1uDBmrB3APD7G290CWV3l8ieJ_Lw
+
+  Microsoft 365 Verifications:
+    MS=ms11844033
+    MS=ms33132372
+    MS=ms37011212
+
+  GlobalSign Domain Verifications:
+    globalsign-domain-verification=ynqUB_TdDIexM50K56_qt2QTD06Rk96h9QVlmsE_CG
+    globalsign-domain-verification=emAfZDbqWX32Cof2nFQ-xcLsZF4h0aAUm7tZScuGNJ
+    globalsign-domain-verification=7z1ceOCd0zC1qUDe7MhUJImRomI_0q1WfDFei2aMCS
+
+  Cisco CI Verification:
+    cisco-ci-domain-verification=50f370706a12aaca6d1d02152128404936a7b128da5b6237a2b36ef5f5a37094
+
+  Unknown Tokens (Potential DKIM/Other):
+    2m0j1gjd18z0fhf9y95hpwcvtbkn8j04
+    FpO49es0QXYbffjSog/a7fy9YD4imQHWcOGeyHdY4J+...
+    EC00D0DD7529AD0AF688E733D1FE46D40CE9ACB5787195CF91A70AE05514515E
+    _kbxbxvevnm857ssvf8o4a7mxtj2wqvp
+    4cacfb2b340dc5a4fd8497b1b79354c19ecc5abf69982e63d5b7a0188a1ea782
+    4ZuU9RuNfsSmc2hoWLAQm6JSFE02RpMWZf+oQh5Edjo=
+    xg3fc57qjj2fqcqj84nbl2y9mw01s10c
+
+================================================================================
+[3] SUBDOMAINS DISCOVERED (33 Total)
+================================================================================
+
+Via Certificate Transparency (crt.sh):
+
+INTERNAL SYSTEMS:
+  ergit.presidencia.gov.co          <- ArcGIS Enterprise 11.3.0 (GIS System)
+  cumplimiento.presidencia.gov.co   <- Compliance System
+  comisionesext.presidencia.gov.co  <- External Commissions
+  aspirantes.presidencia.gov.co     <- Job Applicants Portal
+  boletines.presidencia.gov.co      <- Newsletters
+  certificacionuc.presidencia.gov.co
+  certificacionucapp.presidencia.gov.co
+
+COMMUNICATION SYSTEMS:
+  colombiachat.presidencia.gov.co   <- Chat System
+  agente.colombiachat.presidencia.gov.co
+  login.colombiachat.presidencia.gov.co
+  reportes.colombiachat.presidencia.gov.co
+  supervisor.colombiachat.presidencia.gov.co
+  meet.presidencia.gov.co           <- Video Conferencing
+  sip.presidencia.gov.co            <- VoIP/SIP
+  dialin.presidencia.gov.co         <- Dial-in Conferencing
+  lyncdiscover.presidencia.gov.co   <- Skype for Business/Lync
+  conf.presidencia.gov.co           <- Conferencing
+
+MAIL SYSTEMS:
+  autodiscover.presidencia.gov.co   <- Exchange Autodiscover
+  correo.presidencia.gov.co         <- Webmail
+  mxpalacio.presidencia.gov.co      <- Mail Exchange
+  pxpalacio.presidencia.gov.co      <- Mail Exchange
+
+NAMED SERVERS (Columbus Ship Theme):
+  lanina.presidencia.gov.co         <- "La Nina"
+  lapinta.presidencia.gov.co        <- "La Pinta"
+  santamaria.presidencia.gov.co     <- "Santa Maria"
+
+OTHER:
+  allium.presidencia.gov.co
+  ws.presidencia.gov.co             <- Web Services
+  secumpleelcambio.presidencia.gov.co <- "Change is fulfilled" (Petro slogan?)
+  petro.presidencia.gov.co          <- EXISTS IN CERTS BUT NO DNS (Internal?)
+
+================================================================================
+[4] INFRASTRUCTURE ANALYSIS
+================================================================================
+
+HOSTING PROVIDERS:
+
+Primary Web (170.246.114.229):
+  ASN: AS27951 - Media Commerce Partners S.A
+  Organization: Media Commerce Partners S.A
+  Location: Bogota, Colombia
+  Hostname: 170246114229.ip84.static.mediacommerce.com.co
+  Classification: Hosting, Webserver
+
+Mail Server (190.145.219.51):
+  ASN: AS14080 - Telmex Colombia S.A.
+  Hostname: pxpalacio.presidencia.gov.co
+  Location: Bogota, Colombia
+
+TECHNOLOGY STACK:
+
+Web Server:
+  Platform: Microsoft SharePoint 16.0.0.10387
+  Headers Observed:
+    - MicrosoftSharePointTeamServices: 16.0.0.10387
+    - SPRequestGuid: 82dee9a1-ab27-1089-bd0d-ef6961b9a4ee
+    - SPRequestDuration: 218ms
+    - SPIisLatency: 0
+
+Load Balancer / WAF:
+  Product: F5 BIG-IP
+  Evidence:
+    - TS* cookies (TS0135e55e, TSc94d823d027, etc.)
+    - Bot defense challenge pages
+    - JavaScript obfuscation for anti-bot
+
+Security Headers:
+  - Strict-Transport-Security: max-age=31536000; includeSubDomains
+  - X-Frame-Options: SAMEORIGIN
+  - X-Content-Type-Options: nosniff
+  - X-MS-InvokeApp: 1; RequireReadOnly
+
+ArcGIS Enterprise (ergit.presidencia.gov.co):
+  Version: 11.3.0
+  Components: Dojo, Calcite Components
+  Purpose: Geographic Information System
+  Path: /arcpre/home/
+
+Email Systems:
+  - Microsoft 365 (outlook.com SPF include)
+  - rPost (secure email - spf.rpost.net)
+
+================================================================================
+[5] ROBOTS.TXT ANALYSIS
+================================================================================
+
+User-agent: *
+Disallow: /_layouts/        <- SharePoint layouts
+Disallow: /_vti_bin/        <- SharePoint services
+Disallow: /_catalogs/       <- SharePoint catalogs
+Disallow: /Paginas/test1.aspx   <- TEST PAGE (Now 404)
+
+Sitemap: https://www.presidencia.gov.co:443/sitemap.xml
+
+SITEMAP STRUCTURE:
+  sitemap0.xml       <- Main sitemap
+  sitemap_mobile0.xml <- Mobile sitemap
+  Generated: 2026-01-03T15:18:43
+
+================================================================================
+[6] SECURITY OBSERVATIONS
+================================================================================
+
+POSITIVE:
+  [+] HSTS enabled with 1-year max-age
+  [+] X-Frame-Options prevents clickjacking
+  [+] X-Content-Type-Options prevents MIME sniffing
+  [+] Bot protection active (F5 ASM)
+  [+] SPF record configured with -all (hard fail)
+
+CONCERNS:
+  [-] Self-hosted nameservers (single point of failure if compromised)
+  [-] Multiple internal subdomains exposed in certificates
+  [-] ArcGIS instance publicly accessible
+  [-] petro.presidencia.gov.co in certs but no DNS (shadow IT?)
+  [-] Test page in robots.txt (information disclosure)
+  [-] Some verification tokens in TXT records (minor info leak)
+
+EXPOSED INTERNAL HOSTNAMES:
+  - allium, lanina, lapinta, santamaria (server naming convention)
+  - ariadne, bdpalacio (nameservers)
+  - mxpalacio, pxpalacio (mail)
+
+================================================================================
+[7] IP ADDRESS INVENTORY
+================================================================================
+
+Web Servers:
+  170.246.114.229    <- Main website (Media Commerce)
+  170.246.114.213    <- Mail server mxpalacio
+  170.246.114.197    <- Nameserver bdpalacio
+
+Telmex Network:
+  190.145.219.8      <- Nameserver ariadne
+  190.145.219.51     <- Mail server pxpalacio
+  190.145.219.52     <- Referenced in SPF
+
+Other:
+  181.59.42.8        <- Nameserver ariadne (backup)
+
+IPv6 Addresses:
+  2801:172::930:81:0:12        <- Main site
+  2801:172::930:0:0:8          <- ariadne NS
+  2801:172:2:0:1208::8         <- bdpalacio NS
+
+================================================================================
+[8] CONTACT INFORMATION
+================================================================================
+
+Support Email: soportes@presidencia.gov.co
+Registrar Abuse: abuse@registrocolombia.co
+Registrar Phone: +57.3127823611
+
+================================================================================
+[9] RELATED GOVERNMENT DOMAINS
+================================================================================
+
+Other Colombian .gov.co domains discovered:
+  - cancilleria.gov.co      <- Foreign Ministry
+  - dian.gov.co             <- Tax Authority
+  - dnp.gov.co              <- Planning Department
+  - cali.gov.co             <- Cali City
+  - bomberosbogota.gov.co   <- Bogota Fire Department
+  - colcert.gov.co          <- Colombia CERT
+  - aerocivil.gov.co        <- Civil Aviation
+
+================================================================================
+[10] INTELLIGENCE NOTES
+================================================================================
+
+1. The Colombian Presidency uses Microsoft 365 and SharePoint for their
+   web presence, with F5 BIG-IP providing security and load balancing.
+
+2. Internal servers are named after Columbus's ships (Nina, Pinta, Santa Maria)
+   which is culturally significant given Colombia's naming after Columbus.
+
+3. The "secumpleelcambio" subdomain translates to "change is being fulfilled"
+   which appears to be a Petro administration slogan subdomain.
+
+4. The "petro.presidencia.gov.co" subdomain exists in SSL certificates but
+   has no public DNS resolution - suggests internal-only or decommissioned.
+
+5. ArcGIS Enterprise 11.3.0 is publicly accessible for geographic data.
+
+6. The domain has been registered since 1999, indicating institutional
+   continuity across multiple administrations.
+
+7. Email security includes rPost for certified email delivery.
+
+================================================================================
+                           END OF REPORT
+================================================================================
+
+Collected via passive OSINT - No active scanning performed.
+All data from public DNS, certificate transparency, and HTTP headers.
