@@ -1,0 +1,187 @@
+{
+  "currentVersion": 11.3,
+  "cimVersion": "3.3.0",
+  "serviceDescription": "",
+  "mapName": "Mapa",
+  "description": "",
+  "copyrightText": "",
+  "supportsDynamicLayers": true,
+  "layers": [
+    {
+      "id": 0,
+      "name": "MGN_DPTO_POLITICO",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 1,
+      "name": "Municipios_AT_2025",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 2,
+      "name": "Municipios_PEP",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    }
+  ],
+  "tables": [],
+  "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857,
+    "xyTolerance": 0.001,
+    "zTolerance": 0.001,
+    "mTolerance": 0.001,
+    "falseX": -20037700,
+    "falseY": -30241100,
+    "xyUnits": 10000,
+    "falseZ": -100000,
+    "zUnits": 10000,
+    "falseM": -100000,
+    "mUnits": 10000
+  },
+  "singleFusedMapCache": false,
+  "initialExtent": {
+    "xmin": -8940766.428813467,
+    "ymin": 83152.91675074154,
+    "xmax": -7206709.263649284,
+    "ymax": 1037247.1310565575,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857,
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -20037700,
+      "falseY": -30241100,
+      "xyUnits": 10000,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "fullExtent": {
+    "xmin": -9098767.65996614,
+    "ymin": -471243.533192914,
+    "xmax": -7441397.982281899,
+    "ymax": 1504865.2504856542,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857,
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -20037700,
+      "falseY": -30241100,
+      "xyUnits": 10000,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "datesInUnknownTimezone": false,
+  "minScale": 0,
+  "maxScale": 0,
+  "units": "esriMeters",
+  "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+  "documentInfo": {
+    "Title": "Mapa",
+    "Author": "",
+    "Comments": "",
+    "Subject": "",
+    "Category": "",
+    "Version": "3.4.0",
+    "AntialiasingMode": "Fast",
+    "TextAntialiasingMode": "Force",
+    "Keywords": "AT,Protección"
+  },
+  "supportsQueryDomains": true,
+  "capabilities": "Query,Map,Data",
+  "supportedQueryFormats": "JSON, geoJSON, PBF",
+  "exportTilesAllowed": false,
+  "referenceScale": 0.0,
+  "datumTransformations": [
+    {
+      "geoTransforms": [
+        {
+          "wkid": 15738,
+          "latestWkid": 15738,
+          "transformForward": false,
+          "name": "MAGNA_To_WGS_1984_1"
+        }
+      ]
+    },
+    {
+      "geoTransforms": [
+        {
+          "wkid": 15738,
+          "latestWkid": 15738,
+          "transformForward": true,
+          "name": "MAGNA_To_WGS_1984_1"
+        }
+      ]
+    },
+    {
+      "geoTransforms": [
+        {
+          "wkid": 15738,
+          "latestWkid": 15738,
+          "transformForward": false,
+          "name": "MAGNA_To_WGS_1984_1"
+        }
+      ]
+    },
+    {
+      "geoTransforms": [
+        {
+          "wkid": 15738,
+          "latestWkid": 15738,
+          "transformForward": true,
+          "name": "MAGNA_To_WGS_1984_1"
+        }
+      ]
+    }
+  ],
+  "supportsDatumTransformation": true,
+  "floorAwareMapProperties": {
+    "defaultFloorFilterSettings": {
+      "isEnabled": false
+    }
+  },
+  "archivingInfo": {
+    "supportsHistoricMoment": false
+  },
+  "supportsClipping": true,
+  "supportsSpatialFilter": true,
+  "supportsTimeRelation": true,
+  "supportsQueryDataElements": true,
+  "mapUnits": {
+    "uwkid": 9001
+  },
+  "maxRecordCount": 2000,
+  "maxImageHeight": 4096,
+  "maxImageWidth": 4096,
+  "supportedExtensions": "",
+  "serviceItemId": "c7cc2294ab0f46379eeb0a6fbf55ecef"
+}

@@ -1,0 +1,116 @@
+{
+  "currentVersion": 11.3,
+  "cimVersion": "3.3.0",
+  "serviceDescription": "",
+  "mapName": "Map2",
+  "description": "",
+  "copyrightText": "",
+  "supportsDynamicLayers": true,
+  "layers": [
+    {
+      "id": 0,
+      "name": "SDE.DBO.frm_victim_nb",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPoint",
+      "supportsDynamicLegends": true
+    }
+  ],
+  "tables": [],
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326,
+    "xyTolerance": 8.983152841195215e-09,
+    "zTolerance": 0.001,
+    "mTolerance": 0.001,
+    "falseX": -400,
+    "falseY": -400,
+    "xyUnits": 999999999.9999999,
+    "falseZ": -100000,
+    "zUnits": 10000,
+    "falseM": -100000,
+    "mUnits": 10000
+  },
+  "singleFusedMapCache": false,
+  "initialExtent": {
+    "xmin": -161.6967511415139,
+    "ymin": -132.61260530957873,
+    "xmax": 161.6967511415139,
+    "ymax": 167.97043378625023,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326,
+      "xyTolerance": 8.983152841195215e-09,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -400,
+      "falseY": -400,
+      "xyUnits": 999999999.9999999,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "fullExtent": {
+    "xmin": -78.76787100699994,
+    "ymin": 5.684341886080802e-14,
+    "xmax": 5.684341886080802e-14,
+    "ymax": 10.59232000000003,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326,
+      "xyTolerance": 8.983152841195215e-09,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -400,
+      "falseY": -400,
+      "xyUnits": 999999999.9999999,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "datesInUnknownTimezone": false,
+  "minScale": 0,
+  "maxScale": 0,
+  "units": "esriDecimalDegrees",
+  "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+  "documentInfo": {
+    "Title": "Map2",
+    "Author": "",
+    "Comments": "",
+    "Subject": "",
+    "Category": "",
+    "Version": "2.9.0",
+    "AntialiasingMode": "Fast",
+    "TextAntialiasingMode": "Force",
+    "Keywords": "AICMA"
+  },
+  "supportsQueryDomains": true,
+  "capabilities": "Map,Query,Data",
+  "supportedQueryFormats": "JSON, geoJSON, PBF",
+  "exportTilesAllowed": false,
+  "referenceScale": 0.0,
+  "supportsDatumTransformation": true,
+  "archivingInfo": {
+    "supportsHistoricMoment": false
+  },
+  "supportsClipping": true,
+  "supportsSpatialFilter": true,
+  "supportsTimeRelation": true,
+  "supportsQueryDataElements": true,
+  "mapUnits": {
+    "uwkid": 9102
+  },
+  "maxRecordCount": 2000,
+  "maxImageHeight": 4096,
+  "maxImageWidth": 4096,
+  "supportedExtensions": "FeatureServer",
+  "serviceItemId": "7867034eed34477282c807b3ace686af"
+}

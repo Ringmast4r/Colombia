@@ -1,0 +1,149 @@
+{
+  "currentVersion": 11.3,
+  "cimVersion": "3.3.0",
+  "serviceDescription": "",
+  "hasVersionedData": false,
+  "hasArchivedData": false,
+  "hasBranchVersionedData": false,
+  "supportsDisconnectedEditing": false,
+  "supportsDatumTransformation": true,
+  "supportsReturnServiceEditsOption": true,
+  "returnServiceEditsHaveSR": true,
+  "supportsQueryDataElements": true,
+  "datesInUnknownTimezone": false,
+  "supportsRelationshipsResource": true,
+  "syncEnabled": false,
+  "syncCapabilities": {
+    "supportsRegisterReplicaForServer": true,
+    "supportsSyncDirectionControl": true,
+    "supportsPerLayerSync": true,
+    "supportsPerReplicaSync": true,
+    "supportsAttachmentsSyncDirection": true,
+    "supportsSyncModelNone": true,
+    "supportsDurableUrlForSyncModelNone": false
+  },
+  "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson",
+  "extractChangesCapabilities": {
+    "supportsReturnIdsOnly": false,
+    "supportsReturnExtentOnly": false,
+    "supportsReturnAttachments": false,
+    "supportsLayerQueries": false,
+    "supportsGeometry": false,
+    "supportsFeatureReturn": false,
+    "supportsReturnHasGeometryUpdates": false,
+    "supportsFieldsToCompare": false,
+    "supportsServerGens": false
+  },
+  "supportedQueryFormats": "JSON",
+  "maxRecordCount": 2000,
+  "maxRecordCountFactor": 1,
+  "capabilities": "Query",
+  "description": "",
+  "copyrightText": "",
+  "advancedEditingCapabilities": {
+    "supportsSplit": false,
+    "supportsReturnServiceEditsInSourceSR": true,
+    "supportsAsyncApplyEdits": true,
+    "supportsApplyEditsbyUploadID": true,
+    "supportedApplyEditsUploadIDFormats": "JSON",
+    "supportsMultipatchOptionForServiceEdits": true,
+    "supportedApplyEditsOptions": {
+      "supportedEditingOptions": 0
+    }
+  },
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326,
+    "xyTolerance": 8.983152841195215e-09,
+    "zTolerance": 0.001,
+    "mTolerance": 0.001,
+    "falseX": -400,
+    "falseY": -400,
+    "xyUnits": 999999999.9999999,
+    "falseZ": -100000,
+    "zUnits": 10000,
+    "falseM": -100000,
+    "mUnits": 10000
+  },
+  "initialExtent": {
+    "xmin": -104.2175683529143,
+    "ymin": -10.447561988616044,
+    "xmax": -44.221491363085626,
+    "ymax": 22.20116525261615,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326,
+      "xyTolerance": 8.983152841195215e-09,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -400,
+      "falseY": -400,
+      "xyUnits": 999999999.9999999,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "fullExtent": {
+    "xmin": -79.01021097499995,
+    "ymin": -0.7058400439999559,
+    "xmax": -69.42884874099997,
+    "ymax": 12.459443308000061,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326,
+      "xyTolerance": 8.983152841195215e-09,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -400,
+      "falseY": -400,
+      "xyUnits": 999999999.9999999,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "allowGeometryUpdates": true,
+  "allowTrueCurvesUpdates": true,
+  "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
+  "supportsApplyEditsWithGlobalIds": false,
+  "supportsTrueCurve": true,
+  "units": "esriDecimalDegrees",
+  "documentInfo": {
+    "Title": "Map70",
+    "Author": "",
+    "Comments": "",
+    "Subject": "",
+    "Category": "",
+    "Keywords": ""
+  },
+  "supportsQueryDomains": true,
+  "supportsQueryContingentValues": true,
+  "layers": [
+    {
+      "id": 0,
+      "name": "DDHH_MEDICINA_LEGAL_ENTREGA_FINAL_VISTA",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon"
+    }
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "name": "DDHH_MEDICINA_LEGAL_FINAL"
+    }
+  ],
+  "relationships": [],
+  "enableZDefaults": false,
+  "allowUpdateWithoutMValues": false,
+  "supportsVCSProjection": true,
+  "referenceScale": 0,
+  "serviceItemId": "ae1721c51abe4579979370a268a9490e"
+}

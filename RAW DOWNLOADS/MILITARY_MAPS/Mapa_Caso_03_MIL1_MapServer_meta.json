@@ -1,0 +1,243 @@
+{
+  "currentVersion": 11.3,
+  "cimVersion": "3.3.0",
+  "serviceDescription": "",
+  "mapName": "Mapa",
+  "description": "",
+  "copyrightText": "",
+  "supportsDynamicLayers": true,
+  "layers": [
+    {
+      "id": 9,
+      "name": "Antiguos Espacios Territoriales de Capacitación y Reincororación AETCR",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPoint",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 36,
+      "name": "MGN_DPTO_POLITICO",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 10,
+      "name": "MGN_DPTO_POLITICO",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 35,
+      "name": "Municipios con presencia de GAO, GAO-r y GDCO",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": [
+        34,
+        33,
+        32,
+        31
+      ],
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Group Layer",
+      "supportsDynamicLegends": false
+    },
+    {
+      "id": 34,
+      "name": "Autodefensas Conquistadores de la Sierra Nevada",
+      "parentLayerId": 35,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 33,
+      "name": "Clan del Golfo - AGC",
+      "parentLayerId": 35,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 32,
+      "name": "Frente 33 EMBF",
+      "parentLayerId": 35,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 31,
+      "name": "ELN",
+      "parentLayerId": 35,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    },
+    {
+      "id": 21,
+      "name": "Presencia de Firmantes a nivel muncipal ",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Feature Layer",
+      "geometryType": "esriGeometryPolygon",
+      "supportsDynamicLegends": true
+    }
+  ],
+  "tables": [],
+  "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857,
+    "xyTolerance": 0.001,
+    "zTolerance": 0.001,
+    "mTolerance": 0.001,
+    "falseX": -20037700,
+    "falseY": -30241100,
+    "xyUnits": 10000,
+    "falseZ": -100000,
+    "zUnits": 10000,
+    "falseM": -100000,
+    "mUnits": 10000
+  },
+  "singleFusedMapCache": false,
+  "initialExtent": {
+    "xmin": -8657630.926163506,
+    "ymin": 781375.6886977209,
+    "xmax": -7541513.873651806,
+    "ymax": 1565363.8607779443,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857,
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -20037700,
+      "falseY": -30241100,
+      "xyUnits": 10000,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "fullExtent": {
+    "xmin": -9098767.65996614,
+    "ymin": -471243.5332036831,
+    "xmax": -7441397.982254127,
+    "ymax": 1504865.2504856542,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857,
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -20037700,
+      "falseY": -30241100,
+      "xyUnits": 10000,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "datesInUnknownTimezone": false,
+  "minScale": 0,
+  "maxScale": 0,
+  "units": "esriMeters",
+  "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+  "documentInfo": {
+    "Title": "Mapa",
+    "Author": "",
+    "Comments": "",
+    "Subject": "",
+    "Category": "",
+    "Version": "3.4.0",
+    "AntialiasingMode": "Fast",
+    "TextAntialiasingMode": "Force",
+    "Keywords": "JEP,CASO003,CESAR,MAGDALENA,LA GUAJIRA"
+  },
+  "supportsQueryDomains": true,
+  "capabilities": "Map,Query,Data",
+  "supportedQueryFormats": "JSON, geoJSON, PBF",
+  "exportTilesAllowed": false,
+  "referenceScale": 0.0,
+  "datumTransformations": [
+    {
+      "geoTransforms": [
+        {
+          "wkid": 15738,
+          "latestWkid": 15738,
+          "transformForward": false,
+          "name": "MAGNA_To_WGS_1984_1"
+        }
+      ]
+    },
+    {
+      "geoTransforms": [
+        {
+          "wkid": 15738,
+          "latestWkid": 15738,
+          "transformForward": true,
+          "name": "MAGNA_To_WGS_1984_1"
+        }
+      ]
+    }
+  ],
+  "supportsDatumTransformation": true,
+  "floorAwareMapProperties": {
+    "defaultFloorFilterSettings": {
+      "isEnabled": false
+    }
+  },
+  "archivingInfo": {
+    "supportsHistoricMoment": false
+  },
+  "supportsClipping": true,
+  "supportsSpatialFilter": true,
+  "supportsTimeRelation": true,
+  "supportsQueryDataElements": true,
+  "mapUnits": {
+    "uwkid": 9001
+  },
+  "maxRecordCount": 2000,
+  "maxImageHeight": 4096,
+  "maxImageWidth": 4096,
+  "supportedExtensions": "",
+  "serviceItemId": "b5b70ca3f01047609800147e27a586a7"
+}
