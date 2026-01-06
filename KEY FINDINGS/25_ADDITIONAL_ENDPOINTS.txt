@@ -1,0 +1,115 @@
+================================================================================
+ADDITIONAL ENDPOINT DISCOVERY
+================================================================================
+Target: ergit.presidencia.gov.co
+Date: January 5, 2026
+
+================================================================================
+[1] SERVER INFO ENDPOINT
+================================================================================
+
+URL: https://ergit.presidencia.gov.co/server/rest/info?f=json
+Status: PUBLIC (no auth required)
+
+Response:
+{
+  "currentVersion": 11.3,
+  "fullVersion": "11.3.0",
+  "soapUrl": "https://ergit.presidencia.gov.co/server/services",
+  "secureSoapUrl": null,
+  "owningSystemUrl": "https://ergit.presidencia.gov.co/arcpre",
+  "authInfo": {
+    "isTokenBasedSecurity": true,
+    "tokenServicesUrl": "https://ergit.presidencia.gov.co/arcpre/sharing/rest/generateToken"
+  }
+}
+
+================================================================================
+[2] PORTAL INFO ENDPOINT
+================================================================================
+
+URL: https://ergit.presidencia.gov.co/arcpre/sharing/rest/info?f=json
+Status: PUBLIC (no auth required)
+
+Response:
+{
+  "owningSystemUrl": "https://ergit.presidencia.gov.co/arcpre",
+  "authInfo": {
+    "tokenServicesUrl": "..../generateToken",
+    "isTokenBasedSecurity": true
+  }
+}
+
+================================================================================
+[3] ADMIN ENDPOINTS
+================================================================================
+
+/server/admin?f=json
+Status: ACCESSIBLE but requires token
+Response: {"status":"error","messages":["Unauthorized access. Token not found."],"code":499}
+Note: Reveals generateToken operation exists
+
+/server/admin/services?f=json
+Status: Requires token
+
+/arcgis/admin
+Status: 404 Not Found
+
+/arcpre/admin
+Status: 500 Internal Server Error
+
+================================================================================
+[4] TOKEN GENERATION
+================================================================================
+
+Generate Token URL: https://ergit.presidencia.gov.co/arcpre/sharing/rest/generateToken
+Status: ACCESSIBLE (HTML form returned)
+Method: POST
+Note: Would require valid credentials to generate token
+
+/server/tokens/generateToken
+Status: 405 Method Not Allowed (GET not allowed, POST required)
+
+================================================================================
+[5] SOAP SERVICES
+================================================================================
+
+URL: https://ergit.presidencia.gov.co/server/services
+Note: SOAP endpoint exposed, could provide alternative access
+
+================================================================================
+[6] SECURITY ASSESSMENT
+================================================================================
+
+EXPOSED WITHOUT AUTH:
+[X] /server/rest/services - All map services
+[X] /server/rest/info - Version and config info
+[X] /arcpre/sharing/rest/info - Portal info
+[X] /arcpre/home/gallery.html - Public gallery
+
+REQUIRES AUTH:
+[-] /server/admin - Token required
+[-] /server/admin/services - Token required
+
+NOT FOUND:
+[-] /arcgis/admin - 404
+[-] /robots.txt - 404
+
+ERROR:
+[-] /arcpre/admin - 500 error
+
+================================================================================
+[7] INTELLIGENCE VALUE
+================================================================================
+
+Version Information:
+- ArcGIS Enterprise 11.3.0 (Build 51575)
+- Token-based security configured
+- Portal mode: singletenant
+
+Attack Surface:
+- Known vulnerabilities for ArcGIS 11.3.0 could be researched
+- generateToken endpoint could be target for credential attacks
+- SOAP services provide alternative access path
+
+================================================================================

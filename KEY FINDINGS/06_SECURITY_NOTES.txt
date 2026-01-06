@@ -1,0 +1,26 @@
+SECURITY OBSERVATIONS
+=====================
+
+POSITIVE:
+[+] HSTS enabled (1 year)
+[+] X-Frame-Options: SAMEORIGIN
+[+] X-Content-Type-Options: nosniff
+[+] F5 BIG-IP bot protection
+[+] SPF with hard fail (-all)
+
+CONCERNS:
+[-] Self-hosted nameservers (single point of failure)
+[-] 33 subdomains exposed via certificates
+[-] ArcGIS publicly accessible
+[-] petro.presidencia.gov.co in certs but no DNS
+[-] Test page disclosed in robots.txt
+[-] Internal server names exposed (lanina, lapinta, santamaria)
+
+ROBOTS.TXT LEAKS:
+- /_layouts/ (SharePoint)
+- /_vti_bin/ (SharePoint services)
+- /_catalogs/
+- /Paginas/test1.aspx (test page - now 404)
+
+CONTACT:
+soportes@presidencia.gov.co

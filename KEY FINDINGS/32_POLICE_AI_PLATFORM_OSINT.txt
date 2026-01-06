@@ -1,0 +1,184 @@
+================================================================================
+COLOMBIAN NATIONAL POLICE AI PLATFORM - OSINT FINDINGS
+================================================================================
+Date: January 5, 2026
+Method: Tor-proxied reconnaissance
+Target: ia.policia.gov.co and subdomains
+
+================================================================================
+[1] PLATFORM OVERVIEW
+================================================================================
+
+MAIN DOMAIN: ia.policia.gov.co
+INFRASTRUCTURE: AWS CloudFront + S3 + Next.js
+BUILD ID: jtLZ_BdDvgCDEvbp-NxP2 (app), w51oH-PJRfw5gwpye1ohq (search)
+
+================================================================================
+[2] CRITICAL AWS EXPOSURE
+================================================================================
+
+S3 BUCKET DISCOVERED:
+- Bucket: pon-prod-ai-platform-926162397524.s3.amazonaws.com
+- AWS Account ID: 926162397524
+- Region: us-east-1
+
+AWS CREDENTIALS IN PRE-SIGNED URLS:
+- X-Amz-Security-Token: IQoJb3JpZ2luX2VjEH0aCXVzLWVhc3QtMSJHMEU...
+- X-Amz-Credential: ASIA5PI4UVFKHTDCT3EL/20260105/us-east-1/s3/aws4_request
+- Credential Prefix: ASIA5PI4UVFKHTDCT3EL (temporary STS credentials)
+- Expiration: 900 seconds (15 minutes)
+
+NOTE: These are time-limited pre-signed URLs but expose:
+- AWS account structure
+- S3 bucket naming convention
+- Image storage paths
+
+================================================================================
+[3] ACCESSIBLE SUBDOMAINS
+================================================================================
+
+| Subdomain                         | Status | Tech Stack              |
+|-----------------------------------|--------|-------------------------|
+| app.ia.policia.gov.co             | 200 OK | Next.js, CloudFront     |
+| aisearchengine.ia.policia.gov.co  | 307    | Redirect to /default    |
+| nadia.ia.policia.gov.co           | 200 OK | AWS Bedrock, AmazonS3   |
+| catalog.ia.policia.gov.co         | 307    | Redirect to /login      |
+| iam.ia.policia.gov.co             | 302    | Redirect to /admin/     |
+| forms.ia.policia.gov.co           | 200 OK | nginx, sets cookies     |
+| maps.analytics.ia.policia.gov.co  | 200 OK | AmazonS3                |
+
+TIMEOUT (via Tor):
+- expertopol.ia.policia.gov.co
+- houndoc.ia.policia.gov.co
+- aitranscribe.ia.policia.gov.co
+- addcapas.ia.policia.gov.co
+- anticipacion.ia.policia.gov.co
+
+================================================================================
+[4] NADIA AI ASSISTANT
+================================================================================
+
+URL: https://nadia.ia.policia.gov.co/
+Server: AmazonS3
+Technology: AWS Bedrock (Amazon's AI/ML service)
+
+Evidence of Bedrock:
+- favicon reference: /images/bedrock_icon_192.png
+- Vite + AmplifyUI frontend
+- PWA manifest at /manifest.webmanifest
+
+This indicates Colombian Police are using Amazon's Bedrock AI service
+for their NADIA assistant, likely for:
+- Natural language processing
+- Document analysis
+- Conversational AI
+
+================================================================================
+[5] SESSION COOKIES CAPTURED
+================================================================================
+
+From forms.ia.policia.gov.co:
+
+Cookie: secret=ogPXHONRigakoecq; Secure; HttpOnly; Path=/; SameSite=None
+Cookie: ds=bxZlKImIvSKbaxwW; Expires=Mon, 24 Dec 2035; Secure; HttpOnly
+Cookie: session=f9447787b0f7718f_695c0481.Top27tmOWfgqPlLdK9viW2FbncA; Secure
+
+These session tokens could potentially be replayed if not properly
+validated server-side.
+
+================================================================================
+[6] IAM ADMIN PANEL
+================================================================================
+
+URL: https://iam.ia.policia.gov.co/
+Redirects to: /admin/
+
+This appears to be an Identity and Access Management admin interface
+for the Police AI platform. Accessing /admin/ requires authentication.
+
+================================================================================
+[7] MAPS ANALYTICS
+================================================================================
+
+URL: https://maps.analytics.ia.policia.gov.co/
+Server: AmazonS3
+Last Modified: Tue, 23 Dec 2025 21:26:31 GMT
+ETag: "24439c48dff62a8942533281cfe81adf"
+
+Analytics mapping platform - likely for crime mapping and predictive
+policing analytics.
+
+================================================================================
+[8] AI PLATFORM CAPABILITIES (Based on subdomains)
+================================================================================
+
+1. AISEARCHENGINE - AI-powered search
+2. NADIA - Conversational AI assistant (Bedrock)
+3. EXPERTOPOL - Expert system (possibly for investigations)
+4. HOUNDOC - Document analysis AI
+5. AITRANSCRIBE - Audio/video transcription
+6. ANTICIPACION - Predictive analytics
+7. ADDCAPAS - Layer addition (GIS integration?)
+8. CATALOG - AI service catalog
+9. FORMS - Data collection forms
+10. MAPS.ANALYTICS - Crime mapping analytics
+
+================================================================================
+[9] DIJIN PANDORA SYSTEM
+================================================================================
+
+URL: https://dijinpandora.policia.gov.co/
+Status: Timeout via Tor (likely IP blocking)
+
+DIJIN = Direccion de Investigacion Criminal e INTERPOL
+(Criminal Investigation and INTERPOL Directorate)
+
+"Pandora" likely refers to an investigation case management system
+or intelligence database used by Colombian police investigators.
+
+================================================================================
+[10] SECURITY OBSERVATIONS
+================================================================================
+
+VULNERABILITIES:
+1. AWS credentials exposed in pre-signed URLs (time-limited but informative)
+2. AWS Account ID exposed (926162397524)
+3. S3 bucket name exposed (pon-prod-ai-platform-926162397524)
+4. Session cookies set without strict validation
+5. Build IDs exposed (potential version fingerprinting)
+6. IAM admin panel accessible (though requires auth)
+
+PROPERLY SECURED:
+1. CloudFront CDN protection
+2. HTTPS everywhere
+3. HttpOnly, Secure, SameSite cookie flags
+4. CSP headers present
+5. HSTS enabled
+6. Most endpoints require authentication
+
+================================================================================
+[11] FILES SAVED
+================================================================================
+
+- RAW DOWNLOADS/PoliceAI_app_homepage.html
+- RAW DOWNLOADS/PoliceAI_forms.html
+- RAW DOWNLOADS/PoliceAI_maps_analytics.html
+
+================================================================================
+[12] IMPLICATIONS
+================================================================================
+
+The Colombian National Police operates a sophisticated AI platform
+built on AWS infrastructure including:
+
+1. Amazon Bedrock for conversational AI (NADIA)
+2. S3 for static asset storage
+3. CloudFront for CDN
+4. Custom Next.js applications
+5. Integrated IAM for access control
+6. Analytics and mapping capabilities
+
+This represents significant investment in AI-powered law enforcement
+tools by the Petro administration, despite ongoing tensions with the US.
+
+================================================================================

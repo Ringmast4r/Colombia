@@ -1,0 +1,30 @@
+PETRO - QUICK SUMMARY
+=====================
+
+WHO: Gustavo Petro, President of Colombia
+BACKGROUND: Former M-19 guerrilla (terrorist org)
+
+KEY EVENTS:
+1985 - M-19 Palace of Justice attack (98+ dead)
+2022 - Elected President
+2025 - US SANCTIONS (Oct 24)
+2026 - Term ends, faces uncertain future
+
+US ACCUSATIONS:
+- Drug trafficking ties
+- Alliance with Maduro
+- Record cocaine production
+- Cartel de Los Soles connection
+
+CURRENT STATUS:
+- SANCTIONED (SDN List)
+- Visa REVOKED
+- Key ally Maduro CAPTURED
+- Cannot enter US
+- Assets frozen
+
+INFRASTRUCTURE:
+- presidencia.gov.co
+- SharePoint + F5 WAF
+- 33 subdomains exposed
+- ArcGIS 11.3.0 public

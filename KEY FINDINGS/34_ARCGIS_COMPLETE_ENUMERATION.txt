@@ -1,0 +1,335 @@
+================================================================================
+ARCGIS COMPLETE ENUMERATION - PRESIDENCIA SERVER
+================================================================================
+Date: January 5, 2026 (Afternoon Session)
+Server: https://ergit.presidencia.gov.co
+Version: ArcGIS Enterprise 11.3.0 (Build 51575)
+Status: PUBLICLY ACCESSIBLE - NO AUTHENTICATION REQUIRED
+
+================================================================================
+[1] SERVER OVERVIEW
+================================================================================
+
+Portal Configuration:
+- URL: ergit.presidencia.gov.co/arcpre/sharing/rest/portals/self
+- Mode: Single Tenant
+- Public Access: ENABLED
+- Signup Disabled: Yes
+- OAuth: Supported
+- SAML: Disabled
+
+Helper Services Exposed:
+- Spatial Analysis Tools (requires token)
+- Geocoding Tools (ACCESSIBLE)
+- Geometry Server (ACCESSIBLE)
+- Offline Packaging (ACCESSIBLE)
+- Printing Tools (ACCESSIBLE)
+
+================================================================================
+[2] COMPLETE FOLDER LISTING (26 FOLDERS)
+================================================================================
+
+| Folder               | Description                                |
+|----------------------|-------------------------------------------|
+| AgenciaTierras       | Land Agency data                          |
+| aicma                | Anti-mine action (AICMA)                  |
+| CEDISCO              | Unknown                                   |
+| CENAM                | Unknown                                   |
+| CISCO                | Unknown                                   |
+| Datos_Finales        | Final Data                                |
+| DDHH                 | Human Rights (Derechos Humanos)           |
+| Directorio           | Directory                                 |
+| FondoPaz             | Peace Fund                                |
+| Formularios_Survey123| Survey forms                              |
+| Hosted               | Hosted services (240+ CRITICAL)           |
+| JPP                  | Unknown                                   |
+| MapaParlante         | Speaking Map                              |
+| Priorizacion         | Prioritization                            |
+| Prueba               | Test                                      |
+| Reporte              | Reports                                   |
+| ReporteProgreso      | Progress Reports                          |
+| Resguardos           | Indigenous Reserves                       |
+| SISEP                | Unknown system                            |
+| SISTEMAS             | Systems                                   |
+| Talento              | Talent/HR                                 |
+| TRANSPARENCIA        | Transparency                              |
+| UIAFP                | Peace Agreement Implementation Unit       |
+| UnidadAcuerdoFinal   | Peace Agreement Unit                      |
+| UnidadCumplimiento   | Compliance Unit                           |
+| Utilities            | Utility services                          |
+| victim_nb            | Victim data                               |
+| VisorOACP            | OACP Viewer                               |
+| Zonas                | Zones                                     |
+
+================================================================================
+[3] ROOT SERVICES (33 SERVICES)
+================================================================================
+
+MILITARY INTELLIGENCE MAPS:
+- CNR_julio_2025_MIL1 (MapServer) - July 2025 Military Map
+- CNR_SEP_2025_MIL1 (MapServer) - September 2025 Military Map
+- Mapa_AT_MIL1 (MapServer) - AT Zone Military Map
+- Mapa_Caso_03_MIL1 (MapServer) - Case 03 Military Map
+
+HUMAN RIGHTS DATA:
+- DDHH_Medicina_legal (FeatureServer/MapServer) - Medical Legal Data
+- Informe_Trimestre_DDHH (FeatureServer/MapServer) - Quarterly HR Report
+- MujeresLibresViolencia (FeatureServer/MapServer) - Women Violence Program
+
+JUDICIAL/GOVERNMENT:
+- Consejor_Superior_Judicatura (FeatureServer/MapServer)
+- IdentificarServiciosDapre (FeatureServer/MapServer)
+- InventarioDatosGeograficos_Dapre (FeatureServer/MapServer)
+- JPP_Minuta (FeatureServer/MapServer)
+- MatrizDepartamental (MapServer)
+- Municipios_Caso_003 (MapServer)
+
+PEACE PROCESS:
+- Encuesta_OACP_CAE (MapServer) - OACP Survey
+- Rutas (FeatureServer/MapServer) - Routes
+- T12_Proceso (FeatureServer/MapServer)
+- UIAFP_Proyectos30092023 (FeatureServer/MapServer)
+
+OTHER:
+- frm_victim_nb (FeatureServer/MapServer) - Victim Forms
+- PruebaDash (FeatureServer/MapServer) - Test Dashboard
+- PruebaFondoPaz (FeatureServer/MapServer) - Peace Fund Test
+
+================================================================================
+[4] DDHH (HUMAN RIGHTS) FOLDER - 22 SERVICES
+================================================================================
+
+Critical Services:
+- DDHH_Fiscalia_SIG (FeatureServer) - 81 MB DOWNLOADED
+- DDHH_Fiscalia (FeatureServer) - 32 MB DOWNLOADED
+- DDHH_Fecolper (FeatureServer) - 32 MB Journalist Data DOWNLOADED
+- DDHH_FLIP_SIG (FeatureServer) - Press Freedom
+- DDHH_reporte_de_ruta_de_proteccion - Protection Routes
+- DDHH_dinamica_de_riesgo_y_escenarios - Risk Dynamics
+- DDHH_CensoObservatorios_Survey123 - Observatory Census
+- DDHH_mapa_actores_oferta - Actor Offerings Map
+- DDHH_taller_de_rutas - Routes Workshop
+- DDHH_SesionesCapacitaciones - Training Sessions
+- UNESCO (MapServer)
+
+================================================================================
+[5] HOSTED FOLDER - 240+ SERVICES (CRITICAL INTEL)
+================================================================================
+
+ARMED GROUP TERRITORIES:
+- ELN_ago24 - ELN territories (August 2024)
+- Presencia_ELN - ELN presence
+- Presencia_municipios__Clan_del_golfo - Clan del Golfo (1.9 MB DOWNLOADED)
+- Presencia_municipios_Segunda_Marquetalia - Segunda Marquetalia
+- Presencia_FCS - FCS presence
+- Presencia_ACSN_(Septiembre_2024) - ACSN (Sep 2024)
+- SM_dic24 - Segunda Marquetalia (Dec 2024)
+- EGC_sep25 - EGC (Sep 2025)
+- Zonas_con_presencia_de_Autodefensas_gaitanistas_de_Colombia
+- Zonas_con_presencia_de_la_Coordinadora_Nacional_Ejército_Bolivariano
+- Zonas_con_presencia_del_EMBF_(Continua_en_MDP)
+- Zonas_con_presencia_del_EMC_que_no_continúan_en_MDP
+- Zonas_criticasELN_Ac20_17_23_1
+- Zonas_criticasEMC_FARC_Ac5_18_24
+
+COCA CULTIVATION:
+- ACultivoCoca2017 - Coca 2017
+- ACultivoCoca2022 - Coca 2022
+- CultivoCoca2023 - Coca 2023 (724 KB DOWNLOADED)
+- CambioCultivoCoca - Coca Changes
+- PNIS_datos - Coca Substitution Program
+
+VIOLENCE/CRIME DATA:
+- Homicidios - Homicides (DOWNLOADED)
+- Masacre - Massacres (DOWNLOADED)
+- Hechos_Violencia - Violence Facts (DOWNLOADED)
+- MGN_homicidios_2010_2025 - Homicides 2010-2025
+- MGN_Feminicidio_2010_2025_shp - Femicides 2010-2025
+- MGN_secuestro_2010_2025 - Kidnappings 2010-2025
+- MGN_extorsion_2010_2025 - Extortion 2010-2025
+- MGN_tratadepersonas_2010_2025 - Human Trafficking 2010-2025
+- MGN_violenciaintrafamiliar_2010_2025 - Domestic Violence
+- MGN_reclutamiento_ilicito_2010_2025_1 - Illegal Recruitment
+- MGN_Desplazamiento_2010_2025 - Displacement
+- MGN_Amenazas_2010_2025 - Threats
+- MGN_DelitosSexuales_2010_2025 - Sexual Crimes
+- MGN_fabricacion_trafico_porte_2010_2025 - Weapons Trafficking
+- Acciones_ContraPolicia - Actions Against Police (127 KB DOWNLOADED)
+- ACTIVIDADES_POLICIA - Police Activities
+- ACTIVIDADES_POLICIA_CONS - Police Activities Consolidated
+
+HUMAN RIGHTS ORGANIZATIONS:
+- CNMH - National Historical Memory Center (119 KB DOWNLOADED)
+- INDEPAZ - Peace Institute (DOWNLOADED)
+- SOMOS_DEFENSORES - Human Rights Defenders (DOWNLOADED)
+- DEFENSORIA_ALERTAS - Ombudsman Alerts (DOWNLOADED)
+- DEFENSORIA_ATQ - Ombudsman Attacks
+- COLJURISTAS - Colombian Jurists
+- REPORTEROS_SIN_FRONTERAS - Reporters Without Borders
+- FECOLPER - Federation of Journalists (see DDHH)
+
+TERRITORIAL DATA:
+- Conflictos_Territoriales - Territorial Conflicts (7.1 KB DOWNLOADED)
+- Resguardos_indigenas - Indigenous Reserves
+- Resguardo_Indigena_Formalizado - Formalized Reserves
+- Consejo_Comunitario_Titulado - Community Councils
+- Consejos_comunitarios - Community Councils
+- Zonas_de_Reserva_Campesina - Peasant Reserve Zones
+- Zonas_Reserva_Campesina_Constituida - Constituted ZRCs
+- Pueblos_indigenas - Indigenous Peoples
+- Tierras - Lands
+
+PEACE PROCESS:
+- ETCR_1, ETCR_shp - Reintegration Camp Locations (DOWNLOADED)
+- PresenciadeFirmantesPaz - Peace Signatory Presence
+- PDET - Development Programs
+- Municipios_PDET - PDET Municipalities
+- Subregiones_PDET - PDET Subregions
+- MPaz - Peace Municipality
+- AETCR locations
+
+DEFORESTATION:
+- Deforestacion_2016 through Deforestacion_2023 (8 years)
+- Nucleos_activos_de_deforestación_2023
+- Nucleos_deforestación
+
+COMPLAINTS/INCIDENTS:
+- BD_Denuncias_2023 - Complaints 2023 (DOWNLOADED)
+- BD_Denuncias_Municipios_2023 - Municipal Complaints
+- denuncias110924 - Sept 2024 Complaints
+- capa_denuncias_occp - OCCP Complaints
+
+PROTECTION:
+- UNP - National Protection Unit
+- UNP_INCIDENTES - Protection Incidents (10.6 KB DOWNLOADED)
+- UNP_MEDIDAS - Protection Measures
+- UARIV - Victims Unit
+
+MINING:
+- Solicitud_minera_vigente_ANM
+- Titulo_minero_vigente_Colombia
+- Zona_minera_étnica_ANM
+
+OTHER:
+- Areas_protegidas - Protected Areas
+- Biodiversidad - Biodiversity
+- Ecosistemas - Ecosystems
+- Frontera_agricola - Agricultural Frontier
+- Eventos_Mina_Antipersonal - Landmine Events
+- Rutas_Evacuacion - Evacuation Routes
+
+================================================================================
+[6] DATA DOWNLOADED THIS SESSION (Jan 5, 2026 Afternoon)
+================================================================================
+
+NEW DOWNLOADS (15+ files):
+| File                           | Size    | Content                    |
+|--------------------------------|---------|----------------------------|
+| ClanDelGolfo_Presencia.json    | 1.9 MB  | Clan del Golfo territories |
+| CultivoCoca2023_layer0.json    | 724 KB  | 2023 coca cultivation      |
+| DDHH_DDHH_Fiscalia_SIG_L0.json | 81 MB   | Prosecutor geo data        |
+| DDHH_DDHH_Fiscalia_L0.json     | 32 MB   | Prosecutor data            |
+| DDHH_DDHH_Fecolper_L0.json     | 32 MB   | Journalist federation      |
+| Acciones_ContraPolicia.json    | 127 KB  | Anti-police actions        |
+| CNMH_HistoricalMemory.json     | 119 KB  | Historical memory          |
+| Conflictos_Territoriales.json  | 7.1 KB  | Territorial conflicts      |
+| UNP_Incidentes.json            | 10.6 KB | Protection incidents       |
+| Homicidios_layer0.json         | ?       | Homicides                  |
+| Masacre_layer0.json            | ?       | Massacres                  |
+| Hechos_Violencia.json          | ?       | Violence facts             |
+| INDEPAZ_layer0.json            | ?       | Peace institute data       |
+| Defensoria_Alertas.json        | ?       | Ombudsman alerts           |
+| SomosDefensores.json           | ?       | HR defenders               |
+| Denuncias_2023.json            | ?       | 2023 complaints            |
+| ETCR_Camps.json                | ?       | Reintegration camps        |
+| Desminado_Events_layer0.json   | ?       | Demining events            |
+| Resguardos_Indigenas_layer0.json| ?      | Indigenous reserves        |
+| DDHH_Ruta_Proteccion_layer0.json| ?      | Protection routes          |
+| DDHH_Riesgo_Escenarios_layer0.json| ?    | Risk scenarios             |
+| FondoPaz_Proyectos_layer0.json | ?       | Peace fund projects        |
+| DDHH_FLIP_SIG_layer0.json      | ?       | Press freedom              |
+| MujeresLibresViolencia_layer0.json| ?    | Women violence program     |
+
+================================================================================
+[7] OTHER FOLDERS ENUMERATED
+================================================================================
+
+ZONAS:
+- Eventos_Desminado (MapServer) - Demining Events
+
+RESGUARDOS:
+- Resguardos_Edicion (FeatureServer/MapServer) - Indigenous Reserves
+
+UNIDADCUMPLIMIENTO:
+- Unidad_Cumplimiento_BaseDANE_fijo
+- UnidadCumplimiento_BASE_DANE
+- UnidadCumplimiento_Macrometas_Completo
+- UnidadCumplimiento_MacroMetas
+
+UNIDADACUERDOFINAL:
+- UAFP_Cooperantes_Insights - Peace Cooperators
+
+AICMA:
+- Afectacion_etnica_aicma - Ethnic Landmine Impact
+- FULE - Unknown
+
+FONDOPAZ:
+- FONDO_PAZ_Proyectos - Peace Fund Projects
+
+================================================================================
+[8] UTILITIES SERVICES (PUBLICLY ACCESSIBLE)
+================================================================================
+
+- Utilities/GeocodingTools (GPServer)
+  Tasks: AnalyzeGeocodeInput, BatchGeocode, GeocodeEnterpriseTable, GeocodeFile
+  Max Records: 1000
+
+- Utilities/Geometry (GeometryServer)
+
+- Utilities/OfflinePackaging (GPServer)
+
+- Utilities/PrintingTools (GPServer)
+  Tasks: Export Web Map Task, Get Layout Templates Info Task
+
+================================================================================
+[9] PACTO HISTORICO PARTY SUBDOMAINS (crt.sh)
+================================================================================
+
+Discovered subdomains:
+- pactohistorico.co (main)
+- www.pactohistorico.co
+- chat.pactohistorico.co - Chat system
+- ch.pactohistorico.co - Chat alias
+- mail.pactohistorico.co - Mail server
+- webmail.pactohistorico.co - Webmail
+- registro.pactohistorico.co - Registration
+- conversahook.pactohistorico.co - Conversation hooks
+- nabi.pactohistorico.co - Unknown system
+- nombres.pactohistorico.co - Names database?
+- reformaya.pactohistorico.co - Reform system
+
+Status: Most timeout via Tor (likely blocked)
+
+================================================================================
+[10] SECURITY ASSESSMENT
+================================================================================
+
+CRITICAL VULNERABILITIES:
+1. 240+ services publicly accessible without authentication
+2. Military intelligence maps visible in public gallery
+3. Armed group territory data exposed
+4. Coca cultivation data publicly downloadable
+5. Violence/crime statistics accessible
+6. Human rights defender locations exposed
+7. Peace signatory locations exposed
+8. Protection route information accessible
+9. Indigenous reserve boundaries accessible
+
+EXPOSURE SUMMARY:
+- Total folders: 26+
+- Total services: 300+
+- Data volume: 150+ MB downloaded this session
+- Previous downloads: 1.4 GB+
+- Combined exposure: 1.5+ GB
+
+================================================================================

@@ -1,0 +1,112 @@
+INTERACTIVE MAP VISUALIZATIONS
+==============================
+Created: January 5, 2026
+Data Source: Colombian Military Intelligence (CNR_SEP_2025_MIL1)
+
+================================================================================
+[1] GENERATED MAP FILES
+================================================================================
+
+LOCATION: C:\Users\Squir\Desktop\NARCO COUNTER OPS\COLOMBIA\HTML\
+
+INTERACTIVE MAPS:
+-----------------
+1. armed_groups_map.html
+   - Shows 5 armed group territory layers
+   - Toggle layers on/off
+   - Dark basemap with colored territory overlays
+   - Click territories for info popups
+
+2. attacks_on_signatories_map.html
+   - Choropleth map by department
+   - Color-coded by attack severity
+   - Shows homicides, disappearances, threats
+   - Statistics panel with totals
+
+GEOJSON DATA FILES:
+-------------------
+- ELN.geojson (11 territory zones)
+- Clan_del_Golfo_(AGC).geojson (22 territory zones)
+- Disidencias_EMC.geojson (22 territory zones)
+- Segunda_Marquetalia.geojson (21 territory zones)
+- Disidencias_EMBF.geojson (11 territory zones)
+- attacks_signatories.geojson (33 department polygons)
+
+================================================================================
+[2] TERRITORY COUNTS
+================================================================================
+
+Armed Group          | Territory Zones
+---------------------|----------------
+ELN                  | 11
+Clan del Golfo (AGC) | 22
+Disidencias EMC      | 22
+Segunda Marquetalia  | 21
+Disidencias EMBF     | 11
+---------------------|----------------
+TOTAL                | 87 zones
+
+================================================================================
+[3] HOW TO VIEW
+================================================================================
+
+Option 1: Direct file open
+- Double-click armed_groups_map.html
+- Opens in default browser
+- May need to allow local file access
+
+Option 2: Python HTTP server
+- cd "C:\Users\Squir\Desktop\NARCO COUNTER OPS\COLOMBIA\HTML"
+- python -m http.server 8080
+- Open http://localhost:8080/armed_groups_map.html
+
+================================================================================
+[4] MAP FEATURES
+================================================================================
+
+ARMED GROUPS MAP:
+- Layer control (top-right) to toggle groups
+- Click any territory for popup info
+- Zoom in/out with scroll wheel
+- Color-coded by armed group
+- Dark basemap for contrast
+
+ATTACKS MAP:
+- Choropleth coloring by department
+- Darker red = more attacks
+- Click department for detailed breakdown
+- Statistics box shows totals
+- Context box explains who "Firmantes" are
+
+================================================================================
+[5] TECHNICAL DETAILS
+================================================================================
+
+Original Format: ArcGIS JSON (ESRI FeatureServer)
+Coordinate System: Web Mercator (EPSG:3857)
+Converted To: WGS84 (EPSG:4326) / GeoJSON
+Rendering: Leaflet.js 1.9.4
+Basemap: CARTO Dark Matter
+
+Conversion Scripts:
+- convert_maps.py (territory layers)
+- convert_attacks_map.py (attacks choropleth)
+
+================================================================================
+[6] INTELLIGENCE VALUE
+================================================================================
+
+These visualizations allow:
+1. Clear view of territorial control by each armed group
+2. Overlap analysis between groups (conflict zones)
+3. Department-level attack pattern analysis
+4. Geographic clustering of violence
+5. Correlation with other data layers (AETCR camps, etc.)
+
+OPERATIONAL USE:
+- Identify high-risk areas for peace signatories
+- Track territorial expansion/contraction
+- Plan protection routes
+- Resource allocation for security
+
+================================================================================

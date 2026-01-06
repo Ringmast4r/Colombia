@@ -1,0 +1,46 @@
+HIGH VALUE TARGETS - PETRO INFRASTRUCTURE
+==========================================
+
+GOVERNMENT:
+1. ergit.presidencia.gov.co
+   - ArcGIS Enterprise 11.3.0
+   - GIS mapping system
+   - Public access
+
+2. petro.presidencia.gov.co
+   - IN CERTS but NO PUBLIC DNS
+   - Internal/shadow system
+
+3. secumpleelcambio.presidencia.gov.co
+   - Petro slogan subdomain
+
+PARTY - COLOMBIA HUMANA:
+4. votaciones.colombiahumana.co
+   - Voting system!
+
+5. crm.colombiahumana.co
+   - Customer relationship management
+
+6. decidim.colombiahumana.co
+   - Participatory democracy platform
+
+7. api.colombiahumana.co / api2
+   - Backend APIs
+
+8. dev.colombiahumana.co
+   - Development environment
+
+9. sandbox.colombiahumana.co
+   - Testing environment
+
+PARTY - PACTO HISTORICO:
+10. registro.pactohistorico.co
+    - Voter/supporter registration
+
+11. nabi.pactohistorico.co
+    - AI chatbot system
+
+MAIL SYSTEMS:
+12. mailserver.colombiahumana.co
+13. roundcube.colombiahumana.co
+14. mail.pactohistorico.co

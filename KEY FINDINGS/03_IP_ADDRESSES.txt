@@ -1,0 +1,20 @@
+IP ADDRESS INVENTORY
+====================
+
+MEDIA COMMERCE (AS27951):
+170.246.114.229  - Main website
+170.246.114.213  - Mail (mxpalacio)
+170.246.114.197  - Nameserver (bdpalacio)
+
+TELMEX (AS14080):
+190.145.219.8   - Nameserver (ariadne)
+190.145.219.51  - Mail (pxpalacio)
+190.145.219.52  - SPF listed
+
+OTHER:
+181.59.42.8     - Nameserver backup
+
+IPv6:
+2801:172::930:81:0:12     - Main
+2801:172::930:0:0:8       - ariadne
+2801:172:2:0:1208::8      - bdpalacio

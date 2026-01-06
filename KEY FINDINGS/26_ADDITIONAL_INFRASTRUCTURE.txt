@@ -1,0 +1,187 @@
+================================================================================
+ADDITIONAL COLOMBIAN INFRASTRUCTURE DISCOVERY
+================================================================================
+Date: January 5, 2026
+Focus: Military, Government ArcGIS, Party Infrastructure
+
+================================================================================
+[1] PETRO PERSONAL WEB PRESENCE
+================================================================================
+
+DOMAIN STATUS:
+| Domain              | Status                | Notes                      |
+|---------------------|----------------------|----------------------------|
+| gustavopetro.com    | PARKED (GoDaddy)     | Not under Petro control    |
+| gustavopetro.co     | TIMEOUT              | May be inactive            |
+| petro.co            | PARKED (GoDaddy)     | Not under Petro control    |
+| petropresidente.com | 404 (Decommissioned) | Old campaign site          |
+
+ACTIVE PRESENCE:
+- gustavopetroblog.wordpress.com
+  - Status: ACTIVE but NOT MAINTAINED
+  - Last post: January 17, 2022
+  - Content: Political blog from before presidency
+  - Subscribers: ~967
+  - Social: @petrogustavo Twitter embedded
+
+FINDING: Petro has NO active personal website.
+Official communications through government channels only.
+
+================================================================================
+[2] COLOMBIAN MILITARY DOMAINS (.mil.co)
+================================================================================
+
+DOMAIN RESOLUTION:
+| Domain           | IP              | Status    |
+|------------------|-----------------|-----------|
+| army.mil.co      | 104.21.95.45    | Cloudflare|
+| armada.mil.co    | 201.219.114.19  | Direct    |
+| fac.mil.co       | 13.216.49.210   | AWS       |
+| cgfm.mil.co      | FAILED          | DNS issue |
+| policia.gov.co   | FAILED          | DNS issue |
+
+ENDPOINT CHECKS:
+army.mil.co:
+  - All endpoints return 403 (properly secured)
+  - /robots.txt: 403
+  - /.git/HEAD: 403
+  - /.env: 403
+
+fac.mil.co (Air Force):
+  - /robots.txt: 200 OK (accessible)
+  - /admin: 403
+  - /.git/HEAD: 403
+
+mindefensa.gov.co (Defense Ministry):
+  - IP: 192.230.74.108
+  - WAF detected (returns 200 with "Request Rejected")
+  - /.git/HEAD: 200 (WAF blocks, false positive)
+  - /.env: 200 (WAF blocks, false positive)
+
+================================================================================
+[3] COLOMBIAN GOVERNMENT ARCGIS SERVERS
+================================================================================
+
+PUBLICLY ACCESSIBLE SERVERS (NO AUTH REQUIRED):
+
+1. srvags.sgc.gov.co (Geological Survey)
+   - Path: /arcgis/rest/services
+   - Version: 10.9.1
+   - Folders: 53
+   - Notable: Seismic hazard, volcanic hazard, geological maps
+
+2. mapas.igac.gov.co (Mapping Agency)
+   - Path: /server/rest/services
+   - Folders: 25
+   - Services: 21
+   - Notable: seguridad/eventosminasantipersonal (MINE EVENTS!)
+
+3. visualizador.ideam.gov.co (Environment)
+   - Path: /gisserver/rest/services
+   - Folders: 17
+   - Services: 72
+   - Content: Climate, water quality, ecosystems
+
+4. mapas.parquesnacionales.gov.co (National Parks)
+   - Path: /arcgis/rest/services
+   - Folders: 7
+   - Content: Protected areas, RUNAP registry
+
+5. geoservicios.upra.gov.co (Rural Planning)
+   - Path: /arcgis/rest/services
+   - Folders: 16
+   - Content: Land use, rural markets
+
+6. sig.ani.gov.co (Infrastructure Agency)
+   - Path: /arcgis/rest/services
+   - Folders: 22
+   - Content: Transport, infrastructure projects
+
+SENSITIVE DATA FOUND:
+
+IGAC - Anti-Personnel Mines Map:
+- URL: /seguridad/eventosminasantipersonal
+- Type: MapServer
+- Fields: tipo_event, departamento, municipio, GPS coordinates
+- Data: Mine/IED events with exact locations
+- Max Records: 2000
+
+================================================================================
+[4] COLOMBIA HUMANA PARTY INFRASTRUCTURE
+================================================================================
+
+ACTIVE DOMAINS:
+| Subdomain                    | IP              | Status     |
+|------------------------------|-----------------|------------|
+| colombiahumana.co            | 172.67.206.107  | Cloudflare |
+| crm.colombiahumana.co        | 77.237.247.65   | WordPress  |
+| decidim.colombiahumana.co    | 77.237.247.65   | Active     |
+| api.colombiahumana.co        | 45.86.36.162    | Timeout    |
+| api2.colombiahumana.co       | 167.86.127.148  | Timeout    |
+| dev.colombiahumana.co        | 45.86.36.162    | Timeout    |
+
+INACTIVE:
+- votaciones.colombiahumana.co: NO DNS
+- sandbox.colombiahumana.co: NO DNS
+- mail.colombiahumana.co: NO DNS
+
+CRM ANALYSIS (crm.colombiahumana.co):
+- Platform: WordPress
+- Security: Wordfence WAF installed
+- CRM Plugin: Groundhogg (gh/v3, gh/v4 namespaces)
+- User Enum: BLOCKED (401 on /wp-json/wp/v2/users)
+- Timezone: America/Bogota (GMT-5)
+- robots.txt: Standard WordPress (disallow /wp-admin/)
+
+================================================================================
+[5] INTELLIGENCE SUMMARY
+================================================================================
+
+NEW EXPOSED DATA FOUND:
+
+1. IGAC Mine Events Database
+   - GPS locations of anti-personnel mine incidents
+   - Department/municipality level data
+   - No authentication required
+
+2. Colombian Government ArcGIS Network
+   - 6+ ArcGIS servers publicly accessible
+   - Geological, environmental, infrastructure data
+   - Similar exposure pattern to ergit.presidencia.gov.co
+
+SECURED INFRASTRUCTURE:
+
+1. Military domains (.mil.co)
+   - Properly secured with 403 responses
+   - WAF protection on mindefensa.gov.co
+
+2. Colombia Humana CRM
+   - Wordfence protection
+   - User enumeration blocked
+
+================================================================================
+[6] ADDITIONAL ARCGIS URLS TO INVESTIGATE
+================================================================================
+
+From public listings, not yet checked:
+- https://hermes.invias.gov.co/arcgis/rest/services/ (Roads)
+- https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/ (Cadastre)
+- https://siganla1.anla.gov.co/server/rest/services (Environmental)
+- https://gisart.renovacionterritorio.gov.co/server/rest/services (Peace Process!)
+
+Priority: gisart.renovacionterritorio.gov.co (Territory Renovation)
+- Likely contains peace process reintegration data
+- Similar to presidencia ArcGIS exposure
+- Currently timing out, retry recommended
+
+================================================================================
+[7] RECOMMENDATIONS
+================================================================================
+
+1. Retry renovacionterritorio.gov.co at different time
+2. Deep dive into IGAC mine events data
+3. Check for additional ArcGIS servers in gov.co
+4. Document all exposed services for OSINT report
+5. Consider responsible disclosure to Colombian CERT
+
+================================================================================

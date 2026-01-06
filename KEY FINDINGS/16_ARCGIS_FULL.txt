@@ -1,0 +1,86 @@
+ARCGIS ENTERPRISE - FULL DETAILS
+=================================
+
+URL: https://ergit.presidencia.gov.co/arcpre/
+
+VERSION:
+- Enterprise Version: 11.3.0
+- Build: 51575
+- Current Version: 2024.1
+- Last Modified: Sat, 20 Apr 2024 00:18:48 GMT
+
+PORTAL CONFIG:
+- Portal ID: 0123456789ABCDEF
+- Portal Mode: singletenant
+- Portal Name: ArcGIS Enterprise
+- Hostname: ergit.presidencia.gov.co/arcpre
+- Deployment Type: ArcGISEnterprise
+- Access: PUBLIC
+
+FEATURES:
+- OAuth Supported: YES
+- SAML Enabled: NO
+- Signup Disabled: YES
+- Email Supported: YES
+- Read Only: NO
+- Web Tier Auth: NO
+- Hosted Services: YES
+- Hosted Notebooks: NO
+- Scene Services: NO
+- 3D Tiles Services: NO
+- Semantic Search: YES
+
+DATA STORES:
+- Relational ArcGIS Data Store: YES
+- Spatiotemporal Data Store: NO
+
+HELPER SERVICES (EXPOSED):
+1. Analysis:
+   https://ergit.presidencia.gov.co/server/rest/services/System/SpatialAnalysisTools/GPServer
+
+2. Async Geocode:
+   https://ergit.presidencia.gov.co/server/rest/services/Utilities/GeocodingTools/GPServer
+
+3. Packaging:
+   https://ergit.presidencia.gov.co/server/rest/services/Utilities/OfflinePackaging/GPServer
+
+4. Print Task:
+   https://ergit.presidencia.gov.co/arcpre/sharing/tools/newPrint
+
+5. Workflow Manager:
+   https://workflowdev.arcgis.com
+
+EXTERNAL SERVICES USED:
+- Geocode: https://geocode.arcgis.com
+- Geometry: https://utility.arcgisonline.com
+- Elevation: https://elevation3d.arcgis.com
+- CDN: https://cdndev.arcgis.com
+- Basemaps: https://services.arcgisonline.com
+
+DEFAULT BASEMAP:
+- Title: Topographic
+- URL: https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer
+- Format: JPEG
+- 24 zoom levels (0-23)
+
+PORTAL PROPERTIES:
+- Map Viewer: modern
+- Home Page: modern
+- Map Viewer Switch Date: 1747262795279 (timestamp)
+
+FEATURED GROUPS:
+- Owner: esriadmin
+- Title: Featured Maps and Apps
+
+SECURITY:
+- Users list: PROTECTED (403 error)
+- Token generation: Requires credentials
+- Content search: Returns empty (no public items)
+
+F5 LOAD BALANCER:
+- Cookie: TS01e9ff77
+- Evidence of WAF protection
+
+PORTS:
+- HTTP: 80
+- HTTPS: 443

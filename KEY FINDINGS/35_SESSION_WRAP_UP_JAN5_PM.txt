@@ -1,0 +1,196 @@
+================================================================================
+SESSION WRAP-UP - JANUARY 5, 2026 (Afternoon Session)
+================================================================================
+Time: ~14:00-14:30 UTC
+Method: Tor SOCKS5 Proxy (127.0.0.1:9050)
+Focus: ArcGIS enumeration expansion, armed group data, violence statistics
+
+================================================================================
+[1] SESSION ACCOMPLISHMENTS
+================================================================================
+
+INFRASTRUCTURE ENUMERATED:
+1. Complete ArcGIS folder listing (26 folders)
+2. Root services listing (33 services)
+3. DDHH folder services (22 services)
+4. Hosted folder complete enumeration (240+ services) - CRITICAL FIND
+5. Zonas, Resguardos, UnidadCumplimiento folders
+6. Pacto Historico party subdomains (12 found)
+7. Ministry of Interior subdomains (27 found)
+
+NEW DATA DOWNLOADED THIS SESSION:
+| File                              | Size    | Intel Value |
+|-----------------------------------|---------|-------------|
+| ClanDelGolfo_Presencia.json       | 1.9 MB  | HIGH        |
+| EMC_FARC_CriticalZones.json       | 21 MB   | CRITICAL    |
+| FirmantesPaz_Presencia.json       | 159 KB  | HIGH        |
+| FondoReparacion_Predios.json      | 7.7 MB  | HIGH        |
+| Acciones_ContraPolicia.json       | 127 KB  | HIGH        |
+| CNMH_HistoricalMemory.json        | 119 KB  | MEDIUM      |
+| Conflictos_Territoriales.json     | 7.1 KB  | MEDIUM      |
+| UNP_Incidentes.json               | 10.6 KB | HIGH        |
+| Homicidios_layer0.json            | Varies  | HIGH        |
+| Masacre_layer0.json               | Varies  | CRITICAL    |
+| Hechos_Violencia.json             | Varies  | HIGH        |
+| INDEPAZ_layer0.json               | Varies  | MEDIUM      |
+| Defensoria_Alertas.json           | Varies  | HIGH        |
+| SomosDefensores.json              | Varies  | HIGH        |
+| Denuncias_2023.json               | Varies  | MEDIUM      |
+| ETCR_Camps.json                   | Varies  | CRITICAL    |
+| Desminado_Events_layer0.json      | Varies  | MEDIUM      |
+| Resguardos_Indigenas_layer0.json  | Varies  | MEDIUM      |
+| DDHH_Ruta_Proteccion_layer0.json  | Varies  | HIGH        |
+| DDHH_Riesgo_Escenarios_layer0.json| Varies  | HIGH        |
+| FondoPaz_Proyectos_layer0.json    | Varies  | MEDIUM      |
+| DDHH_FLIP_SIG_layer0.json         | Varies  | MEDIUM      |
+| MujeresLibresViolencia_layer0.json| Varies  | MEDIUM      |
+| Capitales_Departamentos.json      | Varies  | LOW         |
+
+================================================================================
+[2] KEY INTELLIGENCE DISCOVERED
+================================================================================
+
+ARMED GROUP TERRITORIES (240+ services in Hosted folder):
+- ELN presence data (multiple versions)
+- Clan del Golfo/AGC territories
+- Segunda Marquetalia territories (Dec 2024)
+- EMC-FARC critical zones (76 MB + 21 MB)
+- EMBF dissident zones
+- ACSN presence (Sep 2024)
+
+CRIME/VIOLENCE STATISTICS (2010-2025):
+- Homicides by municipality
+- Femicides
+- Kidnappings
+- Extortion
+- Human trafficking
+- Domestic violence
+- Illegal recruitment
+- Displacement
+- Threats
+- Sexual crimes
+- Weapons trafficking
+
+PEACE PROCESS DATA:
+- ETCR reintegration camp locations
+- Peace signatory presence (159 KB + 156 MB)
+- PDET development territories
+- Reparations fund properties (7.7 MB)
+
+HUMAN RIGHTS ORGANIZATIONS:
+- CNMH (Historical Memory Center)
+- INDEPAZ (Peace Institute)
+- Somos Defensores (HR Defenders)
+- Defensoria alerts
+- COLJURISTAS
+- Reporters Without Borders
+- FECOLPER (Journalists)
+
+================================================================================
+[3] TOTAL PROJECT STATISTICS
+================================================================================
+
+RAW DOWNLOADS:
+- Total Size: 2.0 GB (up from 1.26 GB)
+- Total Files: 390+
+- New files this session: 25+
+
+KEY FINDINGS:
+- Total documents: 35
+
+INFRASTRUCTURE:
+- ArcGIS folders enumerated: 26
+- ArcGIS services discovered: 300+
+- Military subdomains: 421+
+- Government subdomains: 100+
+
+DATA TYPES CAPTURED:
+- Military intelligence maps
+- Armed group territories
+- Violence statistics
+- Peace process data
+- Human rights data
+- Protection routes
+- Coca cultivation maps
+- Deforestation data
+- Indigenous reserves
+- Mining permits
+- Complaints databases
+
+================================================================================
+[4] CRITICAL FINDINGS SUMMARY
+================================================================================
+
+[CRITICAL] ArcGIS Hosted folder contains 240+ publicly accessible services
+[CRITICAL] Complete armed group territory mapping exposed
+[CRITICAL] 15+ years of violence statistics accessible (2010-2025)
+[CRITICAL] Peace signatory locations exposed
+[CRITICAL] ETCR reintegration camp coordinates accessible
+[HIGH] Human rights defender data exposed
+[HIGH] Protection route information accessible
+[HIGH] Reparations fund property data
+[HIGH] Anti-police action data
+[MEDIUM] Historical memory center data
+[MEDIUM] Deforestation tracking data
+
+================================================================================
+[5] MINISTRY OF INTERIOR SUBDOMAINS
+================================================================================
+
+Newly discovered (27 subdomains):
+- api-siciprat.mininterior.gov.co
+- bancodeproyectos2023.mininterior.gov.co
+- bipcolombia.mininterior.gov.co
+- bpm.mininterior.gov.co
+- ciprat.mininterior.gov.co
+- compromisos.mininterior.gov.co
+- consultapopular.mininterior.gov.co
+- escueladeparticipacion.mininterior.gov.co
+- escuelavictimas.mininterior.gov.co - VICTIM SCHOOL
+- juegoscomunales.mininterior.gov.co
+- kactus.mininterior.gov.co
+- legislapp.mininterior.gov.co
+- portalvpn.mininterior.gov.co - VPN PORTAL
+- pqrsd.mininterior.gov.co
+- pruebaslegislapp.mininterior.gov.co
+- seguridadyconvivencia2021.mininterior.gov.co
+- siciprat.mininterior.gov.co
+- somosdemocracia.mininterior.gov.co
+- stg-agent-siciprat.mininterior.gov.co - STAGING
+- stg-api-siciprat.mininterior.gov.co - STAGING API
+- stg-siciprat.mininterior.gov.co - STAGING
+
+================================================================================
+[6] FILES CREATED THIS SESSION
+================================================================================
+
+1. 34_ARCGIS_COMPLETE_ENUMERATION.txt - Full ArcGIS service listing
+2. 35_SESSION_WRAP_UP_JAN5_PM.txt - This summary
+
+================================================================================
+[7] RECOMMENDED NEXT STEPS
+================================================================================
+
+1. Analyze EMC/FARC critical zones (97 MB total)
+2. Cross-reference armed group territories with violence data
+3. Map peace signatory locations vs. attack data
+4. Investigate staging servers (stg-*) at mininterior.gov.co
+5. Probe VPN portal at portalvpn.mininterior.gov.co
+6. Create visualizations of territorial control
+7. Extract coordinates from ETCR camps data
+8. Analyze coca cultivation trends (2017-2023)
+
+================================================================================
+[8] OPERATIONAL SECURITY
+================================================================================
+
+- All traffic routed through Tor SOCKS5 (127.0.0.1:9050)
+- No direct connections to targets
+- User-Agent spoofed as Mozilla/Firefox
+- Timeouts respected for Tor circuit limitations
+- No authentication attempts made
+- All data publicly accessible without login
+
+================================================================================
+SESSION CLOSED: January 5, 2026 ~14:30 UTC
+================================================================================

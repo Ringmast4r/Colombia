@@ -1,0 +1,139 @@
+MILITARY INTELLIGENCE MAP - SEPTEMBER 2025
+============================================
+Source: ergit.presidencia.gov.co/server/rest/services/CNR_SEP_2025_MIL1
+Downloaded: January 5, 2026 via Tor stealth
+Classification: COLOMBIAN MILITARY INTELLIGENCE
+
+================================================================================
+[1] MAP OVERVIEW
+================================================================================
+
+Title: CNR_SEP_2025_MIL1 (September 2025 Military Map)
+Keywords: TIERRAS, CNR
+Version: ArcGIS 11.3.0
+Spatial Reference: Web Mercator (WKID 102100)
+
+Coverage: All of Colombia
+- West: -81.7° to East: -65.8° longitude
+- South: -4.2° to North: 13.5° latitude
+
+================================================================================
+[2] ARMED GROUP LAYERS
+================================================================================
+
+Layer ID | Name                              | Type
+---------|-----------------------------------|------------------
+9        | AETCR (Former FARC camps)         | Points
+0        | Attacks on Signatories 2025       | Polygons
+23       | Armed Group Influence (Parent)    | Group Layer
+24       | └─ Disidencias EMBF               | Polygons
+11       | └─ Segunda Marquetalia            | Polygons
+12       | └─ ELN                            | Polygons
+13       | └─ Disidencias EMC                | Polygons
+15       | └─ Clan del Golfo (AGC)           | Polygons
+16       | └─ ASCN                           | Polygons
+10       | Firmantes mayo 2025               | Polygons
+
+================================================================================
+[3] ARMED GROUPS IDENTIFIED
+================================================================================
+
+ELN (Ejército de Liberación Nacional):
+- National Liberation Army
+- Marxist-Leninist guerrilla
+- Active since 1964
+- Territory: Eastern Colombia, Venezuelan border
+
+CLAN DEL GOLFO / AGC (Autodefensas Gaitanistas de Colombia):
+- Also known as: Gulf Clan, Los Urabeños
+- Largest drug trafficking organization in Colombia
+- Former paramilitary successor
+- Territory: Northern Colombia, Pacific coast
+
+DISIDENCIAS EMC (Estado Mayor Central):
+- FARC dissidents who rejected peace accord
+- Led by "Ivan Mordisco"
+- Territory: Southern Colombia
+
+SEGUNDA MARQUETALIA:
+- FARC dissidents led by Ivan Marquez
+- Announced return to arms August 2019
+- Territory: Venezuelan border region
+
+DISIDENCIAS EMBF:
+- FARC dissident faction
+- Territory: Various regions
+
+ASCN:
+- Armed group
+- Territory: Eastern Colombia
+
+================================================================================
+[4] AETCR LOCATIONS (Former FARC Reintegration Camps)
+================================================================================
+
+North:
+- CONDORES
+- TIERRA GRATA
+
+Northeast:
+- CAÑO INDIO
+- FILIPINAS
+
+Central-West:
+- CARACOLÍ
+- LLANO GRANDE
+- MUTATÁ
+
+Central:
+- LA PLANOA
+- CARRIZAL
+- MONTERREDONDO
+- HATO BONBON
+
+South-Central:
+- CHARRAS
+- LAS COLINAS
+
+Southwest:
+- EL ÑORAL
+- LA VARIANTE
+- EL ESTRECHO
+- OSCAR MONDRAGON
+- EL DONCELLO 2
+- AGUA BONITA
+- LA PRADERA
+
+================================================================================
+[5] FILES DOWNLOADED
+================================================================================
+
+Map Image:
+- MILITARY_MAP_SEP2025.png (1920x1080)
+
+Territory Data (GeoJSON):
+- ELN_territories.json
+- ClanDelGolfo_territories.json
+- Disidencias_EMC.json
+- SegundaMarquetalia.json
+- Disidencias_EMBF.json
+
+Attack Data:
+- Afectaciones_Firmantes_2025.json (37.7MB)
+
+================================================================================
+[6] INTELLIGENCE VALUE
+================================================================================
+
+This map represents current Colombian military/intelligence assessment of:
+1. Where each armed group operates
+2. Overlap and conflict zones between groups
+3. Location of former FARC reintegration camps
+4. Attacks targeting peace process participants
+
+OPERATIONAL SECURITY FAILURE:
+- Map publicly accessible without authentication
+- Real-time armed group positioning exposed
+- Could be used by hostile actors for targeting
+
+================================================================================

@@ -1,0 +1,167 @@
+ARCGIS ENTERPRISE - FULL DATA DUMP
+====================================
+Downloaded: January 5, 2026 (via Tor stealth)
+Source: https://ergit.presidencia.gov.co/server/rest/services
+
+================================================================================
+[1] SYSTEM INFO
+================================================================================
+
+URL: https://ergit.presidencia.gov.co/arcpre/
+Version: ArcGIS Enterprise 11.3.0
+Build: 51575
+Portal ID: 0123456789ABCDEF
+Access: PUBLIC (no auth required for most services)
+
+================================================================================
+[2] FOLDERS DISCOVERED (29 total)
+================================================================================
+
+AgenciaTierras     - Land Agency
+aicma              - Unknown
+CEDISCO            - Unknown
+CENAM              - Unknown
+CISCO              - Unknown
+Datos_Finales      - Final Data
+DDHH               - Human Rights (Derechos Humanos) ***CRITICAL***
+Directorio         - Directory
+FondoPaz           - Peace Fund
+Formularios_Survey123 - Survey Forms
+Hosted             - Hosted services
+JPP                - Unknown
+MapaParlante       - Speaking Map
+Priorizacion       - Prioritization
+Prueba             - Test
+Reporte            - Reports
+ReporteProgreso    - Progress Reports
+Resguardos         - Indigenous Reserves
+SISEP              - Unknown
+SISTEMAS           - Systems
+Talento            - Talent/HR
+TRANSPARENCIA      - Transparency
+UIAFP              - Peace Agreement Implementation
+UnidadAcuerdoFinal - Final Agreement Unit (Peace Deal)
+UnidadCumplimiento - Compliance Unit
+Utilities          - System utilities
+victim_nb          - Victims (token required)
+VisorOACP          - OACP Viewer
+Zonas              - Zones
+
+================================================================================
+[3] CRITICAL SERVICES FOUND
+================================================================================
+
+HUMAN RIGHTS (DDHH):
+- DDHH_Fiscalia - Prosecutor's Office HR data
+- DDHH_dinamica_de_riesgo_y_escenarios - Risk dynamics
+- DDHH_Fecolper - Colombian Journalist Federation
+- DDHH_FLIP - Press Freedom Foundation
+- DDHH_reporte_de_ruta_de_proteccion - PROTECTION ROUTES!
+- DDHH_mapa_actores_oferta - Actor mapping
+- DDHH_Medicina_legal - Legal Medicine
+- DDHH_CensoObservatorios_Survey123 - Observatory census
+
+MILITARY:
+- CNR_julio_2025_MIL1 - Military map (July 2025)
+- CNR_SEP_2025_MIL1 - Military map (Sept 2025)
+- Mapa_AT_MIL1 - AT Military map
+- Mapa_Caso_03_MIL1 - Case 03 Military map
+
+VICTIMS:
+- frm_victim_nb - Victim forms
+- MujeresLibresViolencia - Women free from violence
+
+PEACE PROCESS:
+- FondoPaz/FONDO_PAZ_Proyectos - Peace Fund projects
+- UnidadAcuerdoFinal/UAFP_Cooperantes_Insights - Cooperants
+- UIAFP_Proyectos30092023 - UIAFP Projects
+
+JUDICIAL:
+- Consejor_Superior_Judicatura - Superior Judicial Council
+
+INDIGENOUS:
+- Resguardos/Resguardos_Edicion - Indigenous reserves
+
+================================================================================
+[4] DOWNLOADED FILES (33 total)
+================================================================================
+
+RAW DATA:
+- DDHH_Fiscalia_data.json - Prosecutor HR data
+- DDHH_riesgo_escenarios.json - Risk scenarios
+- DDHH_ruta_proteccion.json - Protection routes!
+- DDHH_Fecolper.json - Journalist federation
+- DDHH_FLIP.json - Press freedom data
+- DDHH_actores_oferta.json - Actor mapping
+- DDHH_Medicina_legal.json - Legal medicine
+- victims_data.json - Victim data
+- MujeresLibresViolencia.json - Women violence data
+- Resguardos_indigenas.json - Indigenous reserves
+- FondoPaz_proyectos.json - Peace Fund projects
+- UAFP_Cooperantes.json - Peace Agreement cooperants
+- UIAFP_proyectos.json - UIAFP projects
+- Rutas_data.json - Routes
+- Informe_Trimestre_DDHH.json - Quarterly HR report
+- Consejo_Judicatura.json - Judicial council
+- T12_Proceso.json - T12 process
+- ServiciosDapre.json - DAPRE services
+- InventarioGeografico.json - Geographic inventory
+
+METADATA/STRUCTURE:
+- services_root.json - Root service listing
+- DDHH_services.json - HR folder structure
+- CNR_SEP_2025_MIL1_metadata.json - Military map metadata
+- DDHH_UNESCO_metadata.json - UNESCO metadata
+- MatrizDepartamental_meta.json - Departmental matrix
+- Municipios_Caso003_meta.json - Case 003 municipalities
+- *_services.json - Various folder listings
+
+================================================================================
+[5] SECURITY ASSESSMENT
+================================================================================
+
+VULNERABILITIES:
+[!] NO AUTHENTICATION on most map/feature services
+[!] Direct query access to sensitive HR data
+[!] Military map metadata exposed
+[!] Protection route data accessible
+[!] Victim information potentially exposed
+[!] Journalist/press freedom data open
+[!] Indigenous reserve boundaries mapped
+
+PROTECTED (Token Required):
+- victim_nb folder
+- System/SpatialAnalysisTools/GPServer
+- User listings
+
+================================================================================
+[6] COORDINATES/EXTENT
+================================================================================
+
+Colombia bounding box:
+- West: -81.73° to -66.85° (longitude)
+- South: -4.22° to 13.39° (latitude)
+- Spatial Reference: WGS84 (WKID 4326)
+
+================================================================================
+[7] SIGNIFICANCE
+================================================================================
+
+This ArcGIS installation contains:
+1. Human rights case data (prosecutor, legal medicine)
+2. Journalist/press protection information
+3. Violence against women tracking
+4. Peace agreement implementation status
+5. Indigenous territory boundaries
+6. Military operational maps (2025)
+7. Victim assistance program data
+
+RISK: If accessed by hostile actors (cartels, paramilitaries),
+this data could be used to target:
+- Human rights defenders
+- Journalists under protection
+- Women in violence programs
+- Peace process participants
+- Indigenous communities
+
+================================================================================

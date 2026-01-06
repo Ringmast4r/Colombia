@@ -1,0 +1,31 @@
+SUBDOMAINS DISCOVERED (33)
+==========================
+
+INTERNAL SYSTEMS:
+- ergit.presidencia.gov.co (ArcGIS 11.3.0)
+- cumplimiento.presidencia.gov.co (Compliance)
+- comisionesext.presidencia.gov.co
+- aspirantes.presidencia.gov.co (Job Portal)
+- boletines.presidencia.gov.co (Newsletters)
+
+COMMUNICATION:
+- colombiachat.presidencia.gov.co
+- meet.presidencia.gov.co
+- sip.presidencia.gov.co (VoIP)
+- dialin.presidencia.gov.co
+- lyncdiscover.presidencia.gov.co (Skype/Lync)
+
+MAIL:
+- correo.presidencia.gov.co
+- autodiscover.presidencia.gov.co
+- mxpalacio.presidencia.gov.co
+- pxpalacio.presidencia.gov.co
+
+NAMED SERVERS (Columbus Ships):
+- lanina.presidencia.gov.co
+- lapinta.presidencia.gov.co
+- santamaria.presidencia.gov.co
+
+SPECIAL:
+- petro.presidencia.gov.co (IN CERTS, NO DNS - INTERNAL?)
+- secumpleelcambio.presidencia.gov.co (Petro slogan)

@@ -1,0 +1,33 @@
+ACTIONABLE INTELLIGENCE
+========================
+
+HIGH VALUE:
+1. ArcGIS Enterprise 11.3.0 publicly accessible
+   URL: https://ergit.presidencia.gov.co/arcpre/
+   (Backend currently showing errors)
+
+2. petro.presidencia.gov.co in SSL certs
+   but NO public DNS = internal/shadow system
+
+3. Self-hosted nameservers (potential target):
+   - ariadne.presidencia.gov.co
+   - bdpalacio.presidencia.gov.co
+
+4. Columbus-named servers reveal naming convention:
+   - lanina, lapinta, santamaria
+
+MEDIUM VALUE:
+5. 33 subdomains mapped via cert transparency
+6. SPF reveals additional IPs:
+   190.145.219.51, 190.145.219.52, 170.246.114.213
+7. Microsoft 365 verification tokens exposed
+8. Cisco CI domain verification token
+
+LOW VALUE:
+9. F5 cookie patterns (standard)
+10. SharePoint version (16.0.0.10387)
+11. Test page in robots.txt (now 404)
+
+CONTACTS:
+- soportes@presidencia.gov.co (IT support)
+- abuse@registrocolombia.co (registrar)

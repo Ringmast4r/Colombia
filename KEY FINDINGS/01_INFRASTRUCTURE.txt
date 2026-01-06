@@ -1,0 +1,20 @@
+COLOMBIA PRESIDENTIAL INFRASTRUCTURE
+====================================
+
+MAIN SITE: presidencia.gov.co
+PRIMARY IP: 170.246.114.229
+IPv6: 2801:172::930:81:0:12
+
+HOSTING:
+- Media Commerce Partners S.A (AS27951)
+- Telmex Colombia S.A (AS14080)
+
+TECH STACK:
+- Microsoft SharePoint 16.0.0.10387
+- F5 BIG-IP (WAF/Load Balancer)
+- Microsoft 365
+
+DOMAIN:
+- Registered: 1999-10-29
+- Expires: 2026-11-02
+- Self-hosted nameservers

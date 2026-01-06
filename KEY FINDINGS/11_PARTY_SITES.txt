@@ -1,0 +1,63 @@
+PETRO'S PARTY WEBSITES
+=======================
+
+COLOMBIA HUMANA (His Party)
+---------------------------
+DOMAIN: colombiahumana.co
+IPs: 172.67.206.107, 104.21.85.136 (Cloudflare)
+IPv6: 2606:4700:3037::6815:5588, 2606:4700:3037::ac43:ce6b
+
+TECH STACK:
+- IPS4 (Invision Community forum)
+- Cloudflare CDN/WAF
+- FontAwesome 6.7.2
+- Spanish language (es-ES)
+
+SUBDOMAINS (54 discovered):
+- api.colombiahumana.co
+- api2.colombiahumana.co
+- app.colombiahumana.co
+- crm.colombiahumana.co
+- decidim.colombiahumana.co (participation platform)
+- votaciones.colombiahumana.co (voting system!)
+- chat.colombiahumana.co
+- chatapp.colombiahumana.co
+- reunion.colombiahumana.co
+- formacion.colombiahumana.co
+- civis.colombiahumana.co
+- aws.colombiahumana.co / aws2 / aws3
+- dev.colombiahumana.co
+- sandbox.colombiahumana.co
+- mailserver.colombiahumana.co
+- roundcube.colombiahumana.co
+- office.colombiahumana.co
+- nube.colombiahumana.co
+- portal.colombiahumana.co
+- stress.colombiahumana.co (load testing)
+- laravel.colombiahumana.co (PHP framework)
+
+---
+
+PACTO HISTORICO (Coalition)
+---------------------------
+DOMAIN: pactohistorico.co
+IP: 216.150.1.1
+REDIRECT: www.pactohistorico.co (Vercel)
+
+TECH STACK:
+- Next.js (React framework)
+- Vercel hosting
+- Modern responsive design
+
+SUBDOMAINS (20 discovered):
+- registro.pactohistorico.co (voter registration)
+- nabi.pactohistorico.co (AI chatbot)
+- chat.pactohistorico.co
+- ch.pactohistorico.co (Colombia Humana)
+- mail.pactohistorico.co
+- webmail.pactohistorico.co
+- reformaya.pactohistorico.co
+- nombres.pactohistorico.co
+
+2026 CANDIDATE: Ivan Cepeda (NOT Petro)
+TWITTER: @PactoHistorico

@@ -1,0 +1,106 @@
+================================================================================
+GALLERY PUBLIC ACCESS VERIFICATION
+================================================================================
+Target: ergit.presidencia.gov.co
+Date: January 5, 2026
+Status: CONFIRMED - Military Maps Visible in Public Gallery
+
+================================================================================
+[1] GALLERY URL
+================================================================================
+
+URL: https://ergit.presidencia.gov.co/arcpre/home/gallery.html
+Parameters: ?sortField=relevance&sortOrder=desc
+Status: Publicly accessible without authentication
+
+================================================================================
+[2] MILITARY MAPS VISIBLE IN GALLERY
+================================================================================
+
+User confirmed the following maps are displayed in public gallery:
+
+| Map Name              | Date Posted    | Classification |
+|-----------------------|----------------|----------------|
+| CNR_SEP_2025_MIL1     | Sep 28, 2025   | MILITARY       |
+| CNR_SEP_2025          | Sep 28, 2025   | MILITARY       |
+| CNR_julio_2025_MIL1   | Jul 9, 2025    | MILITARY       |
+| CNR                   | Jul 9, 2025    | MILITARY       |
+
+Note: "MIL1" suffix suggests military classification
+Note: "CNR" = Consejeria Nacional de Reincorporacion (National Reintegration Council)
+
+================================================================================
+[3] PORTAL CONFIGURATION (EVIDENCE)
+================================================================================
+
+Retrieved from: /arcpre/sharing/rest/portals/self?f=json
+
+Portal Configuration:
+- Portal ID: 0123456789ABCDEF
+- Portal Name: ArcGIS Enterprise
+- Enterprise Version: 11.3.0
+- Build: 51575
+- Portal Mode: singletenant
+- Portal Deployment: ArcGISEnterprise
+- Access: public
+- SAML Enabled: false
+- Signup Disabled: true
+- OAuth Supported: true
+- Comments Enabled: false
+
+Helper Services Exposed:
+- Analysis: /server/rest/services/System/SpatialAnalysisTools/GPServer
+- Async Geocode: /server/rest/services/Utilities/GeocodingTools/GPServer
+- Packaging: /server/rest/services/Utilities/OfflinePackaging/GPServer
+- Print: /arcpre/sharing/tools/newPrint
+
+================================================================================
+[4] ASSESSMENT: INTENTIONAL OR MISCONFIGURATION?
+================================================================================
+
+INDICATORS OF MISCONFIGURATION:
+[X] Internal naming conventions (MIL1, CNR) not sanitized for public
+[X] No access restrictions on military intelligence layers
+[X] Government employee emails embedded in feature attributes
+[X] GPS coordinates of sensitive facilities (AETCR camps) exposed
+[X] No usage disclaimers or classification markings
+[X] Raw REST API fully accessible without tokens
+
+INDICATORS OF INTENTIONAL PUBLICATION:
+[?] Maps appear in official gallery interface
+[?] Portal configured with "access": "public"
+[?] Could be peace process transparency initiative
+
+CONCLUSION:
+Even if technically "public," the exposure of:
+- Armed group territorial control (ELN, Clan del Golfo, EMC)
+- AETCR reintegration camp GPS coordinates
+- Peace signatory attack data
+- Government employee contact information
+
+...represents a significant OPSEC failure, regardless of intent.
+
+================================================================================
+[5] QUESTIONS FOR OSINT REPORT
+================================================================================
+
+1. Did Colombia's defense/security apparatus approve this publication?
+2. Are peace signatory locations meant to be public knowledge?
+3. Is armed group territorial control considered classified?
+4. Who uploaded these maps to the public gallery?
+5. Was a security review conducted before publication?
+
+================================================================================
+[6] DOCUMENTATION SAVED
+================================================================================
+
+Evidence saved to:
+- C:\Users\Squir\Desktop\NARCO COUNTER OPS\COLOMBIA\RAW DOWNLOADS\gallery_page.html
+- C:\Users\Squir\Desktop\NARCO COUNTER OPS\COLOMBIA\RAW DOWNLOADS\portal_self.json (to save)
+
+Screenshot recommendation:
+- Capture gallery.html showing military maps listed
+- Capture individual map detail pages
+- Capture REST services directory
+
+================================================================================

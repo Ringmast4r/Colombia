@@ -1,0 +1,77 @@
+ATTACKS ON PEACE SIGNATORIES - 2025
+=====================================
+Source: CNR_SEP_2025_MIL1/MapServer Layer 0
+Data: "Afectaciones Firmantes 1er semestre 2025"
+Downloaded: January 5, 2026
+
+================================================================================
+[1] SUMMARY STATISTICS (First Half 2025)
+================================================================================
+
+ATTACK TYPE                      | COUNT
+---------------------------------|-------
+Homicides of Signatories         | 29
+Forced Disappearances            | 9
+Attempted Homicides              | 4
+Threats Against Signatories      | 68
+---------------------------------|-------
+TOTAL INCIDENTS                  | 110
+
+================================================================================
+[2] DATA FIELDS
+================================================================================
+
+OBJECTID                         - Record ID
+DPTO_CCDGO                       - Department code
+DPTO_CNMBR                       - Department name
+DESAPARICIÓN_FORZADA             - Forced disappearances
+FAMILIAR_HOMICIDIO               - Family member homicides
+HOMICIDIO_FIRMANTE               - Signatory homicides
+TENTATIVA_DE_HOMICIDIO_FIRMANTE  - Attempted homicides
+AMENAZAS_A_FIRMANTES             - Threats to signatories
+
+================================================================================
+[3] CONTEXT
+================================================================================
+
+"Firmantes" = Signatories of the 2016 Peace Agreement
+
+These are former FARC guerrillas who:
+- Demobilized under the peace accord
+- Surrendered weapons
+- Entered reintegration programs
+- Live in AETCR camps or reintegrated into society
+
+They are being systematically targeted by:
+- FARC dissidents (revenge for "betrayal")
+- Drug cartels (competition/territory)
+- Criminal groups
+- Unknown actors
+
+================================================================================
+[4] SIGNIFICANCE
+================================================================================
+
+29 HOMICIDES in 6 months = approximately 1 killing per week
+
+This data shows:
+1. Peace process participants are not safe
+2. Colombian government is tracking but not preventing attacks
+3. Reintegration camps (AETCR) are known locations = soft targets
+4. Systematic campaign against peace signatories continues
+
+Since 2016 peace accord signing:
+- 400+ former FARC members killed (various sources)
+- Many more threatened/displaced
+- Undermines peace process credibility
+
+================================================================================
+[5] FILE DETAILS
+================================================================================
+
+Filename: Afectaciones_Firmantes_2025.json
+Size: 37.7 MB
+Records: 33 (by department/region)
+Format: ArcGIS FeatureServer JSON with geometry
+
+================================================================================

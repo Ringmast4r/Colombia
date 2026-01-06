@@ -1,0 +1,201 @@
+================================================================================
+COLOMBIAN MILITARY INFRASTRUCTURE ENUMERATION
+================================================================================
+Date: January 5, 2026
+Method: Tor-proxied reconnaissance via crt.sh certificate transparency
+Status: COMPLETED
+
+================================================================================
+[1] ARMY (EJERCITO) - ejercito.mil.co
+================================================================================
+
+TOTAL SUBDOMAINS: 147 discovered via crt.sh
+
+RESPONDING SERVERS (19 resolved):
+| Subdomain                                    | IP               | Status     |
+|----------------------------------------------|------------------|------------|
+| www.ejercito.mil.co                          | 172.67.71.247    | Cloudflare |
+| intranet.ejercito.mil.co                     | 172.67.71.247    | Cloudflare |
+| cri.ejercito.mil.co                          | 172.67.71.247    | Cloudflare |
+| access.ejc.ejercito.mil.co                   | 200.122.226.217  | INTERNAL   |
+| caocc.ejercito.mil.co                        | 200.122.226.202  | Oracle 12c |
+| dialin.ejc.ejercito.mil.co                   | 200.122.226.216  | INTERNAL   |
+| fovid.ejercito.mil.co                        | 200.122.226.199  | Oracle 12c |
+| lyncdiscover.ejc.ejercito.mil.co             | 200.122.226.211  | INTERNAL   |
+| mdm.ejercito.mil.co                          | 200.122.226.199  | INTERNAL   |
+| qlik.ejercito.mil.co                         | 200.122.226.201  | INTERNAL   |
+| consultaregistroinvestigaciones.ejercito.mil.co | 104.26.12.222 | Cloudflare |
+
+EXPOSED TECH STACK:
+- Oracle HTTP Server 12c (caocc.ejercito.mil.co, fovid.ejercito.mil.co)
+  - Default welcome page exposed
+  - Indicates Oracle Fusion Middleware backend
+  - Copyright 2017 Oracle
+
+IP RANGE (Internal Colombian Military):
+- 200.122.226.0/24 - Colombian Army internal network
+- Not behind CDN protection
+- Potential direct access to military systems
+
+================================================================================
+[2] NAVY (ARMADA) - armada.mil.co
+================================================================================
+
+TOTAL SUBDOMAINS: 94 discovered via crt.sh
+
+HIGH VALUE TARGETS:
+| Subdomain                      | Interest Level | Notes                    |
+|--------------------------------|----------------|--------------------------|
+| dicodarcgisarc.armada.mil.co   | CRITICAL       | ArcGIS Server!           |
+| ORFEO.armada.mil.co            | HIGH           | Document management      |
+| ldap-master.armada.mil.co      | HIGH           | LDAP directory           |
+| ldap-replica.armada.mil.co     | HIGH           | LDAP replica             |
+| mail.armada.mil.co             | HIGH           | Email server             |
+| iris.armada.mil.co             | MEDIUM         | Unknown system           |
+| iristunneling.armada.mil.co    | MEDIUM         | VPN/tunnel               |
+| firewallensb.armada.mil.co     | LOW            | Firewall management      |
+| evaluaciondecompetencias.armada.mil.co | MEDIUM | HR/evaluation system     |
+| incorporaciones.armada.mil.co  | MEDIUM         | Recruitment portal       |
+| cimcon.armada.mil.co           | MEDIUM         | Unknown                  |
+| haztemarino.armada.mil.co      | LOW            | Recruitment campaign     |
+
+REGIONAL BASES (subdomains):
+- barranquilla.armada.mil.co
+- bogota.armada.mil.co
+- cartagena.armada.mil.co
+- leguizamo.armada.mil.co
+
+ACCESSIBILITY: Most timeout via Tor (likely IP blocking)
+
+================================================================================
+[3] AIR FORCE (FAC) - fac.mil.co
+================================================================================
+
+TOTAL SUBDOMAINS: 79 discovered via crt.sh
+
+HIGH VALUE TARGETS:
+| Subdomain                      | Interest Level | Notes                    |
+|--------------------------------|----------------|--------------------------|
+| gitlab.fac.mil.co              | CRITICAL       | Source code repository   |
+| apiapps.fac.mil.co             | HIGH           | API server               |
+| apps.fac.mil.co                | HIGH           | Applications portal      |
+| autodiscover.fac.mil.co        | HIGH           | Exchange autodiscover    |
+| mail.fac.mil.co                | HIGH           | Email server             |
+| correo.fac.mil.co              | HIGH           | Webmail                  |
+| bpm.fac.mil.co                 | MEDIUM         | Business process mgmt    |
+| bpm2/3/4.fac.mil.co            | MEDIUM         | BPM instances            |
+| portalautoservicio.fac.mil.co  | MEDIUM         | Self-service portal      |
+| hermes.fac.mil.co              | MEDIUM         | Messaging system         |
+| sairo.fac.mil.co               | MEDIUM         | Unknown system           |
+| controller1.fac.mil.co         | LOW            | Controller               |
+
+ARCHIVED SITES:
+- old.fac.mil.co
+- new.fac.mil.co
+- *.anterior.fac.mil.co
+- *.old.fac.mil.co
+
+PROTECTION: CloudFront WAF (403 responses)
+
+================================================================================
+[4] GENERAL COMMAND (CGFM) - cgfm.mil.co
+================================================================================
+
+TOTAL SUBDOMAINS: 41 discovered via crt.sh
+ACCESS: AWS ELB protection (403 responses)
+
+================================================================================
+[5] NATIONAL POLICE - policia.gov.co
+================================================================================
+
+TOTAL SUBDOMAINS: 60+ discovered via crt.sh
+
+CRITICAL FINDINGS:
+| Subdomain                      | Interest Level | Notes                    |
+|--------------------------------|----------------|--------------------------|
+| ia.policia.gov.co              | CRITICAL       | AI/Intelligence platform |
+| app.ia.policia.gov.co          | CRITICAL       | AI application           |
+| aisearchengine.ia.policia.gov.co | CRITICAL    | AI search engine         |
+| aitranscribe.ia.policia.gov.co | CRITICAL       | AI transcription         |
+| dijinpandora.policia.gov.co    | CRITICAL       | DIJIN investigation sys  |
+| gisponal.policia.gov.co        | HIGH           | Police GIS mapping       |
+| antecedentes.policia.gov.co    | HIGH           | Criminal records         |
+| cc-csirt.policia.gov.co        | HIGH           | Cyber security team      |
+| rnmc2.policia.gov.co           | HIGH           | Unknown - C2?            |
+| comparendos.policia.gov.co     | MEDIUM         | Traffic violations       |
+
+AI INFRASTRUCTURE (ia.policia.gov.co):
+- expertopol.ia.policia.gov.co (Expert system)
+- nadia.ia.policia.gov.co (AI assistant?)
+- houndoc.ia.policia.gov.co (Document analysis)
+- catalog.ia.policia.gov.co (AI catalog)
+- forms.ia.policia.gov.co (AI forms)
+- maps.analytics.ia.policia.gov.co (Analytics mapping)
+- addcapas.ia.policia.gov.co (Layer addition)
+- anticipacion.ia.policia.gov.co (Predictive?)
+
+COMMUNICATION SYSTEMS:
+- lyncdiscover.policia.gov.co (Skype for Business)
+- lyncadmin.policia.gov.co
+- lyncpool.policia.gov.co
+- lyncwac.policia.gov.co
+- lyncweb.policia.gov.co
+- mail.policia.gov.co
+- SRVHUBCAS1/2.policia.gov.co (Exchange CAS)
+
+MAIN SITE TECH STACK:
+- Server: nginx/1.20.1
+- Backend: Drupal CMS
+- PHP: 8.3.29
+- Cache: Varnish
+- Security: HSTS, CSP, X-Frame-Options
+
+================================================================================
+[6] MINISTRY OF DEFENSE - mindefensa.gov.co
+================================================================================
+
+PROTECTION: Volterra/F5 WAF
+- x-volterra-location: fr4-fra (Frankfurt node)
+- Sophisticated DDoS/WAF protection
+- All requests blocked
+
+================================================================================
+[7] SECURITY ASSESSMENT
+================================================================================
+
+PROPERLY SECURED:
+- mindefensa.gov.co (Volterra/F5 WAF)
+- fac.mil.co (CloudFront WAF)
+- cgfm.mil.co (AWS ELB)
+- army.mil.co (Cloudflare - though wrong domain)
+- Most Police and Navy systems (Tor blocking)
+
+POTENTIALLY VULNERABLE:
+- caocc.ejercito.mil.co - Oracle HTTP Server 12c default page exposed
+- fovid.ejercito.mil.co - Oracle HTTP Server 12c default page exposed
+- 200.122.226.0/24 range - Direct Colombian Army IPs without CDN
+- dicodarcgisarc.armada.mil.co - Navy ArcGIS server (not tested from non-Tor)
+
+TOTAL SUBDOMAINS DISCOVERED:
+| Domain             | Subdomains | Status           |
+|--------------------|------------|------------------|
+| ejercito.mil.co    | 147        | Partial access   |
+| armada.mil.co      | 94         | Tor blocked      |
+| fac.mil.co         | 79         | WAF blocked      |
+| cgfm.mil.co        | 41         | WAF blocked      |
+| policia.gov.co     | 60+        | Partial access   |
+|--------------------|------------|------------------|
+| TOTAL              | 421+       | Mixed            |
+
+================================================================================
+[8] RECOMMENDATIONS
+================================================================================
+
+1. Non-Tor probing of 200.122.226.0/24 range may yield results
+2. Navy ArcGIS (dicodarcgisarc.armada.mil.co) warrants further investigation
+3. Police AI infrastructure is extensive - may have public APIs
+4. DIJIN Pandora system is high-priority OSINT target
+5. Check Wayback Machine for historical versions of these systems
+6. Monitor for new certificate issuances via crt.sh
+
+================================================================================

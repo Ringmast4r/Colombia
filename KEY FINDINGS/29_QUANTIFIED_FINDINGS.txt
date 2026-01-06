@@ -1,0 +1,261 @@
+================================================================================
+QUANTIFIED FINDINGS - COLOMBIA OSINT PROJECT
+================================================================================
+Date: January 5, 2026 (Final Update)
+Target: Colombian Government Infrastructure (Petro Administration)
+
+================================================================================
+[1] DATA VOLUME - FINAL
+================================================================================
+
+TOTAL PROJECT SIZE: 2,553 MB (2.5 GB)
+
+| Category         | Files | Size (MB) |
+|------------------|-------|-----------|
+| RAW DOWNLOADS    | 455   | 2,048.0   |
+| HTML Maps        | 24+   | 247.0     |
+| KEY FINDINGS     | 35    | 0.224     |
+| Hashes/Creds     | 5     | 0.034     |
+| Intel Reports    | 5     | 0.024     |
+| Assets/Snips     | 15+   | 0.448     |
+| Sources          | 5+    | 0.013     |
+|------------------|-------|-----------|
+| TOTAL            | 544+  | 2,553.0   |
+
+RAW DOWNLOADS BY TYPE:
+| Type  | Files | Size (MB) | Notes                    |
+|-------|-------|-----------|--------------------------|
+| .json | 420+  | 2,040.0   | ArcGIS feature data      |
+| .png  | 25+   | 5.0       | Map exports              |
+| .html | 10+   | 2.0       | Police AI, DNI captures  |
+| .txt  | 5+    | 0.5       | Logs, extracts           |
+| .py   | 2     | 0.01      | Conversion scripts       |
+
+================================================================================
+[2] CREDENTIALS EXTRACTED
+================================================================================
+
+TOTAL CREDENTIALS: 687+
+
+| Type               | Count | Notes                        |
+|--------------------|-------|------------------------------|
+| All Emails         | 460   | From ArcGIS feature data     |
+| Gov Emails         | 113   | .gov.co domain addresses     |
+| Hashes/GUIDs       | 103   | MD5-style identifiers        |
+| Usernames          | 3     | System accounts identified   |
+| AWS Account ID     | 1     | 926162397524                 |
+| Session Cookies    | 3     | Police AI platform           |
+| AWS Credentials    | 1     | Temporary STS token pattern  |
+
+Government Email Domains:
+- @presidencia.gov.co
+- @mininterior.gov.co
+- @cancilleria.gov.co
+- @dnp.gov.co
+- @policia.gov.co
+- Various other .gov.co agencies
+
+================================================================================
+[3] INFRASTRUCTURE DISCOVERED
+================================================================================
+
+TOTAL SUBDOMAINS: 513+
+
+| Domain             | Count | Method            |
+|--------------------|-------|-------------------|
+| ejercito.mil.co    | 147   | crt.sh            |
+| armada.mil.co      | 94    | crt.sh            |
+| fac.mil.co         | 79    | crt.sh            |
+| cgfm.mil.co        | 41    | crt.sh            |
+| policia.gov.co     | 60+   | crt.sh            |
+| ia.policia.gov.co  | 20+   | Direct enumeration|
+| dni.gov.co         | 15    | crt.sh            |
+| fiscalia.gov.co    | 30+   | crt.sh            |
+| mininterior.gov.co | 27    | crt.sh            |
+
+ARCGIS SERVICES: 300+
+
+| Folder              | Services | Critical Data                 |
+|---------------------|----------|-------------------------------|
+| Root                | 33       | Military maps, judicial       |
+| Hosted              | 240+     | Armed groups, violence, coca  |
+| DDHH                | 22       | Human rights, protection      |
+| UnidadCumplimiento  | 8        | Compliance tracking           |
+| aicma               | 4        | Landmine data                 |
+| FondoPaz            | 2        | Peace fund projects           |
+| UnidadAcuerdoFinal  | 2        | Peace agreement               |
+| Resguardos          | 2        | Indigenous reserves           |
+| Zonas               | 1        | Demining events               |
+| Utilities           | 4        | Geocoding, printing           |
+
+================================================================================
+[4] INTELLIGENCE DATA VOLUMES
+================================================================================
+
+MILITARY INTELLIGENCE:
+| Dataset                           | Size (MB) | Records   |
+|-----------------------------------|-----------|-----------|
+| CNR_SEP_2025_MIL1 (Sep 2025 map)  | 156.0     | Multiple  |
+| CNR_julio_2025_MIL1 (Jul 2025)    | 45.0      | Multiple  |
+| Mapa_AT_MIL1                      | 8.0       | Multiple  |
+| Mapa_Caso_03_MIL1                 | 5.0       | Multiple  |
+
+ARMED GROUP DATA:
+| Dataset                           | Size (MB) | Records   |
+|-----------------------------------|-----------|-----------|
+| EMC_FARC_CriticalZones            | 97.0      | Multi     |
+| ClanDelGolfo_Presencia            | 1.9       | 22 zones  |
+| ELN territories                   | 0.5       | 11 zones  |
+| Segunda Marquetalia               | 0.4       | 21 zones  |
+| Disidencias EMC                   | 0.066     | 22 zones  |
+| Disidencias EMBF                  | 0.034     | 11 zones  |
+
+PEACE PROCESS DATA:
+| Dataset                           | Size (MB) | Records   |
+|-----------------------------------|-----------|-----------|
+| Firmantes_mayo_2025               | 163.0     | Thousands |
+| Afectaciones_Firmantes_2025       | 38.0      | 110+      |
+| FondoReparacion_Predios           | 7.7       | Multiple  |
+| ETCR_Camps                        | 0.5       | 24 camps  |
+| FirmantesPaz_Presencia            | 0.159     | Multiple  |
+
+HUMAN RIGHTS DATA:
+| Dataset                           | Size (MB) | Source    |
+|-----------------------------------|-----------|-----------|
+| DDHH_Fiscalia_SIG                 | 81.0      | Prosecutor|
+| DDHH_Fiscalia                     | 32.0      | Prosecutor|
+| DDHH_Fecolper (journalists)       | 32.0      | FECOLPER  |
+| CNMH_HistoricalMemory             | 0.119     | CNMH      |
+| Defensoria_Alertas                | Varies    | Ombudsman |
+| SomosDefensores                   | Varies    | HR org    |
+| INDEPAZ                           | Varies    | Peace org |
+
+VIOLENCE/CRIME DATA (2010-2025):
+| Dataset                           | Type           |
+|-----------------------------------|----------------|
+| MGN_homicidios_2010_2025          | Homicides      |
+| MGN_Feminicidio_2010_2025         | Femicides      |
+| MGN_secuestro_2010_2025           | Kidnappings    |
+| MGN_extorsion_2010_2025           | Extortion      |
+| MGN_tratadepersonas_2010_2025     | Trafficking    |
+| MGN_violenciaintrafamiliar        | Domestic       |
+| MGN_reclutamiento_ilicito         | Recruitment    |
+| MGN_Desplazamiento_2010_2025      | Displacement   |
+| MGN_Amenazas_2010_2025            | Threats        |
+| Acciones_ContraPolicia            | Anti-police    |
+| Masacre                           | Massacres      |
+| Hechos_Violencia                  | Violence facts |
+
+COCA/DRUG DATA:
+| Dataset                           | Size (KB) | Year      |
+|-----------------------------------|-----------|-----------|
+| CultivoCoca2023                   | 724       | 2023      |
+| ACultivoCoca2022                  | Varies    | 2022      |
+| ACultivoCoca2017                  | Varies    | 2017      |
+| PNIS_datos                        | Varies    | Current   |
+
+================================================================================
+[5] AWS INFRASTRUCTURE
+================================================================================
+
+Police AI Platform (ia.policia.gov.co):
+| Component          | Value                                      |
+|--------------------|--------------------------------------------|
+| AWS Account ID     | 926162397524                               |
+| S3 Bucket          | pon-prod-ai-platform-926162397524          |
+| Region             | us-east-1                                  |
+| AI Backend         | Amazon Bedrock                             |
+| CDN                | CloudFront                                 |
+| Frontend           | Next.js                                    |
+
+Subdomains discovered (20+):
+- app.ia.policia.gov.co
+- nadia.ia.policia.gov.co (AI assistant)
+- aisearchengine.ia.policia.gov.co
+- iam.ia.policia.gov.co/admin/
+- forms.ia.policia.gov.co
+- maps.analytics.ia.policia.gov.co
+- catalog.ia.policia.gov.co
+- expertopol.ia.policia.gov.co
+- houndoc.ia.policia.gov.co
+- aitranscribe.ia.policia.gov.co
+- anticipacion.ia.policia.gov.co
+
+================================================================================
+[6] INTELLIGENCE AGENCIES
+================================================================================
+
+DNI (National Intelligence):
+| Subdomain              | Type                |
+|------------------------|---------------------|
+| dni.gov.co             | Main site           |
+| correocifrado.dni.gov.co| Encrypted email    |
+| mail.dni.gov.co        | Mail server         |
+| pyxsis.dni.gov.co      | Unknown system      |
+| osirism.dni.gov.co     | Unknown system      |
+| birmania.dni.gov.co    | Codename (Myanmar)  |
+| denver.dni.gov.co      | Codename (US city)  |
+| kuwait.dni.gov.co      | Codename (ME)       |
+
+Fiscalia (Prosecutor's Office): 30+ subdomains
+- geoappfgn.fiscalia.gov.co (GIS app)
+- nomina.fiscalia.gov.co (Payroll)
+- grabacion.fiscalia.gov.co (Recording)
+
+DIJIN (Criminal Investigation):
+- dijinpandora.policia.gov.co (Case management)
+
+================================================================================
+[7] VULNERABILITY COUNTS
+================================================================================
+
+| Severity | Count | Examples                              |
+|----------|-------|---------------------------------------|
+| CRITICAL | 5     | ArcGIS no auth, military maps public  |
+|          |       | 240+ hosted services, AWS exposed     |
+|          |       | Gallery shows military maps           |
+| HIGH     | 6     | Armed group data, signatory locations |
+|          |       | Protection routes, 460 emails         |
+|          |       | Violence stats, session cookies       |
+| MEDIUM   | 5     | Portal config, server version         |
+|          |       | GUIDs, AWS temp creds, DNI codenames  |
+|----------|-------|---------------------------------------|
+| TOTAL    | 16    |                                       |
+
+================================================================================
+[8] SESSION STATISTICS
+================================================================================
+
+Total Sessions: 4
+Total Duration: ~6 hours (estimated)
+Total Files Created: 544+
+Total Data Downloaded: 2.5 GB
+Key Findings Documents: 35
+
+Session Breakdown:
+| Session | Date/Time      | Focus                    | Output     |
+|---------|----------------|--------------------------|------------|
+| 1       | Jan 4 Evening  | Initial ArcGIS discovery | 1.18 GB    |
+| 2       | Jan 5 Morning  | Crisis research, mil     | 0.2 GB     |
+| 3       | Jan 5 PM #1    | Police AI, intel agencies| 0.3 GB     |
+| 4       | Jan 5 PM #2    | Complete enumeration     | 0.4 GB     |
+
+================================================================================
+[9] DATA CATEGORIES SUMMARY
+================================================================================
+
+| Category              | Files | Size    | Priority |
+|-----------------------|-------|---------|----------|
+| Military Intelligence | 50+   | 214 MB  | CRITICAL |
+| Armed Group Territories| 20+  | 100 MB  | CRITICAL |
+| Peace Signatory Data  | 15+   | 210 MB  | CRITICAL |
+| Human Rights Data     | 40+   | 145 MB  | HIGH     |
+| Violence Statistics   | 30+   | 50 MB   | HIGH     |
+| Credentials/Hashes    | 5     | 34 KB   | HIGH     |
+| Coca/Drug Data        | 10+   | 5 MB    | MEDIUM   |
+| Infrastructure Docs   | 100+  | 20 MB   | MEDIUM   |
+| Visualizations/HTML   | 30+   | 247 MB  | LOW      |
+
+================================================================================
+                     END OF QUANTIFIED FINDINGS
+================================================================================

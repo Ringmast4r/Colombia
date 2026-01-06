@@ -1,0 +1,29 @@
+DNS TXT RECORDS (Intelligence)
+==============================
+
+SPF RECORD:
+v=spf1 mx ip4:190.145.219.51 ip4:190.145.219.52
+ip4:170.246.114.213 include:spf.protection.outlook.com
+include:spf.rpost.net -all
+
+VERIFICATION TOKENS:
+
+Google:
+google-site-verification=ZbFu0BAhJKxdmmP1uDBmrB3APD7G290CWV3l8ieJ_Lw
+
+Microsoft 365:
+MS=ms11844033
+MS=ms33132372
+MS=ms37011212
+
+GlobalSign (SSL):
+globalsign-domain-verification=ynqUB_TdDIexM50K56_qt2QTD06Rk96h9QVlmsE_CG
+globalsign-domain-verification=emAfZDbqWX32Cof2nFQ-xcLsZF4h0aAUm7tZScuGNJ
+
+Cisco:
+cisco-ci-domain-verification=50f370706a12aaca6d1d02152128404936a7b128da5b6237a2b36ef5f5a37094
+
+UNKNOWN TOKENS:
+2m0j1gjd18z0fhf9y95hpwcvtbkn8j04
+EC00D0DD7529AD0AF688E733D1FE46D40CE9ACB5787195CF91A70AE05514515E
+4cacfb2b340dc5a4fd8497b1b79354c19ecc5abf69982e63d5b7a0188a1ea782

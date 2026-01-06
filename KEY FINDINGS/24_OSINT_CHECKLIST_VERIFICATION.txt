@@ -1,0 +1,181 @@
+================================================================================
+OSINT CHECKLIST VERIFICATION
+================================================================================
+Target: ergit.presidencia.gov.co / presidencia.gov.co
+Date: January 5, 2026
+Reference: C:\Users\Squir\Desktop\OSINT Playbook\WEBSITE_OSINT_CHECKLIST.txt
+
+================================================================================
+[1] PRE-RECONNAISSANCE - DNS & WHOIS
+================================================================================
+
+[X] A records - Documented in 03_IP_ADDRESSES.txt
+[X] MX records - See DNS analysis
+[X] TXT records - SPF, DKIM captured in 05_DNS_RECORDS.txt
+[X] NS records - Documented
+[X] Subdomains - 33 found for presidencia.gov.co (02_SUBDOMAINS.txt)
+                 54 found for colombiahumana.co (13_COLOMBIAHUMANA_SUBDOMAINS.txt)
+[X] Certificate Transparency - crt.sh checked
+[X] WHOIS - Captured for all domains
+
+================================================================================
+[2] HTTP HEADERS
+================================================================================
+
+[X] Server header - ArcGIS/IIS stack identified
+[X] X-Powered-By - ASP.NET (04_ARCGIS_SYSTEM.txt)
+[ ] Security headers - Need to capture full header dump
+[X] CDN detection - No CDN, direct hosting
+[X] Cookie analysis - Session tokens documented (07_COOKIES_TOKENS.txt)
+
+================================================================================
+[3] HTML SOURCE CODE
+================================================================================
+
+[X] Meta tags - CMS identified
+[X] Framework signatures - ArcGIS Enterprise 11.3.0
+[X] HTML comments - Checked
+[X] Gallery pages downloaded (RAW DOWNLOADS/gallery_page.html)
+
+================================================================================
+[4] JAVASCRIPT FILES
+================================================================================
+
+[ ] Source maps - Not specifically checked (recommend checking)
+[X] API endpoints - ArcGIS REST fully enumerated
+[X] Internal URLs - Mapped
+[ ] Exposed API keys - Need systematic JS analysis
+
+================================================================================
+[5] API ENUMERATION
+================================================================================
+
+[X] REST API discovered - /server/rest/services
+[X] All services enumerated - See 18_ARCGIS_FULL_DUMP.txt
+[X] Feature layers dumped - 322 files, 1.26 GB
+[X] No authentication required - CONFIRMED
+[X] API documentation - ArcGIS standard endpoints
+
+================================================================================
+[6] TRACKING & ANALYTICS
+================================================================================
+
+[ ] Google Analytics IDs - Not checked for ArcGIS portal
+[ ] Facebook Pixel - Not checked
+[ ] Other tracking - Need to analyze gallery HTML
+
+================================================================================
+[7] ROBOTS.TXT & SITEMAP
+================================================================================
+
+[X] robots.txt - Returns 404 (no robots.txt)
+[ ] sitemap.xml - Not checked
+[X] Disallowed paths - N/A
+
+================================================================================
+[8] COMMON FILES CHECKED
+================================================================================
+
+[X] /.git/HEAD - Not exposed (404)
+[ ] /.env - Not checked
+[ ] /swagger.json - Not applicable for ArcGIS
+[X] /server/rest/services - EXPOSED (main finding!)
+[ ] /arcgis/admin - Need to check
+
+================================================================================
+[9] EXPOSED CREDENTIALS & DATA
+================================================================================
+
+[X] Emails extracted - 460 total, 113 .gov.co
+[X] Usernames extracted - 3 (angiemontoya, maicolvelasquez, Esri_Anonymous)
+[X] Hashes/GUIDs - 103 extracted
+[X] Internal IPs - Not found in data
+[X] GPS coordinates - AETCR camps extracted
+
+================================================================================
+[10] DATA DOWNLOADED & ARCHIVED
+================================================================================
+
+RAW DOWNLOADS (1.26 GB, 322 files):
+[X] Military maps (CNR_SEP_2025, CNR_julio_2025)
+[X] Armed group territories (ELN, AGC, EMC, etc.)
+[X] AETCR camp locations
+[X] Human rights data (DDHH)
+[X] Peace signatory attack data
+[X] Portal configuration
+[X] Gallery HTML page
+
+================================================================================
+[11] GAPS TO FILL
+================================================================================
+
+PRIORITY HIGH:
+[ ] Full HTTP header capture and save
+[ ] Screenshot gallery showing military maps listed
+[ ] Check /arcgis/admin for additional exposure
+[ ] Analyze downloaded JS files for exposed secrets
+
+PRIORITY MEDIUM:
+[ ] Source map check (.js.map files)
+[ ] Wayback Machine historical check
+[ ] Analytics ID extraction from HTML
+[ ] Certificate details (openssl)
+
+PRIORITY LOW:
+[ ] Full site mirror with wget
+[ ] Video/media asset enumeration
+[ ] Additional subdomain fuzzing
+
+================================================================================
+[12] VERIFICATION COMMANDS TO RUN
+================================================================================
+
+# Save full headers
+curl -sI https://ergit.presidencia.gov.co/arcpre/home/ > headers.txt
+
+# Check admin endpoints
+curl -sI https://ergit.presidencia.gov.co/arcgis/admin
+curl -sI https://ergit.presidencia.gov.co/server/admin
+
+# Check for source maps
+curl -sI https://ergit.presidencia.gov.co/arcpre/home/js/main.js.map
+
+# Certificate info
+echo | openssl s_client -connect ergit.presidencia.gov.co:443 2>/dev/null | openssl x509 -text
+
+================================================================================
+[13] EVIDENCE INVENTORY
+================================================================================
+
+Location: C:\Users\Squir\Desktop\NARCO COUNTER OPS\COLOMBIA\
+
+Folders:
+- RAW DOWNLOADS/ (322 files, 1.26 GB)
+- KEY FINDINGS/ (24 documentation files)
+- Hashes/ (4 credential files)
+- HTML/ (15 visualization files)
+- intel/ (5 report files)
+
+Key Files:
+- INDEX.txt (master index)
+- GUSTAVO_PETRO_TIMELINE.txt
+- PRESIDENCIA_OSINT_REPORT.txt
+
+================================================================================
+[14] CONCLUSION
+================================================================================
+
+COVERAGE: ~75% of OSINT checklist items completed
+
+MAJOR FINDINGS DOCUMENTED:
+1. ArcGIS REST API publicly accessible without auth
+2. Military intelligence maps in public gallery
+3. Armed group territorial data exposed
+4. 460 emails / 103 hashes extracted
+5. AETCR camp GPS coordinates captured
+
+RECOMMENDATION:
+Run gap-fill commands above to achieve 90%+ checklist coverage
+Focus on screenshot evidence of gallery exposure
+
+================================================================================

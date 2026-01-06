@@ -1,0 +1,24 @@
+PETRO SOCIAL MEDIA
+==================
+
+TWITTER/X:
+Handle: @petaborrego (redirects to x.com)
+Status: Active account
+
+PACTO HISTORICO:
+Handle: @PactoHistorico
+Status: Active
+
+COALITION PARTIES:
+- Colombia Humana
+- Union Patriotica
+- Polo Democratico Alternativo
+- Partido Comunista Colombiano
+- Progresistas
+
+WEBSITES:
+- www.colombiahumana.co (IPS4 forum)
+- www.pactohistorico.co (Next.js on Vercel)
+
+NOTE: Petro cannot run again in 2026
+Next candidate: Ivan Cepeda

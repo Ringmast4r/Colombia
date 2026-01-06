@@ -1,0 +1,119 @@
+================================================================================
+US-COLOMBIA DIPLOMATIC CRISIS 2025
+================================================================================
+Updated: January 5, 2026
+Status: ONGOING CRISIS
+
+================================================================================
+[1] TIMELINE OF ESCALATION
+================================================================================
+
+SEPTEMBER 2025:
+- Sept 26: US REVOKES PETRO'S VISA
+  - Cause: Petro called on soldiers to disobey Trump
+  - Location: Outside UN headquarters, pro-Palestine rally
+  - Petro called for armed force to "free Palestine"
+  - State Dept: "incitement to violence and reckless rhetoric"
+  - Dozen+ Colombian officials' visas also revoked/surrendered
+
+OCTOBER 2025:
+- Oct 19: TRUMP ENDS US AID TO COLOMBIA
+  - Trump calls Petro an "illegal drug dealer" on Truth Social
+  - Announces tariffs on Colombian goods
+  - Decertifies Colombia as drug war partner
+  - Colombia now same category as Venezuela, Bolivia, Myanmar, Afghanistan
+
+- Oct 24: OFAC SANCTIONS ON PETRO & FAMILY
+  Sanctioned individuals (SDN List):
+  - Gustavo Petro (President)
+  - Veronica del Socorro Alcocer Garcia (Wife)
+  - Nicolas Fernando Petro Burgos (Son)
+  - Armando Alberto Benedetti (Interior Minister, former campaign chief)
+
+  Treasury Sec Scott Bessent: "Since President Gustavo Petro came to
+  power, cocaine production in Colombia has exploded to the highest
+  rate in decades, flooding the United States and poisoning Americans."
+
+NOVEMBER 2025:
+- Petro calls Trump a "barbarian"
+- Orders Colombian security forces to STOP sharing intel with US
+- USS Gerald R. Ford (nuclear carrier) deployed to Caribbean
+- Military escalation concerns
+
+- Nov 24: PETRO DARES RUBIO TO ARREST HIM
+  Speech quotes:
+  "So I have to say to Mr. Marco Rubio, brother, 'If you are going
+  to arrest me, let's see if you can.'"
+
+  "If you want to put me in the — what is it? — orange pajamas
+  [jumpsuit]? Try it. But this people does not kneel."
+
+  "You have to kneel, because here there is a jaguar about to awaken.
+  Don't threaten us, don't deceive us, we know the plays."
+
+  "One does not order Colombia to kneel. Free Colombia is beautiful
+  and free."
+
+================================================================================
+[2] KEY ACCUSATIONS AGAINST PETRO
+================================================================================
+
+US GOVERNMENT CLAIMS:
+1. Record cocaine production under Petro presidency
+2. Allowing drug cartels to flourish
+3. Refusing to stop trafficking activity
+4. Ties between president and drug-trafficking operations
+5. Incitement to violence against US
+6. Reckless anti-US rhetoric
+
+PETRO'S DEFENSE:
+1. Colombia has fought drug trafficking "effectively for decades"
+2. US violating Colombian sovereignty
+3. US killing innocent fishermen in boat strikes
+4. Will contest sanctions in US court system
+
+================================================================================
+[3] CURRENT STATUS (JAN 2026)
+================================================================================
+
+SANCTIONS IN EFFECT:
+- Petro and family on OFAC SDN list
+- Blocked from US business transactions
+- Visa revoked - cannot enter US
+- US aid to Colombia suspended
+- Tariffs on Colombian goods
+
+MILITARY POSTURE:
+- USS Gerald R. Ford in Caribbean Sea
+- Under SOUTHCOM control
+- Colombia halted intel sharing with US
+- Trump floated "drug strikes" against Colombia
+- Petro warned of potential "war"
+
+DIPLOMATIC STATUS:
+- Relations at historic low
+- No signs of de-escalation
+- Both sides entrenched
+
+================================================================================
+[4] IMPLICATIONS FOR OSINT
+================================================================================
+
+1. Petro's OFAC designation validates intel collection
+2. Drug trafficking allegations support our findings
+3. Armed group territorial control maps = evidence of cartel expansion
+4. Peace process data shows potential cover for trafficking
+5. Government infrastructure exposure may relate to internal chaos
+
+================================================================================
+[5] SOURCES
+================================================================================
+
+- Breitbart: Petro dares Rubio arrest (Nov 24, 2025)
+- Washington Post: Trump calls Petro drug dealer (Oct 19, 2025)
+- NPR: US sanctions Petro family (Oct 24, 2025)
+- CNN: US revokes Petro visa (Sept 27, 2025)
+- Latin America Reports: Trump floats drug strikes (Nov 2025)
+- Axios: US sanctions Colombia's President Petro
+
+================================================================================

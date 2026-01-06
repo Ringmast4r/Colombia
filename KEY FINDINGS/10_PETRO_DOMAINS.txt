@@ -1,0 +1,25 @@
+PETRO PERSONAL DOMAINS
+======================
+
+gustavopetro.com
+  IP: 76.223.54.146, 13.248.169.48
+  STATUS: PARKED - For Sale on GoDaddy
+  NOT UNDER PETRO'S CONTROL
+
+gustavopetro.co
+  IP: 45.86.36.162
+  STATUS: Timeout (may be inactive)
+
+petro.co
+  IP: 76.223.54.146, 13.248.169.48
+  STATUS: PARKED - For Sale on GoDaddy
+  NOT UNDER PETRO'S CONTROL
+
+petropresidente.com
+  IP: 54.243.117.197, 13.223.25.84 (AWS)
+  STATUS: Returns 404 - Decommissioned
+  SERVER: Kestrel (.NET)
+  WAYBACK: Archives from 2007 (campaign site)
+
+FINDING: Petro does NOT control his name domains.
+They are parked/for sale on GoDaddy.

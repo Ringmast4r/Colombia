@@ -1,0 +1,33 @@
+ARCGIS ENTERPRISE SYSTEM
+========================
+
+URL: https://ergit.presidencia.gov.co/arcpre/
+
+VERSION INFO:
+- ArcGIS Enterprise 11.3.0
+- Build: 51575
+- Current Version: 2024.1
+
+CONFIGURATION:
+- Portal Mode: singletenant
+- Public Access: YES
+- Signup Disabled: YES
+- SAML: Not enabled
+- OAuth Supported: YES
+
+HELPER SERVICES EXPOSED:
+- /server/rest/services/System/SpatialAnalysisTools/GPServer
+- /server/rest/services/Utilities/GeocodingTools/GPServer
+- /server/rest/services/Utilities/OfflinePackaging/GPServer
+
+DATA STORES:
+- Has Relational ArcGIS Data Store: YES
+- Spatiotemporal Data Store: NO
+
+PORTS:
+- HTTP: 80
+- HTTPS: 443
+
+STATUS: REST services returning error
+"Could not access any server machines"
+(Backend may be down or misconfigured)

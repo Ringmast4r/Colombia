@@ -1,0 +1,148 @@
+================================================================================
+COLOMBIAN INTELLIGENCE AGENCIES - OSINT FINDINGS
+================================================================================
+Date: January 5, 2026
+Method: Tor-proxied reconnaissance + crt.sh enumeration
+
+================================================================================
+[1] DNI - DIRECCION NACIONAL DE INTELIGENCIA
+================================================================================
+
+URL: https://www.dni.gov.co/
+Status: 200 OK (Accessible via Tor)
+Server: DNI-GOV-CO (Custom server header)
+
+TECHNOLOGY STACK:
+- WordPress CMS (Astra theme 4.11.18)
+- Custom security headers
+- HSTS enabled (max-age 63072000)
+- CSP: default-src 'self'; object-src 'none'
+- X-Frame-Options: SAMEORIGIN
+- Strict robots: noindex, nofollow
+
+WP REST API: BLOCKED
+- Returns custom "Acceso denegado" (Access denied) page
+- Author: CAOT
+
+SUBDOMAINS DISCOVERED (15):
+| Subdomain                    | Notes                          |
+|------------------------------|--------------------------------|
+| dni.gov.co                   | Main site (WordPress)          |
+| www.dni.gov.co               | Main site mirror               |
+| correocifrado.dni.gov.co     | ENCRYPTED EMAIL SYSTEM         |
+| mail.dni.gov.co              | Mail server                    |
+| pyxsis.dni.gov.co            | Unknown system (codename)      |
+| osirism.dni.gov.co           | Unknown system (codename)      |
+| birmania.dni.gov.co          | Codename server (timeout)      |
+| denver.dni.gov.co            | Codename server (timeout)      |
+| kuwait.dni.gov.co            | Codename server (timeout)      |
+| vcsavdi.dni.gov.co           | Unknown                        |
+
+CODENAME ANALYSIS:
+- "Birmania" = Myanmar (former Burma)
+- "Denver" = US city
+- "Kuwait" = Middle Eastern country
+These may be operation codenames or regional station identifiers.
+
+================================================================================
+[2] FISCALIA GENERAL DE LA NACION (PROSECUTOR'S OFFICE)
+================================================================================
+
+SUBDOMAINS DISCOVERED (30+):
+| Subdomain                    | Interest Level | Notes              |
+|------------------------------|----------------|--------------------|
+| geoappfgn.fiscalia.gov.co    | HIGH           | GIS application    |
+| nomina.fiscalia.gov.co       | HIGH           | Payroll system     |
+| grabacion.fiscalia.gov.co    | HIGH           | Recording system   |
+| pqrs.fiscalia.gov.co         | MEDIUM         | Complaints system  |
+| autodiscover.fiscalia.gov.co | MEDIUM         | Exchange           |
+| correoweb.fiscalia.gov.co    | MEDIUM         | Webmail            |
+| lyncdiscover.fiscalia.gov.co | MEDIUM         | Skype for Business |
+| micollab.fiscalia.gov.co     | MEDIUM         | Collaboration      |
+| bus.fiscalia.gov.co          | LOW            | ESB?               |
+| cav.fiscalia.gov.co          | LOW            | Unknown            |
+
+ACCESSIBILITY: All timeout via Tor (likely IP blocking)
+
+================================================================================
+[3] DEFENSORIA DEL PUEBLO (PUBLIC DEFENDER'S OFFICE)
+================================================================================
+
+SUBDOMAINS DISCOVERED (20+):
+| Subdomain                         | Notes                    |
+|-----------------------------------|--------------------------|
+| defensoria.gov.co                 | Main site                |
+| banco.defensoria.gov.co           | Bank/payments?           |
+| campusvirtual.defensoria.gov.co   | Virtual campus           |
+| catalogo.defensoria.gov.co        | Catalog                  |
+| desarrollos.defensoria.gov.co     | Development server       |
+| donaciones.defensoria.gov.co      | Donations                |
+| donajuana.defensoria.gov.co       | Unknown project          |
+
+================================================================================
+[4] POLICE AI PLATFORM SUMMARY
+================================================================================
+
+(Detailed in 32_POLICE_AI_PLATFORM_OSINT.txt)
+
+KEY FINDINGS:
+- AWS S3 Bucket: pon-prod-ai-platform-926162397524.s3.amazonaws.com
+- AWS Account ID: 926162397524
+- NADIA AI uses Amazon Bedrock
+- Session cookies captured from forms.ia.policia.gov.co
+- IAM admin panel at iam.ia.policia.gov.co/admin/
+
+================================================================================
+[5] DIJIN (CRIMINAL INVESTIGATION DIRECTORATE)
+================================================================================
+
+URL: https://dijinpandora.policia.gov.co/
+Status: Timeout via Tor
+
+DIJIN = Direccion de Investigacion Criminal e INTERPOL
+
+"Pandora" system likely refers to:
+- Criminal case management database
+- Intelligence sharing platform
+- Investigation tracking system
+
+================================================================================
+[6] SECURITY POSTURE SUMMARY
+================================================================================
+
+WELL SECURED:
+- DNI main site (custom security, blocked REST API)
+- Fiscalia (blocks Tor completely)
+- DIJIN Pandora (blocks Tor)
+
+PARTIALLY SECURED:
+- Police AI platform (exposed AWS credentials in URLs)
+- DNI codename servers (existence revealed via crt.sh)
+
+EXPOSED:
+- Police AI AWS infrastructure details
+- Session cookies from Police forms
+- Multiple government subdomains enumerated
+
+================================================================================
+[7] TOTAL INTELLIGENCE INFRASTRUCTURE DISCOVERED
+================================================================================
+
+| Agency          | Subdomains | Accessible | Notes                |
+|-----------------|------------|------------|----------------------|
+| DNI             | 15         | Partial    | Custom server        |
+| Fiscalia        | 30+        | None       | Tor blocked          |
+| Defensoria      | 20+        | Unknown    | Not probed           |
+| Police (AI)     | 20+        | Most       | AWS exposed          |
+| DIJIN           | 1          | None       | Pandora timeout      |
+
+================================================================================
+[8] FILES SAVED
+================================================================================
+
+- RAW DOWNLOADS/DNI_Intelligence_homepage.html
+- RAW DOWNLOADS/PoliceAI_app_homepage.html
+- RAW DOWNLOADS/PoliceAI_forms.html
+- RAW DOWNLOADS/PoliceAI_maps_analytics.html
+
+================================================================================
