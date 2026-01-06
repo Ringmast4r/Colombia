@@ -1,0 +1,9 @@
+HTTP/1.1 302 Found
+Location: https://ergit.presidencia.gov.co/server/admin/
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
+Date: Mon, 05 Jan 2026 05:49:18 GMT
+Set-Cookie: TS01e9ff77=0120c7c1176567248a65e869bfd4b852a390039c74ae6100b57aa48611c6f221918f46c48bed2f4c004f1aedccdd606b1372d4b661; Path=/
+Transfer-Encoding: chunked
+
