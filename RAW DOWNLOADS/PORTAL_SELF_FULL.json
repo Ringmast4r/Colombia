@@ -1,0 +1,352 @@
+{
+  "2DStylesGroupQuery": "title:\"Esri 2D Styles\" AND owner:esri_webstyles",
+  "3DBasemapGalleryGroupQuery": "title:\"ArcGIS Online 3D Basemaps\" AND owner:esri_en",
+  "EsriBoundaryLayersGroupQuery": "title:\"Esri Boundary Layers\" AND owner:esri_boundaries",
+  "EsriDemographicLayersGroupQuery": "title:\"Esri Demographic Layers\" AND owner:esri_demographics",
+  "access": "public",
+  "allSSL": true,
+  "analysisLayersGroupQuery": "",
+  "basemapGalleryGroupQuery": "title:\"ArcGIS Online Basemaps\" AND owner:esri_en",
+  "cdnUrl": "https://cdndev.arcgis.com",
+  "colorSetsGroupQuery": "title:\"Esri Colors\" AND owner:esri_en",
+  "commentsEnabled": false,
+  "contentCategorySetsGroupQuery": "title:\"ArcGIS Online Content Category Sets\" AND owner:esri_en",
+  "culture": "en",
+  "customBaseUrl": "portal",
+  "defaultBasemap": {
+    "baseMapLayers": [
+      {
+        "layerType": "ArcGISTiledMapServiceLayer",
+        "resourceInfo": {
+          "fullExtent": {
+            "ymin": -19971868.880408604,
+            "xmin": -20037507.067161843,
+            "ymax": 19971868.88040863,
+            "xmax": 20037507.067161843,
+            "spatialReference": {
+              "latestWkid": 3857,
+              "wkid": 102100
+            }
+          },
+          "supportedExtensions": "KmlServer",
+          "capabilities": "Map,Tilemap,Query,Data",
+          "supportsDynamicLayers": false,
+          "maxScale": 70.5310735,
+          "maxImageWidth": 4096,
+          "singleFusedMapCache": true,
+          "maxRecordCount": 100,
+          "tileInfo": {
+            "lods": [
+              {
+                "level": 0,
+                "scale": 591657527.591555,
+                "resolution": 156543.03392800014
+              },
+              {
+                "level": 1,
+                "scale": 295828763.795777,
+                "resolution": 78271.51696399994
+              },
+              {
+                "level": 2,
+                "scale": 147914381.897889,
+                "resolution": 39135.75848200009
+              },
+              {
+                "level": 3,
+                "scale": 73957190.948944,
+                "resolution": 19567.87924099992
+              },
+              {
+                "level": 4,
+                "scale": 36978595.474472,
+                "resolution": 9783.93962049996
+              },
+              {
+                "level": 5,
+                "scale": 18489297.737236,
+                "resolution": 4891.96981024998
+              },
+              {
+                "level": 6,
+                "scale": 9244648.868618,
+                "resolution": 2445.98490512499
+              },
+              {
+                "level": 7,
+                "scale": 4622324.434309,
+                "resolution": 1222.992452562495
+              },
+              {
+                "level": 8,
+                "scale": 2311162.217155,
+                "resolution": 611.4962262813797
+              },
+              {
+                "level": 9,
+                "scale": 1155581.108577,
+                "resolution": 305.74811314055756
+              },
+              {
+                "level": 10,
+                "scale": 577790.554289,
+                "resolution": 152.87405657041106
+              },
+              {
+                "level": 11,
+                "scale": 288895.277144,
+                "resolution": 76.43702828507324
+              },
+              {
+                "level": 12,
+                "scale": 144447.638572,
+                "resolution": 38.21851414253662
+              },
+              {
+                "level": 13,
+                "scale": 72223.819286,
+                "resolution": 19.10925707126831
+              },
+              {
+                "level": 14,
+                "scale": 36111.909643,
+                "resolution": 9.554628535634155
+              },
+              {
+                "level": 15,
+                "scale": 18055.954822,
+                "resolution": 4.77731426794937
+              },
+              {
+                "level": 16,
+                "scale": 9027.977411,
+                "resolution": 2.388657133974685
+              },
+              {
+                "level": 17,
+                "scale": 4513.988705,
+                "resolution": 1.1943285668550503
+              },
+              {
+                "level": 18,
+                "scale": 2256.994353,
+                "resolution": 0.5971642835598172
+              },
+              {
+                "level": 19,
+                "scale": 1128.497176,
+                "resolution": 0.29858214164761665
+              },
+              {
+                "level": 20,
+                "scale": 564.248588,
+                "resolution": 0.14929107082380833
+              },
+              {
+                "level": 21,
+                "scale": 282.124294,
+                "resolution": 0.07464553541190416
+              },
+              {
+                "level": 22,
+                "scale": 141.062147,
+                "resolution": 0.03732276770595208
+              },
+              {
+                "level": 23,
+                "scale": 70.5310735,
+                "resolution": 0.01866138385297604
+              }
+            ],
+            "origin": {
+              "x": -20037508.342787,
+              "y": 20037508.342787
+            },
+            "format": "JPEG",
+            "compressionQuality": 90,
+            "rows": 256,
+            "dpi": 96,
+            "spatialReference": {
+              "latestWkid": 3857,
+              "wkid": 102100
+            },
+            "cols": 256
+          },
+          "units": "esriMeters",
+          "currentVersion": 10.3,
+          "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+          "exportTilesAllowed": false,
+          "maxImageHeight": 4096,
+          "tables": [],
+          "supportedQueryFormats": "JSON, AMF",
+          "initialExtent": {
+            "ymin": -2077452.082122866,
+            "xmin": -28848255.049479112,
+            "ymax": 16430757.376790084,
+            "xmax": 28848255.049479112,
+            "spatialReference": {
+              "latestWkid": 3857,
+              "wkid": 102100
+            }
+          },
+          "layers": [
+            {
+              "subLayerIds": "Portal for ArcGIS",
+              "maxScale": 0,
+              "name": "Citations",
+              "defaultVisibility": false,
+              "id": 0,
+              "minScale": 0,
+              "parentLayerId": -1
+            }
+          ],
+          "mapName": "Layers",
+          "minScale": 591657527.591555,
+          "spatialReference": {
+            "latestWkid": 3857,
+            "wkid": 102100
+          }
+        },
+        "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"
+      }
+    ],
+    "title": "Topographic"
+  },
+  "defaultExtent": {
+    "ymin": -12000000,
+    "xmin": -18000000,
+    "ymax": 16000000,
+    "xmax": 18000000,
+    "spatialReference": {
+      "wkid": 102100
+    }
+  },
+  "defaultVectorBasemap": {
+    "baseMapLayers": [
+      {
+        "layerType": "ArcGISTiledMapServiceLayer",
+        "visibility": true,
+        "id": "World_Hillshade_3805",
+        "opacity": 1,
+        "title": "World Hillshade",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer"
+      },
+      {
+        "layerType": "VectorTileLayer",
+        "visibility": true,
+        "id": "VectorTile_2333",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/7dc6cea0b1764a1f9af2e679f642f0f5/resources/styles/root.json",
+        "type": "VectorTileLayer",
+        "title": "World Topographic Map",
+        "opacity": 1
+      }
+    ],
+    "title": "Topographic"
+  },
+  "description": "<br/>",
+  "eueiEnabled": false,
+  "featuredGroups": [
+    {
+      "owner": "esriadmin",
+      "title": "Featured Maps and Apps"
+    }
+  ],
+  "featuredGroupsId": "",
+  "featuredItemsGroupQuery": "",
+  "galleryTemplatesGroupQuery": "title:\"Gallery Templates\" AND owner:esri_en",
+  "hasCategorySchema": false,
+  "helpBase": "/arcpre/portalhelp/en/",
+  "helperServices": {
+    "analysis": {
+      "url": "https://ergit.presidencia.gov.co/server/rest/services/System/SpatialAnalysisTools/GPServer"
+    },
+    "asyncGeocode": {
+      "url": "https://ergit.presidencia.gov.co/server/rest/services/Utilities/GeocodingTools/GPServer"
+    },
+    "defaultElevationLayers": [
+      {
+        "layerType": "ArcGISTiledElevationServiceLayer",
+        "id": "globalElevation",
+        "url": "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer"
+      }
+    ],
+    "geocode": [
+      {
+        "westLon": "Xmin",
+        "southLat": "Ymin",
+        "name": "ArcGIS World Geocoding Service",
+        "batch": false,
+        "placefinding": true,
+        "northLat": "Ymax",
+        "eastLon": "Xmax",
+        "suggest": true,
+        "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
+      }
+    ],
+    "geometry": {
+      "url": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer"
+    },
+    "packaging": {
+      "url": "https://ergit.presidencia.gov.co/server/rest/services/Utilities/OfflinePackaging/GPServer"
+    },
+    "printTask": {
+      "url": "https://ergit.presidencia.gov.co/arcpre/sharing/tools/newPrint"
+    },
+    "workflowManager": {
+      "url": "https://workflowdev.arcgis.com"
+    }
+  },
+  "homePageFeaturedContent": "",
+  "homePageFeaturedContentCount": 12,
+  "id": "0123456789ABCDEF",
+  "isPortal": true,
+  "itemClassificationEnabled": false,
+  "layerTemplatesGroupQuery": "title:\"Esri Layer Templates\" AND owner:esri_en",
+  "livingAtlasGroupQuery": "",
+  "name": "ArcGIS Enterprise",
+  "portalHostname": "ergit.presidencia.gov.co/arcpre",
+  "portalMode": "singletenant",
+  "portalName": "ArcGIS Enterprise",
+  "portalProperties": {
+    "hub": {
+      "settings": {
+        "informationalBanner": true
+      }
+    },
+    "mapViewer": "modern",
+    "homePage": "modern",
+    "semanticSearchEnabled": true,
+    "mapViewerSwitchDate": 1747262795279
+  },
+  "portalThumbnail": null,
+  "rasterFunctionTemplatesGroupQuery": "title:\"Raster Function Templates\" AND owner:esri_en",
+  "rotatorPanels": "",
+  "staticImagesUrl": "/arcpre/portalimages",
+  "stylesGroupQuery": "title:\"Esri Styles\" AND owner:esri_en",
+  "supports3DTilesServices": false,
+  "supportsHostedServices": true,
+  "symbolSetsGroupQuery": "title:\"Esri Symbols\" AND owner:esri_en",
+  "templatesGroupQuery": "title:\"Web Application Templates\" AND owner:esri_en",
+  "thumbnail": null,
+  "units": "english",
+  "use3dBasemaps": true,
+  "useVectorBasemaps": true,
+  "vectorBasemapGalleryGroupQuery": "title:\"ArcGIS Online Vector Basemaps\" AND owner:esri_en",
+  "hostedServerHostedFolder": "Hosted",
+  "supportsHostedNotebooks": false,
+  "supportsSceneServices": false,
+  "hasRelationalArcGISDataStore": true,
+  "hasSpatioTemporalArcGISDataStore": false,
+  "httpPort": 80,
+  "httpsPort": 443,
+  "supportsOAuth": true,
+  "samlEnabled": false,
+  "disableSignup": true,
+  "isReadOnly": false,
+  "currentVersion": "2024.1",
+  "enterpriseVersion": "11.3.0",
+  "enterpriseBuild": "51575",
+  "supportsEmail": true,
+  "portalDeploymentType": "ArcGISEnterprise",
+  "isWebTierAuth": false
+}

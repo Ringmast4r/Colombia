@@ -1,0 +1,1 @@
+{"currentVersion": 11.3, "folders": [], "services": [{"name": "ReporteProgreso/afectacion_aicma", "type": "MapServer"}, {"name": "ReporteProgreso/seguimiento_monitoreo_semanal", "type": "FeatureServer"}, {"name": "ReporteProgreso/seguimiento_monitoreo_semanal", "type": "MapServer"}]}

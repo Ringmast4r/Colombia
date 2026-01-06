@@ -1,0 +1,169 @@
+{
+  "currentVersion": 11.3,
+  "cimVersion": "3.3.0",
+  "serviceDescription": "",
+  "hasVersionedData": false,
+  "hasArchivedData": false,
+  "hasBranchVersionedData": false,
+  "supportsDisconnectedEditing": false,
+  "supportsDatumTransformation": true,
+  "supportsReturnServiceEditsOption": true,
+  "returnServiceEditsHaveSR": true,
+  "supportsQueryDataElements": true,
+  "datesInUnknownTimezone": false,
+  "supportsRelationshipsResource": true,
+  "syncEnabled": false,
+  "syncCapabilities": {
+    "supportsRegisterReplicaForServer": true,
+    "supportsSyncDirectionControl": true,
+    "supportsPerLayerSync": true,
+    "supportsPerReplicaSync": true,
+    "supportsAttachmentsSyncDirection": true,
+    "supportsSyncModelNone": true,
+    "supportsDurableUrlForSyncModelNone": false
+  },
+  "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson",
+  "extractChangesCapabilities": {
+    "supportsReturnIdsOnly": false,
+    "supportsReturnExtentOnly": false,
+    "supportsReturnAttachments": false,
+    "supportsLayerQueries": false,
+    "supportsGeometry": false,
+    "supportsFeatureReturn": false,
+    "supportsReturnHasGeometryUpdates": false,
+    "supportsFieldsToCompare": false,
+    "supportsServerGens": false
+  },
+  "supportedQueryFormats": "JSON",
+  "maxRecordCount": 2000,
+  "maxRecordCountFactor": 1,
+  "capabilities": "Query",
+  "description": "",
+  "copyrightText": "",
+  "advancedEditingCapabilities": {
+    "supportsSplit": false,
+    "supportsReturnServiceEditsInSourceSR": true,
+    "supportsAsyncApplyEdits": true,
+    "supportsApplyEditsbyUploadID": true,
+    "supportedApplyEditsUploadIDFormats": "JSON",
+    "supportsMultipatchOptionForServiceEdits": true,
+    "supportedApplyEditsOptions": {
+      "supportedEditingOptions": 0
+    }
+  },
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326,
+    "xyTolerance": 8.983152841195215e-09,
+    "zTolerance": 0.001,
+    "mTolerance": 0.001,
+    "falseX": -400,
+    "falseY": -400,
+    "xyUnits": 999999999.9999999,
+    "falseZ": -100000,
+    "zUnits": 10000,
+    "falseM": -100000,
+    "mUnits": 10000
+  },
+  "initialExtent": {
+    "xmin": -317.7922841312743,
+    "ymin": -106.68065177930666,
+    "xmax": 154.6226516922337,
+    "ymax": 153.7532230977554,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326,
+      "xyTolerance": 8.983152841195215e-09,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -400,
+      "falseY": -400,
+      "xyUnits": 999999999.9999999,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "fullExtent": {
+    "xmin": "NaN",
+    "ymin": "NaN",
+    "xmax": "NaN",
+    "ymax": "NaN",
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326,
+      "xyTolerance": 8.983152841195215e-09,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -400,
+      "falseY": -400,
+      "xyUnits": 999999999.9999999,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "allowGeometryUpdates": true,
+  "allowTrueCurvesUpdates": true,
+  "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
+  "supportsApplyEditsWithGlobalIds": false,
+  "supportsTrueCurve": true,
+  "units": "esriDecimalDegrees",
+  "documentInfo": {
+    "Title": "Map1",
+    "Author": "",
+    "Comments": "",
+    "Subject": "",
+    "Category": "",
+    "Keywords": "JPP"
+  },
+  "supportsQueryDomains": true,
+  "supportsQueryContingentValues": true,
+  "layers": [],
+  "tables": [
+    {
+      "id": 0,
+      "name": "LESTAT.dapre_gdb.JPP_Minuta"
+    },
+    {
+      "id": 1,
+      "name": "LESTAT.dapre_gdb.JPP_Minuta_Funcionarios"
+    },
+    {
+      "id": 2,
+      "name": "LESTAT.dapre_gdb.JPP_Minuta_FuncionariosView"
+    },
+    {
+      "id": 3,
+      "name": "LESTAT.dapre_gdb.JPP_Minuta_FuncionarioActividad"
+    },
+    {
+      "id": 4,
+      "name": "LESTAT.dapre_gdb.JPP_Minuta_FuncionariosActicidadView"
+    },
+    {
+      "id": 5,
+      "name": "LESTAT.dapre_gdb.JPP_Minuta_ActividadMediosComunicacion"
+    },
+    {
+      "id": 6,
+      "name": "LESTAT.dapre_gdb.JPP_Minuta_ActividadMovilidad"
+    },
+    {
+      "id": 7,
+      "name": "LESTAT.dapre_gdb.JPP_Minuta_ActividadArmamentos"
+    },
+    {
+      "id": 8,
+      "name": "LESTAT.dapre_gdb.JPP_Minuta_FuncionariosActicidad3View"
+    }
+  ],
+  "relationships": [],
+  "enableZDefaults": false,
+  "allowUpdateWithoutMValues": false,
+  "supportsVCSProjection": true,
+  "referenceScale": 0,
+  "serviceItemId": "fadfdb972f24483eabf7e882bfa0dbbf"
+}

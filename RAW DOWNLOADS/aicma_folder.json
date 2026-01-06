@@ -1,0 +1,1 @@
+{"currentVersion": 11.3, "folders": [], "services": [{"name": "aicma/Afectacion_etnica_aicma", "type": "FeatureServer"}, {"name": "aicma/Afectacion_etnica_aicma", "type": "MapServer"}, {"name": "aicma/FULE", "type": "FeatureServer"}, {"name": "aicma/FULE", "type": "MapServer"}]}

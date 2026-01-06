@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="noindex, follow" />
+</head>
+
+<body spellcheck="false">
+  <script type="text/javascript" src="./js/arcgisonline/config.js"></script>
+  <script type="text/javascript" src="./11.3.0/js/jsapi/dojo/dojo.js"></script>
+  <script type="module" src="./11.3.0/js/calcite-components/calcite/calcite.esm.js"></script>
+  <script nomodule="" src="./11.3.0/js/calcite-components/calcite/calcite.js"></script>
+  <script type="module" src="./11.3.0/js/arcgis-app-components/arcgis-app/arcgis-app.esm.js"></script>
+  <script type="text/javascript">
+    function addStylesheet(href) {
+      var dfd = new dojo.Deferred();
+
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = href;
+      document.head.appendChild(link);
+
+      link.onload = function () {
+        return dfd.resolve();
+      };
+
+      return dfd;
+    }
+
+    function loadClassicCSS() {
+      var s1 = addStylesheet("./11.3.0/js/calcite-components/calcite/calcite.css");
+      var s2 = addStylesheet("./11.3.0/js/arcgisonline/css/common.css");
+      var s3 = addStylesheet("./11.3.0/js/arcgisonline/css/esri.css");
+      var s4 = addStylesheet("./11.3.0/css/esri/home.css");
+
+      var pageStyle = document.createElement("style");
+      pageStyle.type = "text/css";
+      pageStyle.innerHTML = ".center.center960 .footer { border-top: none; }";
+      document.head.appendChild(pageStyle);
+
+      return new dojo.DeferredList([s1, s2, s3, s4]);
+    }
+
+    function loadModernCSS() {
+      var s1 = addStylesheet("./11.3.0/js/calcite-web/dist/css/calcite-web-no-fonts.min.css");
+      var s2 = addStylesheet("./11.3.0/js/calcite-components/calcite/calcite.css");
+      var s3 = addStylesheet("./11.3.0/js/arcgis-app-components/arcgis-app/arcgis-app.css");
+      var s4 = addStylesheet("./11.3.0/js/arcgisonline/css/app.css");
+      var s5 = addStylesheet("./11.3.0/js/arcgisonline/pages/css/home.css");
+
+      return new dojo.DeferredList([s1, s2, s3, s4, s5]);
+    }
+
+    function loadClassicTemplate() {
+      require(["dojo/text!arcgisonline/pages/home/widgets/templates/legacyHomePage.html"], function (classicTemplate) {
+        document.body.className = "soria esri hide";
+        document.body.insertAdjacentHTML("afterbegin", classicTemplate);
+      });
+    }
+
+    function loadHeaderAndFooter(embedded) {
+      require(["arcgisonline/sharing/dijit/SiteHeader", "arcgisonline/sharing/dijit/SiteFooter"], function (
+        SiteHeader,
+        SiteFooter
+      ) {
+        if (!embedded) {
+          new SiteHeader({ id: "header", legacy: true }, "header").startup();
+        }
+        new SiteFooter({ id: "footer", style: { width: "100%" } }, "footer").startup();
+      });
+    }
+
+    function loadMetaViewport() {
+      var metaViewport = document.createElement("meta");
+      metaViewport.name = "viewport";
+      metaViewport.content = "width=device-width";
+      document.head.appendChild(metaViewport);
+    }
+
+    require(["arcgisonline/base", "dojo/domReady!"], function (base) {
+      require([
+        "dojo/io-query",
+        "arcgisonline/pages/utils/accessNotice",
+        "arcgisonline/pages/utils/organization",
+        "arcgisonline/pages/utils/signin",
+        "arcgisonline/sharing/geow/Geow",
+        "arcgisonline/sharing/geow/Account",
+        "arcgisonline/init"
+      ], function (ioQuery, accessNotice, orgUtil, signInUtil, Geow, Account, init) {
+        signInUtil.checkSignInStatus().then(
+          function (credential) {
+            accessNotice.checkSettings().then(
+              function (result) {
+                if (!result.redirected) {
+                  Account.getSelf(function (self) {
+                    const loadingProps = orgUtil.calculateHomePageLoadingProperties(self);
+                    if (loadingProps.showModern) {
+                      loadModernCSS().then(
+                        function () {
+                          loadMetaViewport();
+                          require(["arcgisonline/main"]);
+                        }.bind(this)
+                      );
+                    } else {
+                      loadClassicCSS().then(
+                        function () {
+                          loadClassicTemplate();
+                          loadHeaderAndFooter(loadingProps.previewLegacy);
+                          init.initialize(credential);
+                        }.bind(this)
+                      );
+                    }
+                  });
+                }
+              }.bind(this)
+            );
+          }.bind(this)
+        );
+      });
+    });
+  </script>
+</body>
+
+</html>
