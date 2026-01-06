@@ -26,6 +26,21 @@
 
 ---
 
+## Live Interactive Maps
+
+**[View All Maps](https://ringmast4r.github.io/Colombia/HTML/maps_index.html)**
+
+| Map | Link |
+|-----|------|
+| Maps Index | [View](https://ringmast4r.github.io/Colombia/HTML/maps_index.html) |
+| Armed Groups (Sept 2025) | [View](https://ringmast4r.github.io/Colombia/HTML/military_sep2025_full.html) |
+| Violence Statistics | [View](https://ringmast4r.github.io/Colombia/HTML/violence_statistics_map.html) |
+| Coca Cultivation | [View](https://ringmast4r.github.io/Colombia/HTML/coca_cultivation_map.html) |
+| Indigenous Territories | [View](https://ringmast4r.github.io/Colombia/HTML/indigenous_reserves_map.html) |
+| AETCR Camps | [View](https://ringmast4r.github.io/Colombia/HTML/aetcr_camps_map.html) |
+
+---
+
 ## Target Overview
 
 | Attribute | Detail |
