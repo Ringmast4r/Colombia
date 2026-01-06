@@ -1,0 +1,17 @@
+US TREASURY SOURCES
+====================
+
+OFAC SANCTIONS PRESS RELEASE:
+https://home.treasury.gov/news/press-releases/sb0292
+Date: October 24, 2025
+Title: Treasury Sanctions Colombian President Gustavo Petro
+
+EXECUTIVE ORDER 14059:
+"Imposing Sanctions on Foreign Persons Involved in
+the Global Illicit Drug Trade"
+
+SDN LIST ENTRY:
+Program: DRUG-COLOMBIAN
+Name: PETRO URREGO, Gustavo Francisco
+DOB: 19 Apr 1960
+POB: Cienaga de Oro, Cordoba, Colombia

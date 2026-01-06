@@ -1,0 +1,317 @@
+================================================================================
+OSINT DATA SOURCES - COLOMBIA PROJECT
+================================================================================
+Last Updated: January 5, 2026
+Project: Colombian Government Infrastructure OSINT
+
+================================================================================
+[1] CERTIFICATE TRANSPARENCY (crt.sh)
+================================================================================
+
+Primary Tool: https://crt.sh
+
+Queries Executed:
+| Domain                  | Query URL                                    |
+|-------------------------|----------------------------------------------|
+| presidencia.gov.co      | https://crt.sh/?q=%.presidencia.gov.co       |
+| ejercito.mil.co         | https://crt.sh/?q=%.ejercito.mil.co          |
+| armada.mil.co           | https://crt.sh/?q=%.armada.mil.co            |
+| fac.mil.co              | https://crt.sh/?q=%.fac.mil.co               |
+| cgfm.mil.co             | https://crt.sh/?q=%.cgfm.mil.co              |
+| policia.gov.co          | https://crt.sh/?q=%.policia.gov.co           |
+| ia.policia.gov.co       | https://crt.sh/?q=%.ia.policia.gov.co        |
+| dni.gov.co              | https://crt.sh/?q=%.dni.gov.co               |
+| fiscalia.gov.co         | https://crt.sh/?q=%.fiscalia.gov.co          |
+| mininterior.gov.co      | https://crt.sh/?q=%.mininterior.gov.co       |
+| colombiahumana.co       | https://crt.sh/?q=%.colombiahumana.co        |
+| pactohistorico.co       | https://crt.sh/?q=%.pactohistorico.co        |
+
+Results:
+- ejercito.mil.co: 147 subdomains
+- armada.mil.co: 94 subdomains
+- fac.mil.co: 79 subdomains
+- cgfm.mil.co: 41 subdomains
+- policia.gov.co: 60+ subdomains
+- ia.policia.gov.co: 20+ subdomains
+- dni.gov.co: 15 subdomains
+- fiscalia.gov.co: 30+ subdomains
+- mininterior.gov.co: 27 subdomains
+- colombiahumana.co: 54 subdomains
+- pactohistorico.co: 12 subdomains
+- TOTAL: 513+ subdomains
+
+================================================================================
+[2] ARCGIS REST API ENUMERATION
+================================================================================
+
+Primary Target: https://ergit.presidencia.gov.co
+
+Endpoints Enumerated:
+| Endpoint                                          | Data Retrieved           |
+|---------------------------------------------------|--------------------------|
+| /server/rest/services?f=json                      | Service listing          |
+| /server/rest/services/[folder]?f=json             | Folder contents          |
+| /server/rest/services/[service]/MapServer?f=json  | Map service metadata     |
+| /server/rest/services/[service]/FeatureServer?f=json | Feature service meta  |
+| /server/rest/services/[service]/FeatureServer/0/query?f=json&where=1=1&outFields=* | Feature data |
+| /arcpre/sharing/rest/portals/self?f=json          | Portal configuration     |
+| /arcpre/sharing/rest?f=json                       | REST info                |
+| /server/rest/info?f=json                          | Server info              |
+| /arcpre/home/gallery.html                         | Public gallery           |
+
+Folders Enumerated (26):
+- Root (33 services)
+- Hosted (240+ services) - CRITICAL
+- DDHH (22 services)
+- UnidadCumplimiento (8 services)
+- Zonas (1 service)
+- Resguardos (2 services)
+- aicma (4 services)
+- FondoPaz (2 services)
+- UnidadAcuerdoFinal (2 services)
+- Utilities (4 services)
+- AgenciaTierras, CEDISCO, CENAM, CISCO, Datos_Finales, Directorio,
+  Formularios_Survey123, JPP, MapaParlante, Priorizacion, Prueba,
+  Reporte, ReporteProgreso, SISEP, SISTEMAS, Talento, TRANSPARENCIA,
+  UIAFP, victim_nb, VisorOACP
+
+Query Parameters Used:
+- f=json (JSON output format)
+- where=1=1 (return all records)
+- outFields=* (all fields)
+- returnGeometry=true (include geometry)
+- resultRecordCount=5000 (max records)
+
+================================================================================
+[3] AWS INFRASTRUCTURE DISCOVERY
+================================================================================
+
+Police AI Platform: https://ia.policia.gov.co
+
+Methods:
+- HTML source code analysis
+- JavaScript bundle inspection
+- Network request analysis
+- Pre-signed URL extraction
+- CloudFront header analysis
+
+Discovered:
+| Component        | Value                                    |
+|------------------|------------------------------------------|
+| AWS Account ID   | 926162397524                             |
+| S3 Bucket        | pon-prod-ai-platform-926162397524        |
+| Region           | us-east-1                                |
+| AI Backend       | Amazon Bedrock                           |
+| CDN              | CloudFront                               |
+| Frontend         | Next.js                                  |
+
+Pre-signed URL Pattern:
+https://pon-prod-ai-platform-926162397524.s3.amazonaws.com/[path]?
+X-Amz-Algorithm=AWS4-HMAC-SHA256&
+X-Amz-Credential=[access-key]/[date]/us-east-1/s3/aws4_request&
+X-Amz-Date=[timestamp]&
+X-Amz-Expires=900&
+X-Amz-SignedHeaders=host&
+X-Amz-Signature=[signature]
+
+================================================================================
+[4] DNS RECONNAISSANCE
+================================================================================
+
+Tools Used:
+- nslookup (A, MX, TXT, NS, CNAME records)
+- Direct DNS resolution
+
+Records Queried:
+| Domain                  | Record Types        |
+|-------------------------|---------------------|
+| presidencia.gov.co      | A, MX, TXT, NS      |
+| ergit.presidencia.gov.co| A, CNAME            |
+| ia.policia.gov.co       | A, CNAME            |
+| dni.gov.co              | A, MX, TXT          |
+| All military domains    | A, CNAME            |
+
+================================================================================
+[5] WHOIS/RDAP
+================================================================================
+
+Sources:
+- whois.com
+- RDAP queries
+- LACNIC (Latin America registry)
+
+Domains Queried:
+- presidencia.gov.co
+- policia.gov.co
+- gustavopetro.co
+- gustavo-petro.com
+- colombiahumana.co
+- pactohistorico.co
+
+================================================================================
+[6] IP INTELLIGENCE
+================================================================================
+
+Primary Tool: https://ipinfo.io
+
+Data Retrieved:
+- ASN (Autonomous System Number)
+- Organization
+- Geolocation
+- Hosting provider
+
+================================================================================
+[7] HTTP HEADER ANALYSIS
+================================================================================
+
+Method: curl -sI [URL]
+
+Headers Analyzed:
+- Server (ArcGIS, nginx, Apache)
+- X-Powered-By
+- Set-Cookie (session tokens, F5 BIG-IP)
+- X-Frame-Options
+- Content-Security-Policy
+- CloudFront headers (x-amz-cf-id, x-cache)
+- WAF indicators
+
+================================================================================
+[8] ROBOTS.TXT / SITEMAP
+================================================================================
+
+Files Retrieved:
+- https://www.presidencia.gov.co/robots.txt
+- https://www.presidencia.gov.co/sitemap.xml
+- https://ia.policia.gov.co/robots.txt
+
+================================================================================
+[9] ANONYMIZATION / PROXIES
+================================================================================
+
+Primary Method: Tor SOCKS5 Proxy
+
+Configuration:
+- Proxy: 127.0.0.1:9050
+- curl flag: --socks5-hostname 127.0.0.1:9050
+- User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+
+Exit Node Attempts:
+- Colombian exit nodes (unavailable)
+- General Tor circuit (used)
+
+================================================================================
+[10] DATA EXTRACTION METHODS
+================================================================================
+
+ArcGIS Feature Data:
+- FeatureServer layer queries
+- JSON geometry extraction
+- Attribute field enumeration
+
+File Types Downloaded:
+| Type  | Count | Purpose                    |
+|-------|-------|----------------------------|
+| .json | 420+  | ArcGIS feature/map data    |
+| .png  | 25+   | Map image exports          |
+| .html | 10+   | Web page captures          |
+| .txt  | 100+  | Documentation, findings    |
+
+================================================================================
+[11] NEWS / CURRENT EVENTS SOURCES
+================================================================================
+
+For US-Colombia Crisis (2025) Research:
+- Reuters
+- Associated Press
+- BBC News
+- Al Jazeera
+- Colombian media (El Tiempo, El Espectador)
+- US Treasury OFAC SDN list
+- State Department press releases
+
+================================================================================
+[12] CREDENTIAL EXTRACTION
+================================================================================
+
+Sources:
+- ArcGIS feature data (email fields)
+- Portal configuration (usernames)
+- Service metadata (GUIDs/hashes)
+- JavaScript bundles (AWS credentials patterns)
+- Pre-signed URLs (temporary STS tokens)
+
+Results:
+| Type           | Count | Source                     |
+|----------------|-------|----------------------------|
+| All Emails     | 460   | ArcGIS feature attributes  |
+| Gov Emails     | 113   | .gov.co domain filtering   |
+| Hashes/GUIDs   | 103   | Service metadata           |
+| Usernames      | 3     | Portal/service configs     |
+| AWS Account ID | 1     | S3 bucket naming           |
+| Session Cookies| 3     | Police AI platform         |
+
+================================================================================
+[13] TOOLS USED
+================================================================================
+
+Command Line:
+- curl (HTTP requests, Tor proxy)
+- nslookup (DNS queries)
+- PowerShell (file operations)
+
+Web Services:
+- crt.sh (Certificate Transparency)
+- ipinfo.io (IP intelligence)
+- whois.com (Domain registration)
+
+Analysis:
+- JSON parsing
+- Geometry extraction
+- Coordinate conversion
+
+================================================================================
+[14] TARGET URLS - COMPLETE LIST
+================================================================================
+
+GOVERNMENT:
+- https://ergit.presidencia.gov.co/server/rest/services
+- https://ia.policia.gov.co
+- https://dni.gov.co
+- https://fiscalia.gov.co
+- https://mininterior.gov.co
+
+MILITARY:
+- https://ejercito.mil.co
+- https://armada.mil.co
+- https://fac.mil.co
+- https://cgfm.mil.co
+
+INTELLIGENCE:
+- https://correocifrado.dni.gov.co
+- https://pyxsis.dni.gov.co
+- https://birmania.dni.gov.co
+- https://denver.dni.gov.co
+- https://kuwait.dni.gov.co
+
+POLICE AI SUBDOMAINS:
+- https://app.ia.policia.gov.co
+- https://nadia.ia.policia.gov.co
+- https://aisearchengine.ia.policia.gov.co
+- https://iam.ia.policia.gov.co
+- https://forms.ia.policia.gov.co
+- https://maps.analytics.ia.policia.gov.co
+- https://catalog.ia.policia.gov.co
+- https://expertopol.ia.policia.gov.co
+- https://houndoc.ia.policia.gov.co
+- https://aitranscribe.ia.policia.gov.co
+- https://anticipacion.ia.policia.gov.co
+
+POLITICAL PARTY:
+- https://colombiahumana.co
+- https://pactohistorico.co
+- https://gustavopetro.co (parked)
+- https://gustavo-petro.com (parked)
+
+================================================================================
+                          END OF OSINT SOURCES
+================================================================================
