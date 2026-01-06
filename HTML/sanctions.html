@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Sanctions - Gustavo Petro</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 2px solid #ff0066;
+            margin-bottom: 30px;
+        }
+        h1 { color: #ff0066; font-size: 2em; }
+        h2 { color: #ffd700; margin: 30px 0 15px; }
+        .back-link {
+            display: inline-block;
+            color: #ffd700;
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+        }
+        .back-link:hover { background: #ffd700; color: #1a1a2e; }
+
+        .sanction-banner {
+            background: linear-gradient(135deg, #ff0066 0%, #cc0052 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .sanction-banner h2 { color: white; margin: 0; font-size: 1.8em; }
+        .sanction-banner p { margin-top: 10px; font-size: 1.1em; }
+
+        .info-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .info-card h3 {
+            color: #ff0066;
+            margin-bottom: 15px;
+        }
+        .info-card p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        .sanctioned-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .sanctioned-person {
+            background: rgba(255, 0, 102, 0.15);
+            border: 1px solid #ff0066;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .sanctioned-person h4 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+        .sanctioned-person .role {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .quote-box {
+            background: rgba(0,0,0,0.3);
+            border-left: 4px solid #ff0066;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .quote-box p {
+            color: #ccc;
+            font-style: italic;
+            line-height: 1.7;
+        }
+        .quote-box .author {
+            color: #ff0066;
+            font-style: normal;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .timeline-mini {
+            border-left: 3px solid #ff0066;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        .timeline-mini .event {
+            margin: 20px 0;
+            position: relative;
+        }
+        .timeline-mini .event::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #ff0066;
+            border-radius: 50%;
+        }
+        .timeline-mini .date {
+            color: #ff0066;
+            font-weight: bold;
+        }
+        .timeline-mini .desc {
+            color: #ccc;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(0,0,0,0.2);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        th {
+            background: rgba(255, 0, 102, 0.3);
+            color: #ff6b6b;
+        }
+
+        .effects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .effect-box {
+            background: rgba(255, 0, 102, 0.1);
+            border: 1px solid #ff0066;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .effect-box .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .effect-box h4 { color: #ff6b6b; }
+        .effect-box p { color: #888; font-size: 0.9em; margin-top: 5px; }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Overview</a>
+
+        <header>
+            <h1>US TREASURY SANCTIONS</h1>
+            <p>OFAC Designation - October 24, 2025</p>
+        </header>
+
+        <div class="sanction-banner">
+            <h2>GUSTAVO PETRO - SDN LIST</h2>
+            <p>Specially Designated Nationals and Blocked Persons</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">Press Release: sb0292 | Executive Order: 14059</p>
+        </div>
+
+        <h2>Escalation Timeline</h2>
+
+        <div class="timeline-mini">
+            <div class="event">
+                <div class="date">September 15, 2025</div>
+                <div class="desc">Trump designates Colombia as "major drug transit or major illicit drug producing country" under Section 706(1) Foreign Relations Authorization Act</div>
+            </div>
+            <div class="event">
+                <div class="date">September 26, 2025</div>
+                <div class="desc">Petro speaks at pro-Palestinian demonstration outside UN Headquarters, New York City</div>
+            </div>
+            <div class="event">
+                <div class="date">September 27, 2025</div>
+                <div class="desc">US revokes Petro's visa - immediate retaliation</div>
+            </div>
+            <div class="event">
+                <div class="date">October 19, 2025</div>
+                <div class="desc">Trump publicly accuses Petro of being "leader of the Colombian cartels"</div>
+            </div>
+            <div class="event">
+                <div class="date">October 24, 2025</div>
+                <div class="desc">OFAC adds Petro and family to SDN List - unprecedented sanctions on allied nation's president</div>
+            </div>
+        </div>
+
+        <h2>Sanctioned Individuals</h2>
+
+        <div class="sanctioned-list">
+            <div class="sanctioned-person">
+                <h4>Gustavo Francisco Petro Urrego</h4>
+                <div class="role">President of Colombia</div>
+                <p style="color: #ccc; margin-top: 10px; font-size: 0.9em;">Primary designee - alleged drug trafficking ties</p>
+            </div>
+            <div class="sanctioned-person">
+                <h4>Veronica del Socorro Alcocer Garcia</h4>
+                <div class="role">Wife</div>
+                <p style="color: #ccc; margin-top: 10px; font-size: 0.9em;">Designated as Petro supporter/associate</p>
+            </div>
+            <div class="sanctioned-person">
+                <h4>Nicolas Fernando Petro Burgos</h4>
+                <div class="role">Son</div>
+                <p style="color: #ccc; margin-top: 10px; font-size: 0.9em;">Designated as Petro supporter/associate</p>
+            </div>
+            <div class="sanctioned-person">
+                <h4>Armando Alberto Benedetti Villaneda</h4>
+                <div class="role">Interior Minister</div>
+                <p style="color: #ccc; margin-top: 10px; font-size: 0.9em;">Designated as Petro supporter/associate</p>
+            </div>
+        </div>
+
+        <h2>Official Justification</h2>
+
+        <div class="quote-box">
+            <p>"Since President Gustavo Petro came to power, cocaine production in Colombia has exploded to the highest rate in decades, flooding the United States and poisoning Americans. President Petro has allowed drug cartels to flourish and refused to stop this activity. Today, President Trump is taking strong action to protect our nation and make clear that we will not tolerate the trafficking of drugs into our nation."</p>
+            <div class="author">— Secretary of the Treasury Scott Bessent</div>
+        </div>
+
+        <div class="info-card">
+            <h3>Additional Accusations</h3>
+            <p>The Treasury Department also accused Petro of having "allied himself with the narco-terrorist regime of Nicolas Maduro Moros and the Cartel de Los Soles" in Venezuela.</p>
+        </div>
+
+        <h2>Legal Basis</h2>
+
+        <table>
+            <tr>
+                <th>Authority</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Executive Order</td>
+                <td>E.O. 14059 - Imposing Sanctions on Foreign Persons Involved in the Global Illicit Drug Trade</td>
+            </tr>
+            <tr>
+                <td>Statutory Basis</td>
+                <td>Section 706(1) Foreign Relations Authorization Act</td>
+            </tr>
+            <tr>
+                <td>Designation</td>
+                <td>Activities that materially contributed to international proliferation of illicit drugs</td>
+            </tr>
+            <tr>
+                <td>Program</td>
+                <td>Global Illicit Drug Trade (OFAC)</td>
+            </tr>
+        </table>
+
+        <h2>Effects of Sanctions</h2>
+
+        <div class="effects-grid">
+            <div class="effect-box">
+                <div class="icon">🏦</div>
+                <h4>Assets Frozen</h4>
+                <p>All US property blocked</p>
+            </div>
+            <div class="effect-box">
+                <div class="icon">✈️</div>
+                <h4>Travel Banned</h4>
+                <p>Cannot enter United States</p>
+            </div>
+            <div class="effect-box">
+                <div class="icon">💳</div>
+                <h4>Banking Cut Off</h4>
+                <p>No US financial access</p>
+            </div>
+            <div class="effect-box">
+                <div class="icon">🚫</div>
+                <h4>Trade Prohibited</h4>
+                <p>US persons cannot deal</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Detailed Prohibitions</h3>
+            <ul style="margin: 15px 0 0 20px; color: #ccc; line-height: 1.8;">
+                <li>All property and interests in property in the United States are blocked</li>
+                <li>All property within possession or control of US persons is blocked</li>
+                <li>Dealings by US persons involving such property are generally prohibited</li>
+                <li>Transactions transiting the US financial system are prohibited</li>
+                <li>US persons providing services to designees face secondary sanctions risk</li>
+            </ul>
+        </div>
+
+        <h2>Petro's Response</h2>
+
+        <div class="quote-box">
+            <p>"Against the calumnies that high-ranking officials have hurled at me on U.S. soil, I will defend myself judicially with American lawyers in the U.S. courts."</p>
+            <div class="author">— Gustavo Petro (via X/Twitter)</div>
+        </div>
+
+        <div class="info-card">
+            <h3>Colombian Government Response</h3>
+            <ul style="margin: 15px 0 0 20px; color: #ccc; line-height: 1.8;">
+                <li>Recalled Colombian ambassador to United States</li>
+                <li>Petro announced plans to sue in US courts</li>
+                <li>Dismissed accusations as "calumnies"</li>
+                <li>Unprecedented crisis in US-Colombia relations</li>
+            </ul>
+        </div>
+
+        <h2>Historical Significance</h2>
+
+        <div class="info-card">
+            <p>The sanctions marked an <strong>unprecedented escalation</strong> in tensions with a country that has been for decades one of Washington's key Latin American allies and a top recipient of U.S. aid.</p>
+            <p style="margin-top: 15px;">Colombia was historically the United States' closest partner in the "War on Drugs" and received billions in military and development aid through Plan Colombia.</p>
+        </div>
+
+        <footer>
+            <p>Source: US Treasury Press Release sb0292 (October 24, 2025)</p>
+            <p><a href="https://home.treasury.gov/news/press-releases/sb0292" style="color: #ff0066;">Official Treasury Press Release</a></p>
+        </footer>
+    </div>
+</body>
+</html>

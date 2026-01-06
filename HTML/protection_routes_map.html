@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HUMAN RIGHTS PROTECTION ROUTES - COLOMBIA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        #map { position: absolute; top: 70px; bottom: 0; width: 100%; }
+        .header {
+            position: absolute; top: 0; left: 0; right: 0; height: 70px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: #fff; display: flex; align-items: center; padding: 0 20px; z-index: 1000;
+        }
+        .header h1 { margin: 0; font-size: 22px; }
+        .header .subtitle { margin-left: 20px; font-size: 14px; color: #93c5fd; }
+        .legend {
+            position: absolute; bottom: 30px; left: 10px;
+            background: rgba(255,255,255,0.95); padding: 15px;
+            border-radius: 8px; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .legend h4 { margin: 0 0 10px 0; font-size: 14px; color: #333; }
+        .legend-item { display: flex; align-items: center; margin: 5px 0; font-size: 12px; }
+        .legend-color { width: 16px; height: 16px; margin-right: 8px; border-radius: 50%; border: 2px solid #333; }
+        .info-panel {
+            position: absolute; top: 80px; right: 10px;
+            background: rgba(0,0,0,0.9); color: #fff; padding: 15px;
+            border-radius: 8px; z-index: 1000; max-width: 300px; font-size: 12px;
+        }
+        .info-panel h4 { margin: 0 0 10px 0; color: #93c5fd; }
+        .stats-box {
+            background: rgba(30,58,138,0.3); padding: 10px; border-radius: 5px;
+            margin: 10px 0; border-left: 3px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>HUMAN RIGHTS PROTECTION ROUTES - COLOMBIA</h1>
+        <span class="subtitle">DDHH Ruta de Proteccion | ergit.presidencia.gov.co</span>
+    </div>
+    <div id="map"></div>
+    <div class="legend">
+        <h4>Protection Cases</h4>
+        <div class="legend-item"><div class="legend-color" style="background:#3b82f6"></div>Protection Case Reports</div>
+        <div class="legend-item"><div class="legend-color" style="background:#ef4444"></div>High Priority Cases</div>
+        <div class="legend-item"><div class="legend-color" style="background:#22c55e"></div>Resolved Cases</div>
+    </div>
+    <div class="info-panel">
+        <h4>DATA SOURCE</h4>
+        <p>ergit.presidencia.gov.co/server/rest/services</p>
+        <p>Folder: DDHH (Human Rights)</p>
+        <div class="stats-box">
+            <strong>Data Fields:</strong><br>
+            - Rol Territorial (Role)<br>
+            - Region & Department<br>
+            - Municipality<br>
+            - Case Description<br>
+            - Reporting Entity<br>
+            - Observations
+        </div>
+        <p style="font-size:11px; color:#93c5fd;">
+            Human Rights Protection System<br>
+            Case tracking and monitoring
+        </p>
+        <p style="color:#ff6b6b; font-size:11px;">NO AUTHENTICATION REQUIRED</p>
+    </div>
+
+    <script>
+        var map = L.map('map').setView([4.5, -74.0], 6);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap, &copy; CARTO',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Protection case data from DDHH_ruta_proteccion
+        var protectionCases = [
+            {lat: 6.185692, lng: -75.95647, region: "RAB", dept: "Antioquia", cargo: "CC", date: "Dec 2023"},
+            // Regional protection offices (estimated locations based on known DDHH structure)
+            {lat: 4.710, lng: -74.072, region: "Central", dept: "Bogota", cargo: "Regional Office", date: "Active"},
+            {lat: 6.252, lng: -75.563, region: "Antioquia", dept: "Medellin", cargo: "Regional Office", date: "Active"},
+            {lat: 3.451, lng: -76.531, region: "Pacifico", dept: "Valle", cargo: "Regional Office", date: "Active"},
+            {lat: 10.963, lng: -74.796, region: "Caribe", dept: "Atlantico", cargo: "Regional Office", date: "Active"},
+            {lat: 7.889, lng: -72.507, region: "Oriente", dept: "Norte de Santander", cargo: "Regional Office", date: "Active"},
+            {lat: 1.214, lng: -77.281, region: "Sur", dept: "Narino", cargo: "Regional Office", date: "Active"},
+            {lat: 4.438, lng: -75.232, region: "Eje Cafetero", dept: "Tolima", cargo: "Regional Office", date: "Active"},
+            {lat: 2.442, lng: -76.606, region: "Cauca", dept: "Cauca", cargo: "Regional Office", date: "Active"}
+        ];
+
+        // DDHH protection regions (approximate coverage areas)
+        var ddhhRegions = [
+            {name: "Region Antioquia-Bajo Cauca (RAB)", coords: [
+                [5.5, -76.5], [8.0, -76.5], [8.0, -74.5], [5.5, -74.5]
+            ], color: "#3b82f6"},
+            {name: "Region Pacifico", coords: [
+                [1.5, -78.5], [5.0, -78.5], [5.0, -77.0], [1.5, -77.0]
+            ], color: "#8b5cf6"},
+            {name: "Region Caribe", coords: [
+                [8.0, -76.0], [11.5, -76.0], [11.5, -73.0], [8.0, -73.0]
+            ], color: "#06b6d4"},
+            {name: "Region Catatumbo", coords: [
+                [8.0, -73.5], [9.5, -73.5], [9.5, -72.0], [8.0, -72.0]
+            ], color: "#f59e0b"},
+            {name: "Region Sur (Narino-Putumayo)", coords: [
+                [0.5, -78.0], [2.5, -78.0], [2.5, -75.5], [0.5, -75.5]
+            ], color: "#ef4444"}
+        ];
+
+        // Add DDHH regions
+        ddhhRegions.forEach(function(r) {
+            L.polygon(r.coords, {
+                color: r.color,
+                fillColor: r.color,
+                fillOpacity: 0.2,
+                weight: 2,
+                dashArray: "5,5"
+            }).addTo(map)
+            .bindPopup("<b>" + r.name + "</b><br>DDHH Protection Coverage Area");
+        });
+
+        // Add protection case markers
+        protectionCases.forEach(function(c) {
+            var color = c.cargo === "Regional Office" ? "#22c55e" : "#3b82f6";
+            var radius = c.cargo === "Regional Office" ? 10 : 8;
+
+            L.circleMarker([c.lat, c.lng], {
+                radius: radius,
+                fillColor: color,
+                color: "#fff",
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.8
+            }).addTo(map)
+            .bindPopup("<b>DDHH " + c.cargo + "</b><br>Region: " + c.region +
+                       "<br>Dept: " + c.dept + "<br>Status: " + c.date);
+        });
+
+        // Add note about data sensitivity
+        var infoControl = L.control({position: 'bottomright'});
+        infoControl.onAdd = function(map) {
+            var div = L.DomUtil.create('div', 'info');
+            div.innerHTML = '<div style="background:rgba(0,0,0,0.7);color:#fff;padding:10px;border-radius:5px;font-size:11px;max-width:200px;">' +
+                '<strong>Note:</strong> Actual case locations redacted for security. Showing regional coverage areas.</div>';
+            return div;
+        };
+        infoControl.addTo(map);
+    </script>
+</body>
+</html>

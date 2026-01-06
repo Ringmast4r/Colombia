@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AETCR REINTEGRATION CAMPS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        #map { position: absolute; top: 70px; bottom: 0; width: 100%; }
+        .header {
+            position: absolute; top: 0; left: 0; right: 0; height: 70px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff; display: flex; align-items: center; padding: 0 20px; z-index: 1000;
+        }
+        .header h1 { margin: 0; font-size: 22px; }
+        .header .subtitle { margin-left: 20px; font-size: 14px; color: #888; }
+        .legend {
+            position: absolute; bottom: 30px; left: 10px;
+            background: rgba(255,255,255,0.95); padding: 15px;
+            border-radius: 8px; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            max-height: 400px; overflow-y: auto;
+        }
+        .legend h4 { margin: 0 0 10px 0; font-size: 14px; color: #333; }
+        .legend-item { display: flex; align-items: center; margin: 5px 0; font-size: 12px; }
+        .legend-color { width: 20px; height: 20px; margin-right: 8px; border: 1px solid #333; border-radius: 3px; }
+        .info {
+            position: absolute; top: 80px; right: 10px;
+            background: rgba(0,0,0,0.85); color: #fff; padding: 15px;
+            border-radius: 8px; z-index: 1000; max-width: 280px; font-size: 12px;
+        }
+        .info h4 { margin: 0 0 10px 0; color: #ffd93d; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AETCR REINTEGRATION CAMPS</h1>
+        <span class="subtitle">Former FARC Camp Locations | CRITICAL TARGET DATA</span>
+    </div>
+    <div id="map"></div>
+    <div class="legend">
+        <h4>Layers</h4>
+        <div class="legend-item"><div class="legend-color" style="background:#00FF00"></div>AETCR Reintegration Camps (24)</div>
+    </div>
+    <div class="info">
+        <h4>SOURCE</h4>
+        <p>ergit.presidencia.gov.co</p>
+        <p>Downloaded: Jan 5, 2026</p>
+        <p style="color:#ff6b6b;">NO AUTHENTICATION REQUIRED</p>
+    </div>
+    <script>
+        var map = L.map('map').setView([4.5, -74], 6);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap &copy; CARTO',
+            subdomains: 'abcd', maxZoom: 19
+        }).addTo(map);
+        
+        var AETCR_Reintegration_Camps = L.geoJSON({"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"OBJECTID": 1, "Nombre": "PONDORES", "Solicitudes": null, "Mujeres": 40, "Hombres": 56, "Total": 96, "Municipio": "FONSECA ", "Observaciones": "Sin novedad", "Indicadores": 3, "NiveldeRiesgo": "Medio", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-72.81280546313556, 10.836036144141588]}}, {"type": "Feature", "properties": {"OBJECTID": 2, "Nombre": "TIERRA GRATA", "Solicitudes": null, "Mujeres": 36, "Hombres": 63, "Total": 99, "Municipio": "MANAURE ", "Observaciones": "Sin novedad", "Indicadores": 3, "NiveldeRiesgo": "Medio", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-73.009819493163, 10.35436533709165]}}, {"type": "Feature", "properties": {"OBJECTID": 3, "Nombre": "CA\u00d1O INDIO", "Solicitudes": null, "Mujeres": 15, "Hombres": 32, "Total": 47, "Municipio": "TIB\u00da ", "Observaciones": "Alerta", "Indicadores": 5, "NiveldeRiesgo": "Muy Alto", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-72.8221192691369, 8.792972657929013]}}, {"type": "Feature", "properties": {"OBJECTID": 4, "Nombre": "FILIPINAS", "Solicitudes": 1, "Mujeres": 49, "Hombres": 119, "Total": 168, "Municipio": "ARAUQUITA ", "Observaciones": "Alerta", "Indicadores": 4, "NiveldeRiesgo": "Alto", "Acceso": "Con tierra insuficiente"}, "geometry": {"type": "Point", "coordinates": [-71.19192359590996, 6.652600647704503]}}, {"type": "Feature", "properties": {"OBJECTID": 5, "Nombre": "CARRIZAL", "Solicitudes": null, "Mujeres": 10, "Hombres": 34, "Total": 44, "Municipio": "REMEDIOS ", "Observaciones": "Sin novedad", "Indicadores": 4, "NiveldeRiesgo": "Alto", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-74.45547524336425, 7.124795435754194]}}, {"type": "Feature", "properties": {"OBJECTID": 6, "Nombre": "LA PLANCHA", "Solicitudes": 4, "Mujeres": 13, "Hombres": 28, "Total": 41, "Municipio": "ANORI ", "Observaciones": "Alerta", "Indicadores": 5, "NiveldeRiesgo": "Muy Alto", "Acceso": "Con tierra insuficiente"}, "geometry": {"type": "Point", "coordinates": [-75.20716244446886, 7.141807214755957]}}, {"type": "Feature", "properties": {"OBJECTID": 7, "Nombre": "LLANO GRANDE", "Solicitudes": null, "Mujeres": 31, "Hombres": 62, "Total": 93, "Municipio": "DABEIBA ", "Observaciones": "Alerta", "Indicadores": 4, "NiveldeRiesgo": "Alto", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-76.19697738360668, 7.017450379742854]}}, {"type": "Feature", "properties": {"OBJECTID": 8, "Nombre": "MUTAT\u00c1", "Solicitudes": 2, "Mujeres": 22, "Hombres": 37, "Total": 59, "Municipio": "MUTAT\u00c1 ", "Observaciones": "Sin novedad", "Indicadores": 3, "NiveldeRiesgo": "Medio", "Acceso": "Sin Acceso a tierras"}, "geometry": {"type": "Point", "coordinates": [-76.56878689265842, 7.508472613794453]}}, {"type": "Feature", "properties": {"OBJECTID": 9, "Nombre": "CARACOL\u00cd", "Solicitudes": 2, "Mujeres": 18, "Hombres": 34, "Total": 52, "Municipio": "CARMEN DEL DARIEN ", "Observaciones": "Alerta", "Indicadores": 3, "NiveldeRiesgo": "Medio", "Acceso": "Sin Acceso a tierras"}, "geometry": {"type": "Point", "coordinates": [-76.83970499969615, 7.294972654772039]}}, {"type": "Feature", "properties": {"OBJECTID": 10, "Nombre": "LA FILA", "Solicitudes": 2, "Mujeres": 40, "Hombres": 74, "Total": 114, "Municipio": "ICONONZO ", "Observaciones": "Alerta", "Indicadores": 1, "NiveldeRiesgo": "Bajo", "Acceso": "Con tierra insuficiente"}, "geometry": {"type": "Point", "coordinates": [-74.51413414337243, 4.129053746438146]}}, {"type": "Feature", "properties": {"OBJECTID": 11, "Nombre": "EL BERL\u00cdN", "Solicitudes": null, "Mujeres": 41, "Hombres": 55, "Total": 96, "Municipio": "ACAC\u00cdAS ", "Observaciones": "Alerta", "Indicadores": 2, "NiveldeRiesgo": "Bajo", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-73.81389208627492, 4.022993281426849]}}, {"type": "Feature", "properties": {"OBJECTID": 12, "Nombre": "HATO ROND\u00d3N", "Solicitudes": null, "Mujeres": 57, "Hombres": 124, "Total": 181, "Municipio": "SAN JUAN DE ARAMA ", "Observaciones": "Sin novedad", "Indicadores": 2, "NiveldeRiesgo": "Bajo", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-73.83256132727752, 3.3193327103523274]}}, {"type": "Feature", "properties": {"OBJECTID": 13, "Nombre": "EL DONCELLO 2", "Solicitudes": null, "Mujeres": 9, "Hombres": 34, "Total": 43, "Municipio": "SAN VICENTE DEL CAGU\u00c1N ", "Observaciones": "Riesgo", "Indicadores": 0, "NiveldeRiesgo": "Sin riesgo", "Acceso": "Con tierra insuficiente"}, "geometry": {"type": "Point", "coordinates": [-75.17456317946434, 1.6573158141760729]}}, {"type": "Feature", "properties": {"OBJECTID": 14, "Nombre": "OSCAR MONDRAGON", "Solicitudes": 3, "Mujeres": 19, "Hombres": 33, "Total": 52, "Municipio": "EL DONCELLO ", "Observaciones": "Riesgo", "Indicadores": 4, "NiveldeRiesgo": "Alto", "Acceso": "Con tierra insuficiente"}, "geometry": {"type": "Point", "coordinates": [-75.24724710747445, 1.6868811051791823]}}, {"type": "Feature", "properties": {"OBJECTID": 15, "Nombre": "LAS COLINAS", "Solicitudes": 1, "Mujeres": 53, "Hombres": 63, "Total": 116, "Municipio": "SAN JOS\u00c9 DEL GUAVIARE ", "Observaciones": "Alerta", "Indicadores": 4, "NiveldeRiesgo": "Alto", "Acceso": "Con tierra insuficiente"}, "geometry": {"type": "Point", "coordinates": [-72.96717908515704, 2.312857466245603]}}, {"type": "Feature", "properties": {"OBJECTID": 16, "Nombre": "MONTERREDONDO", "Solicitudes": 7, "Mujeres": 4, "Hombres": 22, "Total": 26, "Municipio": "MIRANDA ", "Observaciones": "Alerta", "Indicadores": 5, "NiveldeRiesgo": "Muy Alto", "Acceso": "Sin Acceso a tierras"}, "geometry": {"type": "Point", "coordinates": [-76.09091238759189, 3.1898085743386133]}}, {"type": "Feature", "properties": {"OBJECTID": 17, "Nombre": "EL OSO", "Solicitudes": 4, "Mujeres": 22, "Hombres": 39, "Total": 61, "Municipio": "PLANADAS ", "Observaciones": "Alerta", "Indicadores": 2, "NiveldeRiesgo": "Bajo", "Acceso": "Sin Acceso a tierras"}, "geometry": {"type": "Point", "coordinates": [-75.55118462551677, 2.9203075693100686]}}, {"type": "Feature", "properties": {"OBJECTID": 18, "Nombre": "EL CERAL", "Solicitudes": 1, "Mujeres": 7, "Hombres": 11, "Total": 18, "Municipio": "BUENOS AIRES ", "Observaciones": "Alerta", "Indicadores": null, "NiveldeRiesgo": "N/A", "Acceso": "Sin Acceso a tierras"}, "geometry": {"type": "Point", "coordinates": [-76.7396480086822, 3.104342414329537]}}, {"type": "Feature", "properties": {"OBJECTID": 19, "Nombre": "EL ESTRECHO", "Solicitudes": null, "Mujeres": 6, "Hombres": 18, "Total": 24, "Municipio": "PAT\u00cdA ", "Observaciones": "Alerta", "Indicadores": 4, "NiveldeRiesgo": "Alto", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-77.15619539274019, 1.8084017811920887]}}, {"type": "Feature", "properties": {"OBJECTID": 20, "Nombre": "LA PRADERA", "Solicitudes": 1, "Mujeres": 22, "Hombres": 49, "Total": 71, "Municipio": "PUERTO AS\u00cdS ", "Observaciones": "Alerta", "Indicadores": 3, "NiveldeRiesgo": "Medio", "Acceso": "Sin Acceso a tierras"}, "geometry": {"type": "Point", "coordinates": [-76.51670595665117, 0.361330544038438]}}, {"type": "Feature", "properties": {"OBJECTID": 21, "Nombre": "LA VARIANTE", "Solicitudes": null, "Mujeres": 21, "Hombres": 33, "Total": 54, "Municipio": "TUMACO ", "Observaciones": "Alerta", "Indicadores": 4, "NiveldeRiesgo": "Alto", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-78.73545772296004, 1.4663646331558056]}}, {"type": "Feature", "properties": {"OBJECTID": 22, "Nombre": "AGUA BONITA", "Solicitudes": 3, "Mujeres": 53, "Hombres": 131, "Total": 184, "Municipio": "LA MONTA\u00d1ITA ", "Observaciones": "Alerta", "Indicadores": 4, "NiveldeRiesgo": "Alto", "Acceso": "Con tierra insuficiente"}, "geometry": {"type": "Point", "coordinates": [-75.36329831349062, 1.5033287111597105]}}, {"type": "Feature", "properties": {"OBJECTID": 23, "Nombre": "LOS MONOS", "Solicitudes": null, "Mujeres": 3, "Hombres": 12, "Total": 15, "Municipio": "CALDONO ", "Observaciones": "Alerta", "Indicadores": 5, "NiveldeRiesgo": "Muy Alto", "Acceso": null}, "geometry": {"type": "Point", "coordinates": [-76.4753026486454, 2.7740320282945135]}}, {"type": "Feature", "properties": {"OBJECTID": 24, "Nombre": "CHARRAS", "Solicitudes": 7, "Mujeres": 24, "Hombres": 55, "Total": 79, "Municipio": "SAN JOS\u00c9 DEL GUAVIARE ", "Observaciones": "Alerta", "Indicadores": 4, "NiveldeRiesgo": "Alto", "Acceso": "Con tierra insuficiente"}, "geometry": {"type": "Point", "coordinates": [-72.06103453603093, 2.817067951299137]}}]}, {
+            style: function(feature) {
+                return {
+                    fillColor: '#00FF00',
+                    weight: 2,
+                    opacity: 1,
+                    color: '#00FF00',
+                    fillOpacity: 0.5
+                };
+            },
+            pointToLayer: function(feature, latlng) {
+                return L.circleMarker(latlng, {
+                    radius: 8,
+                    fillColor: '#00FF00',
+                    color: '#000',
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                });
+            },
+            onEachFeature: function(feature, layer) {
+                var props = feature.properties;
+                var popup = '<b>AETCR Reintegration Camps</b><br>';
+                for (var key in props) {
+                    if (props[key] && key !== 'Shape_Length' && key !== 'Shape_Area') {
+                        popup += key + ': ' + props[key] + '<br>';
+                    }
+                }
+                layer.bindPopup(popup);
+            }
+        }).addTo(map);
+        
+        var overlays = { "AETCR Reintegration Camps": AETCR_Reintegration_Camps };
+        L.control.layers(null, overlays, {collapsed: false}).addTo(map);
+    </script>
+</body>
+</html>

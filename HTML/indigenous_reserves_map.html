@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INDIGENOUS RESERVES & AFRO-COLOMBIAN COMMUNITIES - COLOMBIA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        #map { position: absolute; top: 70px; bottom: 0; width: 100%; }
+        .header {
+            position: absolute; top: 0; left: 0; right: 0; height: 70px;
+            background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+            color: #fff; display: flex; align-items: center; padding: 0 20px; z-index: 1000;
+        }
+        .header h1 { margin: 0; font-size: 20px; }
+        .header .subtitle { margin-left: 20px; font-size: 14px; color: #DEB887; }
+        .legend {
+            position: absolute; bottom: 30px; left: 10px;
+            background: rgba(255,255,255,0.95); padding: 15px;
+            border-radius: 8px; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .legend h4 { margin: 0 0 10px 0; font-size: 14px; color: #333; }
+        .legend-item { display: flex; align-items: center; margin: 5px 0; font-size: 12px; }
+        .legend-color { width: 20px; height: 20px; margin-right: 8px; border: 1px solid #333; }
+        .info-panel {
+            position: absolute; top: 80px; right: 10px;
+            background: rgba(0,0,0,0.9); color: #fff; padding: 15px;
+            border-radius: 8px; z-index: 1000; max-width: 300px; font-size: 12px;
+        }
+        .info-panel h4 { margin: 0 0 10px 0; color: #DEB887; }
+        .stats-box {
+            background: rgba(139,69,19,0.3); padding: 10px; border-radius: 5px;
+            margin: 10px 0; border-left: 3px solid #DEB887;
+        }
+        .loading {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8); color: #fff; padding: 30px;
+            border-radius: 10px; z-index: 2000; text-align: center;
+        }
+        .layer-control {
+            position: absolute; top: 80px; left: 10px;
+            background: rgba(255,255,255,0.95); padding: 10px;
+            border-radius: 8px; z-index: 1000; font-size: 12px;
+        }
+        .layer-control label { display: block; margin: 5px 0; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>INDIGENOUS RESERVES & AFRO-COLOMBIAN COMMUNITIES</h1>
+        <span class="subtitle">Resguardos & Consejos Comunitarios | ergit.presidencia.gov.co</span>
+    </div>
+    <div id="map"></div>
+    <div class="layer-control">
+        <strong>Layers</strong>
+        <label><input type="checkbox" id="toggleIndigenous" checked> Indigenous Reserves (785)</label>
+        <label><input type="checkbox" id="toggleAfro" checked> Afro-Colombian (211)</label>
+    </div>
+    <div class="legend">
+        <h4>Territory Types</h4>
+        <div class="legend-item"><div class="legend-color" style="background:rgba(139,69,19,0.6)"></div>Indigenous Reserves (785)</div>
+        <div class="legend-item"><div class="legend-color" style="background:rgba(75,0,130,0.6)"></div>Afro-Colombian Communities (211)</div>
+    </div>
+    <div class="info-panel">
+        <h4>DATA SOURCE</h4>
+        <p>ergit.presidencia.gov.co/server/rest/services</p>
+        <p>Resguardos/Resguardos_Edicion</p>
+        <div class="stats-box">
+            <strong>Actual Data Loaded:</strong><br>
+            - resguardos_indigenas.geojson (785)<br>
+            - afro_communities.geojson (211)<br>
+            <br>
+            <strong>Total: 996 territories</strong>
+        </div>
+        <p style="color:#ff6b6b; font-size:11px;">NO AUTHENTICATION REQUIRED</p>
+    </div>
+    <div id="loading" class="loading">Loading 996 territory polygons...</div>
+
+    <script>
+        var map = L.map('map').setView([4.5, -74.0], 6);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap, &copy; CARTO',
+            maxZoom: 18
+        }).addTo(map);
+
+        var indigenousLayer, afroLayer;
+
+        // Load Indigenous Reserves
+        fetch('resguardos_indigenas.geojson')
+            .then(response => response.json())
+            .then(data => {
+                indigenousLayer = L.geoJSON(data, {
+                    style: {
+                        color: '#8B4513',
+                        fillColor: 'rgba(139,69,19,0.5)',
+                        fillOpacity: 0.5,
+                        weight: 1
+                    },
+                    onEachFeature: function(feature, layer) {
+                        var props = feature.properties;
+                        layer.bindPopup(
+                            "<b>RESGUARDO INDIGENA</b><br>" +
+                            "Name: " + (props.NOMBRE_RESGUARDO_IND || 'N/A') + "<br>" +
+                            "Pueblo: " + (props.PUEBLO_ETNICO || 'N/A') + "<br>" +
+                            "Dept: " + (props.DEPARTAMENTO || 'N/A') + "<br>" +
+                            "Municipality: " + (props.MUNICIPIO || 'N/A')
+                        );
+                    }
+                }).addTo(map);
+                console.log("Loaded " + data.features.length + " indigenous reserves");
+                checkLoaded();
+            });
+
+        // Load Afro-Colombian Communities
+        fetch('afro_communities.geojson')
+            .then(response => response.json())
+            .then(data => {
+                afroLayer = L.geoJSON(data, {
+                    style: {
+                        color: '#4B0082',
+                        fillColor: 'rgba(75,0,130,0.5)',
+                        fillOpacity: 0.5,
+                        weight: 1
+                    },
+                    onEachFeature: function(feature, layer) {
+                        var props = feature.properties;
+                        layer.bindPopup(
+                            "<b>COMUNIDAD AFRO-COLOMBIANA</b><br>" +
+                            "Name: " + (props.NOMBRE_COMUNIDAD_NEGRA || 'N/A') + "<br>" +
+                            "Resolution: " + (props.RESOLUCION_TITULACION || 'N/A') + "<br>" +
+                            "Year: " + (props.ANO || 'N/A')
+                        );
+                    }
+                }).addTo(map);
+                console.log("Loaded " + data.features.length + " Afro-Colombian communities");
+                checkLoaded();
+            });
+
+        var loadedCount = 0;
+        function checkLoaded() {
+            loadedCount++;
+            if (loadedCount >= 2) {
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+
+        // Layer toggle controls
+        document.getElementById('toggleIndigenous').addEventListener('change', function() {
+            if (this.checked) {
+                map.addLayer(indigenousLayer);
+            } else {
+                map.removeLayer(indigenousLayer);
+            }
+        });
+
+        document.getElementById('toggleAfro').addEventListener('change', function() {
+            if (this.checked) {
+                map.addLayer(afroLayer);
+            } else {
+                map.removeLayer(afroLayer);
+            }
+        });
+    </script>
+</body>
+</html>

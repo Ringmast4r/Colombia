@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colombia OSINT Maps - Navigation</title>
+    <meta charset="utf-8">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #FFFFFF;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #1A1A2E;
+            padding: 40px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 4px solid;
+            border-image: linear-gradient(90deg, #FCD116, #003893, #CE1126) 1;
+        }
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: #CE1126;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #003893;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .warning {
+            background: #FFF5F5;
+            border: 3px solid #CE1126;
+            border-left: 8px solid #CE1126;
+            padding: 20px 30px;
+            border-radius: 0;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .warning h3 {
+            color: #CE1126;
+            margin-bottom: 8px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .warning p { color: #333; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .card {
+            background: #FFFFFF;
+            border: 3px solid #003893;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            background: #FCD116;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,56,147,0.2);
+            border-color: #CE1126;
+        }
+        .card h2 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #003893;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+        .card .stats {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            background: #FCD116;
+            padding: 8px 15px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #1A1A2E;
+            border: 2px solid #003893;
+        }
+        .stat span {
+            color: #CE1126;
+            font-weight: 800;
+        }
+        .card a {
+            display: inline-block;
+            background: #CE1126;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .card a:hover {
+            background: #003893;
+            transform: scale(1.02);
+        }
+        .critical { border-left: 8px solid #CE1126; }
+        .military { border-left: 8px solid #FCD116; }
+        .humanitarian { border-left: 8px solid #003893; }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 4px solid;
+            border-image: linear-gradient(90deg, #FCD116, #003893, #CE1126) 1;
+        }
+        .footer p {
+            color: #666;
+            margin: 8px 0;
+        }
+        .footer .critical-text {
+            color: #CE1126;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 15px;
+        }
+        .divider {
+            width: 80%;
+            height: 4px;
+            background: linear-gradient(90deg, #FCD116, #003893, #CE1126);
+            margin: 30px auto;
+        }
+        .flag-stripe {
+            display: flex;
+            height: 20px;
+            margin-bottom: 30px;
+        }
+        .flag-stripe .yellow { flex: 2; background: #FCD116; }
+        .flag-stripe .blue { flex: 1; background: #003893; }
+        .flag-stripe .red { flex: 1; background: #CE1126; }
+    </style>
+</head>
+<body>
+    <div class="flag-stripe">
+        <div class="yellow"></div>
+        <div class="blue"></div>
+        <div class="red"></div>
+    </div>
+
+    <div class="header">
+        <h1>Colombia OSINT Maps</h1>
+        <p class="subtitle">Interactive Intelligence Visualizations</p>
+    </div>
+
+    <div class="warning">
+        <h3>Sensitive Intelligence Data</h3>
+        <p>Source: ergit.presidencia.gov.co | Downloaded: January 5, 2026 | <strong>NO AUTHENTICATION REQUIRED</strong></p>
+    </div>
+
+    <div class="grid">
+        <div class="card critical">
+            <h2>Armed Groups Map (Sept 2025)</h2>
+            <p>Complete military intelligence map showing all armed group territorial control as of September 2025.</p>
+            <div class="stats">
+                <div class="stat"><span>7</span> Layers</div>
+                <div class="stat"><span>112</span> Zones</div>
+                <div class="stat"><span>24</span> Camps</div>
+            </div>
+            <a href="military_sep2025_full.html">Open Map</a>
+        </div>
+
+        <div class="card military">
+            <h2>July 2025 Military Map</h2>
+            <p>Earlier military assessment showing armed group positions as of July 2025.</p>
+            <div class="stats">
+                <div class="stat"><span>7</span> Layers</div>
+                <div class="stat"><span>113</span> Zones</div>
+            </div>
+            <a href="military_jul2025_full.html">Open Map</a>
+        </div>
+
+        <div class="card military">
+            <h2>Case 03 Investigation Map</h2>
+            <p>Special investigation zones with detailed armed group presence data.</p>
+            <div class="stats">
+                <div class="stat"><span>6</span> Layers</div>
+                <div class="stat"><span>144</span> Features</div>
+            </div>
+            <a href="military_caso03.html">Open Map</a>
+        </div>
+
+        <div class="card humanitarian">
+            <h2>AT Zones Map</h2>
+            <p>Administrative territorial zones including departments and municipalities.</p>
+            <div class="stats">
+                <div class="stat"><span>33</span> Departments</div>
+                <div class="stat"><span>103</span> Municipalities</div>
+            </div>
+            <a href="at_zones_map.html">Open Map</a>
+        </div>
+
+        <div class="card critical">
+            <h2>AETCR Reintegration Camps</h2>
+            <p>Former FARC reintegration camp locations with exact GPS coordinates. CRITICAL TARGET DATA.</p>
+            <div class="stats">
+                <div class="stat"><span>24</span> Camps</div>
+                <div class="stat">GPS Coordinates</div>
+            </div>
+            <a href="aetcr_camps_map.html">Open Map</a>
+        </div>
+
+        <div class="card humanitarian">
+            <h2>Human Rights Data (DDHH)</h2>
+            <p>Protection data including observatory census and victim information.</p>
+            <div class="stats">
+                <div class="stat"><span>809</span> Features</div>
+                <div class="stat">Protection Data</div>
+            </div>
+            <a href="ddhh_human_rights_map.html">Open Map</a>
+        </div>
+
+        <div class="card critical">
+            <h2>Original Armed Groups</h2>
+            <p>First visualization with territory overlays for 5 armed groups (ELN, AGC, EMC, etc).</p>
+            <div class="stats">
+                <div class="stat"><span>87</span> Zones</div>
+                <div class="stat"><span>5</span> Groups</div>
+            </div>
+            <a href="armed_groups_map.html">Open Map</a>
+        </div>
+
+        <div class="card critical">
+            <h2>Attacks on Signatories</h2>
+            <p>Choropleth map showing violence against peace signatories by department (H1 2025).</p>
+            <div class="stats">
+                <div class="stat"><span>110</span> Incidents</div>
+                <div class="stat"><span>29</span> Homicides</div>
+            </div>
+            <a href="attacks_on_signatories_map.html">Open Map</a>
+        </div>
+
+        <div class="card critical">
+            <h2>Violence Statistics (2016-2025)</h2>
+            <p>Homicides of peace signatories, human rights defenders, and massacres mapped across Colombia.</p>
+            <div class="stats">
+                <div class="stat"><span>1,822</span> Homicides</div>
+                <div class="stat"><span>490</span> Massacres</div>
+            </div>
+            <a href="violence_statistics_map.html">Open Map</a>
+        </div>
+
+        <div class="card military">
+            <h2>Coca Cultivation & PNIS (2023)</h2>
+            <p>Complete coca cultivation polygon (93 MB) with PNIS substitution zones.</p>
+            <div class="stats">
+                <div class="stat"><span>93 MB</span> Polygon</div>
+                <div class="stat"><span>56</span> PNIS Zones</div>
+            </div>
+            <a href="coca_cultivation_map.html">Open Map</a>
+        </div>
+
+        <div class="card humanitarian">
+            <h2>Indigenous & Afro-Colombian Territories</h2>
+            <p>Indigenous reserves (Resguardos) and Afro-Colombian community territories.</p>
+            <div class="stats">
+                <div class="stat"><span>785</span> Resguardos</div>
+                <div class="stat"><span>211</span> Afro-Colombian</div>
+            </div>
+            <a href="indigenous_reserves_map.html">Open Map</a>
+        </div>
+
+        <div class="card humanitarian">
+            <h2>Protection Routes (DDHH)</h2>
+            <p>Human rights protection case tracking and regional coverage areas.</p>
+            <div class="stats">
+                <div class="stat"><span>5</span> Regions</div>
+                <div class="stat">Protection Cases</div>
+            </div>
+            <a href="protection_routes_map.html">Open Map</a>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+        <p><strong>Data Source:</strong> ergit.presidencia.gov.co/server/rest/services</p>
+        <p><strong>Total Download:</strong> 2.5 GB | 544+ Files | 460 Emails | 103 Hashes</p>
+        <p><strong>Maps:</strong> 12 Interactive Visualizations</p>
+        <p class="critical-text">No Authentication Was Required</p>
+    </div>
+
+    <div class="flag-stripe" style="margin-top: 30px; margin-bottom: 0;">
+        <div class="yellow"></div>
+        <div class="blue"></div>
+        <div class="red"></div>
+    </div>
+</body>
+</html>

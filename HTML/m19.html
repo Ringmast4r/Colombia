@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-19 Crimes - Colombia OSINT</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 2px solid #ff4444;
+            margin-bottom: 30px;
+        }
+        h1 { color: #ff4444; font-size: 2em; }
+        h2 { color: #ffd700; margin: 30px 0 15px; }
+        .back-link {
+            display: inline-block;
+            color: #ffd700;
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+        }
+        .back-link:hover { background: #ffd700; color: #1a1a2e; }
+
+        .warning-box {
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .warning-box h2 { color: white; margin: 0 0 10px 0; }
+
+        .crime-card {
+            background: rgba(255, 68, 68, 0.1);
+            border: 1px solid #ff4444;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .crime-card h3 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .crime-card p {
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-box {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-box .number {
+            font-size: 2.5em;
+            color: #ff4444;
+            font-weight: bold;
+        }
+        .stat-box .label {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(0,0,0,0.2);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        th {
+            background: rgba(255, 68, 68, 0.3);
+            color: #ff6b6b;
+        }
+        tr:hover { background: rgba(255,255,255,0.05); }
+
+        .disputed {
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid orange;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .disputed h3 { color: orange; }
+
+        .quote {
+            background: rgba(0,0,0,0.3);
+            border-left: 4px solid #ffd700;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #ccc;
+        }
+        .quote-author {
+            color: #888;
+            font-style: normal;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Overview</a>
+
+        <header>
+            <h1>M-19 GUERRILLA CRIMES</h1>
+            <p>19th of April Movement (1974-1990)</p>
+        </header>
+
+        <div class="warning-box">
+            <h2>GUSTAVO PETRO WAS AN ACTIVE M-19 MEMBER</h2>
+            <p>Joined 1977 (age 17) | Arrested 1985 | Member until demobilization 1990</p>
+        </div>
+
+        <h2>M-19 Criminal Activities</h2>
+
+        <div class="crime-card">
+            <h3>Kidnappings</h3>
+            <p>M-19 regularly conducted kidnappings for ransom and political leverage. Victims included businessmen, politicians, and foreign diplomats. Ransom money funded guerrilla operations including weapons purchases.</p>
+        </div>
+
+        <div class="crime-card">
+            <h3>Assassinations</h3>
+            <p>Targeted killings of political opponents, military officers, and police. M-19 operated as an urban guerrilla group conducting assassinations in Colombian cities.</p>
+        </div>
+
+        <div class="crime-card">
+            <h3>Embassy Siege (1980)</h3>
+            <p><strong>February 27, 1980:</strong> 35 M-19 guerrillas storm the Dominican Republic embassy during a cocktail party.</p>
+            <ul style="margin: 15px 0 0 20px; color: #ccc;">
+                <li><strong>14 ambassadors</strong> taken hostage (including US Ambassador)</li>
+                <li>Largest diplomatic hostage-taking in Colombian history</li>
+                <li>Siege lasted 61 days</li>
+                <li>Guerrillas eventually flew to Cuba with $2.5 million ransom</li>
+            </ul>
+        </div>
+
+        <h2>Palace of Justice Siege (1985)</h2>
+        <p style="color: #ff6b6b; font-size: 1.2em; margin-bottom: 20px;">THE DEADLIEST M-19 ATTACK</p>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="number">98+</div>
+                <div class="label">Total Killed</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">11</div>
+                <div class="label">Disappeared</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">12</div>
+                <div class="label">Justices Killed</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">35</div>
+                <div class="label">M-19 Attackers</div>
+            </div>
+        </div>
+
+        <div class="crime-card">
+            <h3>Timeline of the Attack</h3>
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                </tr>
+                <tr>
+                    <td>Nov 6, 11:30 AM</td>
+                    <td>35 M-19 guerrillas storm Palace of Justice in Bogotá</td>
+                </tr>
+                <tr>
+                    <td>Nov 6, 12:00 PM</td>
+                    <td>~300 hostages taken including Supreme Court justices and lawyers</td>
+                </tr>
+                <tr>
+                    <td>Nov 6, Afternoon</td>
+                    <td>M-19 demands trial of President Betancur for "betraying peace"</td>
+                </tr>
+                <tr>
+                    <td>Nov 6, Evening</td>
+                    <td>Military's 13th Brigade surrounds building</td>
+                </tr>
+                <tr>
+                    <td>Nov 6-7, Night</td>
+                    <td>Army launches assault; intense firefight</td>
+                </tr>
+                <tr>
+                    <td>Nov 7, Morning</td>
+                    <td>Building catches fire during battle</td>
+                </tr>
+                <tr>
+                    <td>Nov 7, Afternoon</td>
+                    <td>Siege ends - all M-19 attackers dead</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="crime-card">
+            <h3>Casualty Breakdown</h3>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Deaths</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Supreme Court Justices</td>
+                    <td style="color: #ff4444; font-weight: bold;">12</td>
+                    <td>Including Chief Justice Alfonso Reyes</td>
+                </tr>
+                <tr>
+                    <td>Other Hostages</td>
+                    <td style="color: #ff4444; font-weight: bold;">43</td>
+                    <td>Lawyers, employees, visitors</td>
+                </tr>
+                <tr>
+                    <td>Colombian Soldiers</td>
+                    <td style="color: #ff4444; font-weight: bold;">48</td>
+                    <td>During military assault</td>
+                </tr>
+                <tr>
+                    <td>M-19 Guerrillas</td>
+                    <td style="color: #ff4444; font-weight: bold;">35</td>
+                    <td>All attackers killed</td>
+                </tr>
+                <tr>
+                    <td>Disappeared</td>
+                    <td style="color: #ff4444; font-weight: bold;">11</td>
+                    <td>Never found - presumed dead</td>
+                </tr>
+                <tr>
+                    <td><strong>TOTAL</strong></td>
+                    <td style="color: #ff4444; font-weight: bold;">98+</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Pablo Escobar Connection</h2>
+
+        <div class="disputed">
+            <h3>DISPUTED - Evidence Both Ways</h3>
+
+            <p style="margin-bottom: 15px;"><strong>Claims Escobar funded the attack:</strong></p>
+            <ul style="margin: 0 0 20px 20px; color: #ccc;">
+                <li>Escobar's son claims father paid M-19 <strong>$1 million</strong></li>
+                <li>Escobar's mistress Virginia Vallejo testified to payment</li>
+                <li>Former Escobar hitman claims <strong>$2 million</strong> payment</li>
+                <li>Extradition case files (against Escobar) were being reviewed that day</li>
+                <li>Files destroyed in fire - cui bono?</li>
+            </ul>
+
+            <p style="margin-bottom: 15px;"><strong>M-19 denies cartel funding:</strong></p>
+            <ul style="margin: 0 0 20px 20px; color: #ccc;">
+                <li>Former M-19 commanders deny any drug money</li>
+                <li>Called accusations "far-right urban myth"</li>
+                <li>Testified to Colombian Truth Commission denying links</li>
+            </ul>
+        </div>
+
+        <h2>Petro's Position on M-19 Legacy</h2>
+
+        <div class="quote">
+            "The lie about our ties to the Medellin Cartel became popular belief after constant repetition by members of the military and the country's far-right."
+            <div class="quote-author">- Petro's position on Escobar accusations</div>
+        </div>
+
+        <div class="crime-card">
+            <h3>Petro's Rehabilitation of M-19</h3>
+            <p>Since taking office, Petro has repeatedly invoked M-19 not as a terrorist group, but as a "democratic insurgency" that helped open political space.</p>
+            <ul style="margin: 15px 0 0 20px; color: #ccc;">
+                <li>Carries Bolívar's sword (stolen by M-19 in 1974) at state ceremonies</li>
+                <li>Calls the theft an act of "restoration for the people"</li>
+                <li>Denies M-19 received drug money from Escobar</li>
+                <li>Suggested Justice Manuel Gaona (executed at close range) may have died at hands of state forces instead</li>
+                <li>Anniversary commemorations sparked controversy in 2025</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Sources: Colombian judicial records, Truth Commission testimonies, news archives</p>
+            <p>Generated January 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Petro Timeline - Colombia OSINT</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 2px solid #ffd700;
+            margin-bottom: 30px;
+        }
+        h1 { color: #ffd700; font-size: 2em; }
+        .back-link {
+            display: inline-block;
+            color: #ffd700;
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+        }
+        .back-link:hover { background: #ffd700; color: #1a1a2e; }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #ffd700, #ff6b6b, #ffd700);
+        }
+        .event {
+            position: relative;
+            margin: 30px 0;
+            padding-left: 100px;
+        }
+        .event::before {
+            content: '';
+            position: absolute;
+            left: 42px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ffd700;
+            border: 4px solid #1a1a2e;
+        }
+        .event.critical::before { background: #ff4444; }
+        .event.arrest::before { background: #ff8c00; }
+        .event.political::before { background: #00d4ff; }
+        .event.sanctions::before { background: #ff0066; }
+
+        .year {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            font-weight: bold;
+            color: #ffd700;
+            font-size: 0.9em;
+        }
+        .event-content {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .event-content h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        .event-content p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        .event-content.critical-bg {
+            background: rgba(255, 68, 68, 0.15);
+            border-color: #ff4444;
+        }
+        .event-content.sanctions-bg {
+            background: rgba(255, 0, 102, 0.15);
+            border-color: #ff0066;
+        }
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+        .tag-guerrilla { background: #ff6b6b; }
+        .tag-attack { background: #ff4444; }
+        .tag-political { background: #00d4ff; }
+        .tag-sanctions { background: #ff0066; }
+        .tag-arrest { background: #ff8c00; }
+
+        .death-toll {
+            background: #ff4444;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .section-header {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid #ffd700;
+            padding: 15px 20px;
+            margin: 40px 0 20px 100px;
+            font-size: 1.2em;
+            color: #ffd700;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Overview</a>
+
+        <header>
+            <h1>GUSTAVO PETRO TIMELINE</h1>
+            <p>From M-19 Guerrilla to US-Sanctioned President</p>
+        </header>
+
+        <div class="section-header">M-19 GUERRILLA YEARS (1977-1990)</div>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">1960</span>
+                <div class="event-content">
+                    <h3>Birth</h3>
+                    <p>Gustavo Francisco Petro Urrego born April 19, 1960 in Ciénaga de Oro, Córdoba, Colombia.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <span class="year">1974</span>
+                <div class="event-content">
+                    <span class="tag tag-guerrilla">M-19 FOUNDED</span>
+                    <h3>M-19 Movement Created</h3>
+                    <p>The 19th of April Movement (M-19) founded after alleged fraud in 1970 presidential election. Urban guerrilla group targeting Colombian establishment.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <span class="year">1977</span>
+                <div class="event-content">
+                    <span class="tag tag-guerrilla">JOINS M-19</span>
+                    <h3>Petro Joins M-19 at Age 17</h3>
+                    <p>Convinced armed struggle could change Colombia's political and economic system. Adopted pseudonym <strong>"Aureliano"</strong> (character from One Hundred Years of Solitude).</p>
+                </div>
+            </div>
+
+            <div class="event critical">
+                <span class="year">1980</span>
+                <div class="event-content critical-bg">
+                    <span class="tag tag-attack">TERRORIST ATTACK</span>
+                    <h3>Dominican Embassy Siege</h3>
+                    <p>February 27: M-19 guerrillas storm Dominican Republic embassy during cocktail party. <strong>14 ambassadors taken hostage</strong> including US Ambassador. Largest diplomatic hostage-taking in Colombian history.</p>
+                </div>
+            </div>
+
+            <div class="event critical">
+                <span class="year">1985</span>
+                <div class="event-content critical-bg">
+                    <span class="tag tag-attack">MASS CASUALTY</span>
+                    <h3>PALACE OF JUSTICE SIEGE</h3>
+                    <p><strong>November 6-7, 1985:</strong> 35 M-19 commandos storm Colombia's Supreme Court. ~300 hostages taken including judges and lawyers. Military assault to retake building. Building burns during battle.</p>
+                    <div class="death-toll">
+                        DEATH TOLL: 98+ KILLED | 11 DISAPPEARED<br>
+                        12 Supreme Court Justices Executed<br>
+                        48 Colombian Soldiers Killed<br>
+                        All 35 M-19 Attackers Killed
+                    </div>
+                    <p style="margin-top: 15px;"><strong>Escobar Connection (Disputed):</strong> Pablo Escobar allegedly paid M-19 $1-2 million. Extradition case files destroyed in fire. Petro denies cartel funding.</p>
+                </div>
+            </div>
+
+            <div class="event arrest">
+                <span class="year">1985</span>
+                <div class="event-content">
+                    <span class="tag tag-arrest">ARRESTED</span>
+                    <h3>Petro Arrested by Colombian Army</h3>
+                    <p>Detained for M-19 guerrilla affiliation. Held during peace negotiations between government and M-19.</p>
+                </div>
+            </div>
+
+            <div class="event">
+                <span class="year">1990</span>
+                <div class="event-content">
+                    <span class="tag tag-political">DEMOBILIZATION</span>
+                    <h3>M-19 Demobilizes</h3>
+                    <p>M-19 signs peace agreement with Colombian government. Transforms into political party: <strong>M-19 Democratic Alliance</strong>. Petro released from detention, transitions to politics.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">POLITICAL CAREER (1991-2022)</div>
+
+        <div class="timeline">
+            <div class="event political">
+                <span class="year">1991</span>
+                <div class="event-content">
+                    <span class="tag tag-political">ELECTED</span>
+                    <h3>Elected to Chamber of Representatives</h3>
+                    <p>One of first former guerrillas elected to Colombian Congress. Represents M-19 Democratic Alliance party.</p>
+                </div>
+            </div>
+
+            <div class="event political">
+                <span class="year">2006</span>
+                <div class="event-content">
+                    <span class="tag tag-political">SENATOR</span>
+                    <h3>Elected to Colombian Senate</h3>
+                    <p>Gains reputation as anti-corruption crusader. Exposes paramilitary links to politicians ("parapolitics" scandal).</p>
+                </div>
+            </div>
+
+            <div class="event political">
+                <span class="year">2012</span>
+                <div class="event-content">
+                    <span class="tag tag-political">MAYOR</span>
+                    <h3>Elected Mayor of Bogotá</h3>
+                    <p>First leftist mayor of Colombian capital. Later removed from office by Inspector General (overturned by Inter-American Court).</p>
+                </div>
+            </div>
+
+            <div class="event political">
+                <span class="year">2018</span>
+                <div class="event-content">
+                    <span class="tag tag-political">CANDIDATE</span>
+                    <h3>Presidential Run - Loses</h3>
+                    <p>Loses to Iván Duque in runoff. Gets 42% of vote - strongest leftist showing in Colombian history.</p>
+                </div>
+            </div>
+
+            <div class="event political">
+                <span class="year">2022</span>
+                <div class="event-content">
+                    <span class="tag tag-political">PRESIDENT</span>
+                    <h3>ELECTED PRESIDENT OF COLOMBIA</h3>
+                    <p><strong>June 19, 2022:</strong> Defeats Rodolfo Hernández with 50.4% of vote. <strong>First left-wing president in modern Colombian history.</strong> Inaugurated August 7, 2022.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">DOWNFALL (2025-2026)</div>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">2025</span>
+                <div class="event-content">
+                    <h3>Cocaine Production Explodes</h3>
+                    <p>Colombia reaches highest cocaine production in decades under Petro's "total peace" policy. US increasingly critical of Petro's approach to drug cartels.</p>
+                </div>
+            </div>
+
+            <div class="event sanctions">
+                <span class="year">SEP 25</span>
+                <div class="event-content sanctions-bg">
+                    <span class="tag tag-sanctions">RETALIATION</span>
+                    <h3>US Revokes Petro's Visa</h3>
+                    <p><strong>September 27, 2025:</strong> US revokes visa after Petro speaks at pro-Palestinian demonstration outside UN Headquarters in New York.</p>
+                </div>
+            </div>
+
+            <div class="event sanctions">
+                <span class="year">OCT 25</span>
+                <div class="event-content sanctions-bg">
+                    <span class="tag tag-sanctions">ACCUSED</span>
+                    <h3>Trump: Petro is "Cartel Leader"</h3>
+                    <p><strong>October 19, 2025:</strong> President Trump publicly accuses Petro of being "leader of the Colombian cartels."</p>
+                </div>
+            </div>
+
+            <div class="event sanctions">
+                <span class="year">OCT 25</span>
+                <div class="event-content sanctions-bg">
+                    <span class="tag tag-sanctions">SANCTIONED</span>
+                    <h3>US TREASURY SANCTIONS PETRO</h3>
+                    <p><strong>October 24, 2025:</strong> OFAC adds Petro to Specially Designated Nationals (SDN) List.</p>
+                    <p style="margin-top: 10px;"><strong>Also sanctioned:</strong></p>
+                    <ul style="margin: 10px 0 10px 20px; color: #ccc;">
+                        <li>Veronica del Socorro Alcocer Garcia (Wife)</li>
+                        <li>Nicolas Fernando Petro Burgos (Son)</li>
+                        <li>Armando Alberto Benedetti Villaneda (Interior Minister)</li>
+                    </ul>
+                    <p><strong>Treasury Statement:</strong> "Since Petro came to power, cocaine production has exploded to the highest rate in decades, flooding the United States."</p>
+                    <p style="margin-top: 10px;"><strong>Accusation:</strong> Alliance with Maduro's "Cartel de Los Soles"</p>
+                </div>
+            </div>
+
+            <div class="event sanctions">
+                <span class="year">DEC 25</span>
+                <div class="event-content sanctions-bg">
+                    <span class="tag tag-sanctions">EMERGENCY</span>
+                    <h3>Economic Emergency Declared - Taxes by Decree</h3>
+                    <p><strong>December 23-24, 2025:</strong> Petro declares economic state of emergency after Congress strikes down tax reform bill. $4.2B budget deficit.</p>
+                    <p style="margin-top: 10px;"><strong>Emergency Powers:</strong></p>
+                    <ul style="margin: 10px 0 10px 20px; color: #ccc;">
+                        <li>30 days to issue tax decrees without Congress</li>
+                        <li>Wealth tax up to 5% on fortunes >$500K</li>
+                        <li>Financial transaction tax: 0.4% → 0.5%</li>
+                        <li>VAT on alcohol/gambling → 19%</li>
+                    </ul>
+                    <p><strong>Critics:</strong> "Flagrant abuse of rule of law" - National Association of Industrialists</p>
+                </div>
+            </div>
+
+            <div class="event political">
+                <span class="year">JAN 26</span>
+                <div class="event-content">
+                    <span class="tag tag-political">ECONOMY</span>
+                    <h3>23% Minimum Wage Hike - Biggest Since 1980s</h3>
+                    <p><strong>January 1, 2026:</strong> Petro announces minimum wage increase from $380 (COP 1,425,500) to $466 (COP 1,750,905). Largest increase since the 1980s.</p>
+                </div>
+            </div>
+
+            <div class="event sanctions">
+                <span class="year">JAN 26</span>
+                <div class="event-content sanctions-bg">
+                    <span class="tag tag-sanctions">ALLY CAPTURED</span>
+                    <h3>Maduro Captured - Petro Condemns US</h3>
+                    <p><strong>January 3, 2026:</strong> Venezuelan President Maduro captured by US military. Petro holds 3am emergency security meeting.</p>
+                    <p style="margin-top: 10px;"><strong>Petro's Response:</strong></p>
+                    <ul style="margin: 10px 0 10px 20px; color: #ccc;">
+                        <li>"Colombia condemns the attack on sovereignty of Venezuela and Latin America"</li>
+                        <li>Deploys troops to 2,219km Venezuela border</li>
+                        <li>Calls for emergency UN Security Council meeting</li>
+                        <li>Protests erupt outside US Embassy Bogota</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event critical">
+                <span class="year">JAN 26</span>
+                <div class="event-content critical-bg">
+                    <span class="tag tag-attack">THREAT</span>
+                    <h3>Trump Threatens Petro Directly</h3>
+                    <p><strong>January 5, 2026:</strong> When asked if US could do the same to Colombia, Trump replies: <strong>"Sounds good to me."</strong></p>
+                    <p style="margin-top: 10px;">Petro responds he is "not worried about being the next" - despite sanctions and threats.</p>
+                    <p style="margin-top: 10px;"><strong>ELN Concern:</strong> Security analysts warn ELN controls nearly entire Venezuela border - may retaliate for Maduro capture.</p>
+                </div>
+            </div>
+
+            <div class="event political">
+                <span class="year">JAN 26</span>
+                <div class="event-content">
+                    <span class="tag tag-political">UN</span>
+                    <h3>UN Security Council Meeting Called</h3>
+                    <p><strong>January 5, 2026 @ 10am EST:</strong> At request of Venezuela and Colombia (with Russia/China support), UN Security Council convenes on US strikes. Colombia now holds non-permanent seat (since Jan 1).</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Sources: US Treasury sb0292 | OFAC SDN List | Al Jazeera | Colombia Reports | ABC News | NPR | Atlantic Council | US Embassy Bogota</p>
+            <p>Last Updated: January 5, 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

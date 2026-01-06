@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connections - Petro Network</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 2px solid #00d4ff;
+            margin-bottom: 30px;
+        }
+        h1 { color: #00d4ff; font-size: 2em; }
+        h2 { color: #ffd700; margin: 30px 0 15px; }
+        .back-link {
+            display: inline-block;
+            color: #ffd700;
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+        }
+        .back-link:hover { background: #ffd700; color: #1a1a2e; }
+
+        .network-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .network-card h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+        }
+        .network-card p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        .connection-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        .entity {
+            background: rgba(0, 212, 255, 0.2);
+            border: 2px solid #00d4ff;
+            border-radius: 10px;
+            padding: 15px 20px;
+            text-align: center;
+            min-width: 150px;
+        }
+        .entity.red {
+            background: rgba(255, 68, 68, 0.2);
+            border-color: #ff4444;
+        }
+        .entity.orange {
+            background: rgba(255, 140, 0, 0.2);
+            border-color: #ff8c00;
+        }
+        .entity.captured {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: #00ff00;
+        }
+        .entity h4 { color: #fff; margin-bottom: 5px; }
+        .entity .role { color: #888; font-size: 0.85em; }
+        .entity .status {
+            margin-top: 8px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            display: inline-block;
+        }
+        .status-sanctioned { background: #ff4444; }
+        .status-captured { background: #00aa00; }
+        .status-active { background: #ff8c00; }
+
+        .arrow {
+            font-size: 2em;
+            color: #00d4ff;
+        }
+
+        .accusation-box {
+            background: rgba(255, 68, 68, 0.1);
+            border: 1px solid #ff4444;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .accusation-box h3 { color: #ff6b6b; }
+
+        .timeline-event {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            border-left: 4px solid #00d4ff;
+        }
+        .timeline-event .date {
+            color: #00d4ff;
+            font-weight: bold;
+            min-width: 100px;
+        }
+        .timeline-event .content { color: #ccc; }
+
+        .drug-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .drug-stat {
+            background: rgba(255, 68, 68, 0.15);
+            border: 1px solid #ff4444;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .drug-stat .number {
+            font-size: 2em;
+            color: #ff4444;
+            font-weight: bold;
+        }
+        .drug-stat .label { color: #888; }
+
+        .m19-box {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid #ffd700;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .m19-box h3 { color: #ffd700; }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Overview</a>
+
+        <header>
+            <h1>PETRO CONNECTIONS</h1>
+            <p>Network Analysis - Drug Trade & Political Alliances</p>
+        </header>
+
+        <h2>Maduro-Petro Alliance</h2>
+
+        <div class="connection-box">
+            <div class="entity red">
+                <h4>Gustavo Petro</h4>
+                <div class="role">President of Colombia</div>
+                <span class="status status-sanctioned">SANCTIONED</span>
+            </div>
+            <div class="arrow">&harr;</div>
+            <div class="entity captured">
+                <h4>Nicolás Maduro</h4>
+                <div class="role">President of Venezuela</div>
+                <span class="status status-captured">CAPTURED</span>
+            </div>
+        </div>
+
+        <div class="network-card">
+            <h3>US Treasury Accusation</h3>
+            <p>The Treasury Department accused Petro of having <strong>"allied himself with the narco-terrorist regime of Nicolas Maduro Moros and the Cartel de Los Soles"</strong> in Venezuela.</p>
+            <p style="margin-top: 15px;"><strong>Cartel de Los Soles</strong> (Cartel of the Suns) refers to Venezuelan military officers involved in drug trafficking. "Suns" refers to the sun insignia on generals' uniforms.</p>
+        </div>
+
+        <div class="timeline-event">
+            <div class="date">Jan 3, 2026</div>
+            <div class="content">
+                <strong>Maduro Captured:</strong> US military operation captures Venezuelan President Nicolás Maduro. Petro's key regional ally now in US custody facing drug trafficking and terrorism charges.
+            </div>
+        </div>
+
+        <h2>Drug Trade Accusations</h2>
+
+        <div class="drug-stats">
+            <div class="drug-stat">
+                <div class="number">RECORD</div>
+                <div class="label">Cocaine Production Under Petro</div>
+            </div>
+            <div class="drug-stat">
+                <div class="number">#1</div>
+                <div class="label">Colombia = World's Top Producer</div>
+            </div>
+            <div class="drug-stat">
+                <div class="number">90%</div>
+                <div class="label">US Cocaine from Colombia</div>
+            </div>
+        </div>
+
+        <div class="accusation-box">
+            <h3>Treasury Statement</h3>
+            <p style="color: #ccc; line-height: 1.7;">"Since President Gustavo Petro came to power, cocaine production in Colombia has exploded to the highest rate in decades, flooding the United States and poisoning Americans."</p>
+        </div>
+
+        <div class="network-card">
+            <h3>"Total Peace" Policy</h3>
+            <p>Petro's approach to drug cartels has been to negotiate rather than confront:</p>
+            <ul style="margin: 15px 0 0 20px; color: #ccc; line-height: 1.8;">
+                <li>Peace talks with ELN guerrillas</li>
+                <li>Negotiations with drug trafficking groups</li>
+                <li>Reduced military operations against cartels</li>
+                <li>Critics say this enabled cartel expansion</li>
+            </ul>
+        </div>
+
+        <h2>M-19 Veterans in Government</h2>
+
+        <div class="m19-box">
+            <h3>Former Guerrillas in Petro Administration</h3>
+            <p style="color: #ccc; line-height: 1.7;">Several former M-19 members hold positions in Petro's government. The rehabilitation of M-19's legacy has been a controversial aspect of his presidency.</p>
+            <p style="color: #ccc; margin-top: 15px;"><strong>Symbol:</strong> Petro carries Bolívar's sword (stolen by M-19 in 1974) at state ceremonies, calling its theft an act of "restoration for the people."</p>
+        </div>
+
+        <h2>Regional Network</h2>
+
+        <div class="connection-box" style="justify-content: center;">
+            <div class="entity orange">
+                <h4>Cuba</h4>
+                <div class="role">Ideological Ally</div>
+                <span class="status status-active">ACTIVE</span>
+            </div>
+            <div class="arrow">&larr;</div>
+            <div class="entity red">
+                <h4>Petro</h4>
+                <div class="role">Colombia</div>
+                <span class="status status-sanctioned">SANCTIONED</span>
+            </div>
+            <div class="arrow">&rarr;</div>
+            <div class="entity captured">
+                <h4>Maduro</h4>
+                <div class="role">Venezuela</div>
+                <span class="status status-captured">CAPTURED</span>
+            </div>
+        </div>
+
+        <div class="network-card">
+            <h3>Left-Wing Latin American Alliance</h3>
+            <p>Petro aligned with left-wing governments in the region:</p>
+            <ul style="margin: 15px 0 0 20px; color: #ccc; line-height: 1.8;">
+                <li><strong>Venezuela (Maduro):</strong> Close ally - now captured by US</li>
+                <li><strong>Cuba:</strong> Ideological alignment, diplomatic ties</li>
+                <li><strong>Nicaragua (Ortega):</strong> Shared anti-US stance</li>
+                <li><strong>Bolivia:</strong> Coordination on coca policy</li>
+            </ul>
+        </div>
+
+        <h2>Iran-Venezuela-Hezbollah Axis</h2>
+
+        <div class="accusation-box">
+            <h3>Indirect Connection Through Maduro</h3>
+            <p style="color: #ccc; line-height: 1.7;">Venezuela under Maduro maintained close ties with Iran and allegedly facilitated Hezbollah financial operations in Latin America. By aligning with Maduro, Petro became indirectly connected to this network.</p>
+            <ul style="margin: 15px 0 0 20px; color: #ccc; line-height: 1.8;">
+                <li>Venezuela-Iran 20-year defense pact</li>
+                <li>IRGC investments in Venezuela</li>
+                <li>Hezbollah fundraising networks in region</li>
+                <li>Syrian collapse (Dec 2024) disrupted these networks</li>
+            </ul>
+        </div>
+
+        <h2>Current Status (January 2026)</h2>
+
+        <div class="network-card">
+            <h3>Petro's Isolation</h3>
+            <ul style="margin: 0; color: #ccc; line-height: 1.8;">
+                <li><strong>US Sanctions:</strong> Cannot access US financial system or travel to US</li>
+                <li><strong>Visa Revoked:</strong> Barred from entering United States</li>
+                <li><strong>Key Ally Captured:</strong> Maduro in US custody</li>
+                <li><strong>Ambassador Recalled:</strong> Colombia pulled ambassador from Washington</li>
+                <li><strong>Legal Defense:</strong> Claims he will sue in US courts</li>
+                <li><strong>Term Ends:</strong> 2026 (cannot be re-elected)</li>
+            </ul>
+        </div>
+
+        <div class="timeline-event">
+            <div class="date">?? 2026</div>
+            <div class="content">
+                <strong>Uncertain Future:</strong> After leaving office, Petro could face prosecution if he travels to US-allied countries. May seek asylum in Cuba, Nicaragua, or remaining allied nations.
+            </div>
+        </div>
+
+        <footer>
+            <p>Sources: US Treasury, DOJ indictments, news archives</p>
+            <p>Generated January 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
