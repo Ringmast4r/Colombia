@@ -1,3 +1,27 @@
+<div align="center">
+
+<img width="100%" alt="COLOMBIA" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:297B2D&height=220&section=header&text=COLOMBIA&fontSize=60&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Web%20%7C%20HTML%20%7C%20OSINT%20%7C%20Archive&descSize=16&descAlignY=58"/>
+
+`Web` [`HTML`](https://developer.mozilla.org/en-US/docs/Web/HTML) `OSINT` `Archive` - OSINT intelligence on US-sanctioned Colombian President Gustavo Petro - infrastructure mapping, M-19 history, ArcGIS data dumps
+
+[Project website / live view](https://ringmast4r.github.io/Colombia/HTML/maps_index.html)
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=297B2D&center=true&vCenter=true&multiline=true&repeat=true&width=950&height=90&lines=OSINT+intelligence+on+US-sanctioned+Colombian+President+Gustavo+Petro+-...%3BWeb+%2F+HTML+%2F+OSINT+%2F+Archive)](https://git.io/typing-svg)
+
+<br>
+
+[![Project](https://img.shields.io/badge/Project-Colombia-297B2D?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ringmast4r/Colombia)
+[![Format](https://img.shields.io/badge/Format-HTML-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ringmast4r/Colombia/tree/main)
+
+[![Stars](https://img.shields.io/github/stars/Ringmast4r/Colombia?style=flat-square&color=297B2D)](https://github.com/Ringmast4r/Colombia/stargazers)
+[![Forks](https://img.shields.io/github/forks/Ringmast4r/Colombia?style=flat-square&color=297B2D)](https://github.com/Ringmast4r/Colombia/network/members)
+[![Repo Size](https://img.shields.io/github/repo-size/Ringmast4r/Colombia?style=flat-square&color=297B2D)](https://github.com/Ringmast4r/Colombia)
+[![Last Commit](https://img.shields.io/github/last-commit/Ringmast4r/Colombia?style=flat-square&color=297B2D)](https://github.com/Ringmast4r/Colombia/commits/main)
+
+</div>
+
+---
+
 # Colombia OSINT - Gustavo Petro Infrastructure Analysis
 
 <p align="center">
@@ -14,19 +38,15 @@
 ![Counter-Narcotics](https://img.shields.io/badge/COUNTER-NARCOTICS-blue?style=for-the-badge)
 ![OSINT](https://img.shields.io/badge/OPEN_SOURCE-INTELLIGENCE-black?style=for-the-badge)
 
-![GitHub stars](https://img.shields.io/github/stars/Ringmast4r/Colombia?style=for-the-badge&logo=github&color=gold)
-![GitHub forks](https://img.shields.io/github/forks/Ringmast4r/Colombia?style=for-the-badge&logo=github&color=blue)
-![GitHub watchers](https://img.shields.io/github/watchers/Ringmast4r/Colombia?style=for-the-badge&logo=github&color=green)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Ringmast4r/Colombia?style=for-the-badge&logo=github&color=purple)
-![GitHub last commit](https://img.shields.io/github/last-commit/Ringmast4r/Colombia?style=for-the-badge&logo=github&color=orange)
 ![License](https://img.shields.io/badge/LICENSE-OSINT-green?style=for-the-badge)
 
 </p>
 
 ---
 
-## Live Interactive Maps
+<a id="live-interactive-maps"></a>
+## `> live_interactive_maps`
 
 **[View All Maps](https://ringmast4r.github.io/Colombia/HTML/maps_index.html)**
 
@@ -41,7 +61,8 @@
 
 ---
 
-## Target Overview
+<a id="target-overview"></a>
+## `> target_overview`
 
 | Attribute | Detail |
 |-----------|--------|
@@ -54,7 +75,8 @@
 
 ---
 
-## Project Statistics
+<a id="project-statistics"></a>
+## `> project_statistics`
 
 | Category | Count | Size |
 |----------|-------|------|
@@ -67,7 +89,8 @@
 
 ---
 
-## Critical Findings
+<a id="critical-findings"></a>
+## `> critical_findings`
 
 ### Critical Finding #1: Open ArcGIS Server
 
@@ -99,7 +122,8 @@
 
 ---
 
-## Infrastructure Enumerated
+<a id="infrastructure-enumerated"></a>
+## `> infrastructure_enumerated`
 
 | Domain | Subdomains | Type |
 |--------|------------|------|
@@ -118,7 +142,8 @@
 
 ---
 
-## ArcGIS Services Enumerated
+<a id="arcgis-services-enumerated"></a>
+## `> arcgis_services_enumerated`
 
 | Folder | Services | Critical Data |
 |--------|----------|---------------|
@@ -132,7 +157,8 @@
 
 ---
 
-## Credentials Extracted
+<a id="credentials-extracted"></a>
+## `> credentials_extracted`
 
 | Type | Count | Source |
 |------|-------|--------|
@@ -145,7 +171,8 @@
 
 ---
 
-## Intelligence Data Captured
+<a id="intelligence-data-captured"></a>
+## `> intelligence_data_captured`
 
 ### Military Intelligence
 - CNR_SEP_2025_MIL1: September 2025 operational map (156 MB)
@@ -174,7 +201,8 @@
 
 ---
 
-## Subject Timeline
+<a id="subject-timeline"></a>
+## `> subject_timeline`
 
 | Year | Event |
 |------|-------|
@@ -190,7 +218,8 @@
 
 ---
 
-## Repository Structure
+<a id="repository-structure"></a>
+## `> repository_structure`
 
 ```
 COLOMBIA/
@@ -243,7 +272,8 @@ COLOMBIA/
 
 ---
 
-## Vulnerability Summary
+<a id="vulnerability-summary"></a>
+## `> vulnerability_summary`
 
 | Severity | Count | Examples |
 |----------|-------|----------|
@@ -254,7 +284,8 @@ COLOMBIA/
 
 ---
 
-## Sessions Conducted
+<a id="sessions-conducted"></a>
+## `> sessions_conducted`
 
 | Session | Date | Focus | Output |
 |---------|------|-------|--------|
@@ -265,7 +296,8 @@ COLOMBIA/
 
 ---
 
-## Methodology
+<a id="methodology"></a>
+## `> methodology`
 
 All intelligence gathered through legal OSINT techniques:
 - Certificate Transparency (crt.sh) subdomain enumeration
@@ -278,7 +310,8 @@ All intelligence gathered through legal OSINT techniques:
 
 ---
 
-## Legal Notice
+<a id="legal-notice"></a>
+## `> legal_notice`
 
 This repository contains **publicly available information** gathered through open source intelligence. No systems were compromised. Sources include:
 - Public DNS records
@@ -290,3 +323,11 @@ This repository contains **publicly available information** gathered through ope
 ---
 
 *Last Updated: January 5, 2026*
+
+---
+
+<div align="center">
+
+<img width="100%" alt="COLOMBIA footer" src="https://capsule-render.vercel.app/api?type=waving&color=0:297B2D,100:000000&height=120&section=footer&text=RINGMAST4R%20%2F%2F%20ARCHIVE&fontSize=18&fontColor=ffffff&fontAlignY=65"/>
+
+</div>
